@@ -6,10 +6,10 @@ import javax.servlet.http.HttpServletResponse;
 import mvc.oldBalance.model.*;
 import mybatis.oldBalance.service.*;
 
-public class CommandProductList implements Command {
+public class CommandProductMG implements Command {
 	private String next;
 	
-	public CommandProductList(String _next) {
+	public CommandProductMG(String _next) {
 		next = _next;
 	}
 	

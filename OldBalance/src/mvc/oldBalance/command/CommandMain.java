@@ -3,6 +3,9 @@ package mvc.oldBalance.command;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mvc.oldBalance.model.*;
+import mybatis.oldBalance.service.*;
+
 public class CommandMain implements Command {
 	private String next;
 	

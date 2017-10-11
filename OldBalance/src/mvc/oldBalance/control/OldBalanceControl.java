@@ -15,7 +15,7 @@ import mvc.oldBalance.command.CommandException;
 
 public class OldBalanceControl extends HttpServlet{
 	private HashMap commandMap;
-	private String	jspDir = "/04_board_class/";
+	private String	jspDir = "/OldBalance/";
 	private String  error = "error.jsp";
 	
 	
