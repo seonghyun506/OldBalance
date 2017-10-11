@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.OldBalanceMapper">
+
+<select id="selectAll" parameterType="HashMap" resultType="comment">
+select * from comment_tab
+
+<where>
+	<if test="cId != null">
+		comment_no = #{cId}
+	</if>
+</where>
+</select>
+
+<select id="delete" parameterType="HashMap">
+delete from comment_tab where comment_no = #{cId}
+</select>
+
+<select id="insertComment" parameterType="comment">
+insert into comment_tab
+values ( #{commentNo}, #{userId}, #{commentContent}, sysdate)
+</select>
+
+<update id="modifyComment" parameterType="comment">
+update comment_tab set user_id=#{userId},comment_content=#{commentContent}, reg_date=sysdate where comment_No=#{commentNo}
+</update>
+
+</mapper>
