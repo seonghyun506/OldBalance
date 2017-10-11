@@ -10,6 +10,6 @@
 <title>oldBalanceMain.jsp</title>
 </head>
 <body>
-git == 야생마 == 씹구대기
+git == 야생마 == 씹구대기  
 </body>
 </html>
