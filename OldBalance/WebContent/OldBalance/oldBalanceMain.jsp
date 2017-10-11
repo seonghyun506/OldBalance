@@ -7,6 +7,6 @@
 <title>oldBalanceMain.jsp</title>
 </head>
 <body>
-ㅎㅇㅎㅇㅎㅇㅎㅇ
+ㅎㅇㅎㅇㅎㅇㅎㅇㅗㅗ
 </body>
 </html>
