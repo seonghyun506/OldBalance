@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% String pjName="/OldBalance"; %>
+<jsp:include page="header.jsp"></jsp:include> 
 <!DOCTYPE html>
 <html>
 <head>
