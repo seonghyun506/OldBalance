@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <% String projectName = "/OldBalance"; %>
-
+<jsp:include page="header.jsp"></jsp:include>  
 <!DOCTYPE html>
 <html>
 <head>
