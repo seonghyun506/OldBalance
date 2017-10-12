@@ -47,6 +47,11 @@ $(document).ready(function() {
 	         }         
 	      }
 	      
+	      if($('#id').val() == '' || $('#addr').val() == '') {
+	    	  sub = false;
+	    	  alert('필수 입력사항을 다시 확인해주세요.');
+	      }
+	      
 	      if(sub) {
 	    	  $('form').submit();
 	      }
