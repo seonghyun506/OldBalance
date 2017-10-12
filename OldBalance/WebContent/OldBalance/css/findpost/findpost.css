@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.post{
+	height:200px;
+	overflow:auto;
+	border:1px solid green;
+	
+}
+td{
+	text-align:center;
+}
