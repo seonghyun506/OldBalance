@@ -20,9 +20,9 @@ header{width:100%; background:#000; opacity:0.8;}
 #Gmenu ul li .sho li a{color:#000; border:1px solid red; margin-top:50px; display:none;}
 
 /**************************************************************** sub_wrap1 */
-#sub_wrap1{width:100%; background:#000; opacity:0.6; overflow:hidden; height:400px;}
-#sub_wrap2{width:100%; background:#000; opacity:0.6; overflow:hidden; height:400px;}
-#sub_wrap3{width:100%; background:#000; opacity:0.6; overflow:hidden; height:420px;}
+#sub_wrap1{width:100%; background:#000; opacity:0.87; overflow:hidden; height:400px; position:absolute; z-index:9999;}
+#sub_wrap2{width:100%; background:#000; opacity:0.87; overflow:hidden; height:400px; position:absolute; z-index:9999;}
+#sub_wrap3{width:100%; background:#000; opacity:0.87; overflow:hidden; height:420px; position:absolute; z-index:9999;}
 /******************************************************************sub_menu*/
 .sub_menu1{width:1000px; margin:0 auto;}
 .sub_menu1 > ul{float:left; margin:20px 50px 20px 0; padding-left:20px; border-left:1px solid #fff; height:360px;}
@@ -30,6 +30,7 @@ header{width:100%; background:#000; opacity:0.8;}
 .sub_menu1 > ul .txt_f a{font-size:16px; font-weight:bold; color:#fff;}
 .sub_menu1 > ul li{padding-bottom:8px;}
 .sub_menu1 > ul li a{font-size:14px; color:#f2f2f2;}
+.sub_menu1 > ul li a:hover{color:#e92525; transition:0.3s; -webkit-transitionb:0.3s;}
 .sub_menu1 > ul .allview{font-weight:bold;}
 .sub_menu1 > ul .allview span{font-size:10px; padding-bottom:25px;}
 .sub_menu1 > ul:last-child li img{width:20%;}
