@@ -12,7 +12,7 @@
 		$('.sho').hide();
 		
 		 $('.Men').hover(function(){
-			 $('#sub_wrap1').show(); // setter 역할
+			 $('#sub_wrap1').slideDown(); // setter 역할
 		 },function(){
 			 $('#sub_wrap1').hide(); 
 		 });
@@ -25,7 +25,7 @@
 	});
 	$(function Women(){
 		$('.Women').hover(function(){
-			 $('#sub_wrap2').show(); // setter 역할
+			 $('#sub_wrap2').slideDown(); // setter 역할
 		 },function(){
 			 $('#sub_wrap2').hide(); 
 		 });
@@ -39,7 +39,7 @@
 	
 	$(function Kids(){
 		$('.Kids').hover(function(){
-			 $('#sub_wrap3').show(); // setter 역할
+			 $('#sub_wrap3').slideDown(); // setter 역할
 		 },function(){
 			 $('#sub_wrap3').hide(); 
 		 });
