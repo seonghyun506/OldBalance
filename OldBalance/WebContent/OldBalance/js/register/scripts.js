@@ -6,16 +6,19 @@ $(document).ready(function() {
 	$('#signup form').validate({
 		rules : {
 			name : { required : true },
+			email : {
+				required : true,
+				email : true
+			},
+			website : {
+				url : true
+			},
 			password : {
-				minlength : 6,
-				maxlength : 16,
-				required : true
+				minlength : 6
 			},
 			passconf : {
-				equalTo : '#password',
-				required : true
-			},
-			addr : {required : true}
+				equalTo : '#password'
+			}
 		},
 		success : function(label) {
 			label.addClass('valid');
@@ -33,19 +36,6 @@ $(document).ready(function() {
 		}
 	});
 	
-	$('#join').click(function() {
-		var check = document.getElementsByName('checked');
-		var sub = false;
-		
-		for (var i = 0; i < check.length; i++) {
-			if($('.agree').is(':checked')) {
-					
-			}			
-		}
-		
-		if(sub) {
-			$('form').submit;
-		}
-	});
+	
 	
 });
