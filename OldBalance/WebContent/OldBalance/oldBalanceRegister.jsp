@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<% String pjName="/TeamProject"; %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +20,7 @@
 		<div id="content">
 			<div id="signup">
 				<h2>회원 가입</h2>
-				<form action="oldBalanceRegisterForm.jsp" method='post'>
+				<form action="<%= pjName %>/ObControl?cmd=input-member" method='post'>
 					<div>
 						<label for="id">ID :</label> <input name="id" id="id" type="text" />
 						<input name="idCheck" id="idCheck" value="중복확인" type="button"/>
@@ -29,20 +29,17 @@
 						<label for="password">Password :</label> <input name="password" id="password" type="password" />
 					</div>
 					<div>
-						<label for="passconf">Check :</label> <input name="passconf" id="passconf" type="password" />
+						<label for="passconf">Check Password :</label> <input name="passconf" id="passconf" type="password" />
 					</div>
 					<div>
-						<label for="name">Name :</label> <input name="name" id="name" type="text" />
-					</div>
-					<div>
-						<label for="telnum">TEL:</label> <input name="telnum" id="telnum" type="password" />
+						<label for="telnum">TEL:</label> <input name="telnum" id="telnum" type="text" />
 					</div>
 					<div>
 						<label for="post">Post :</label> <input name="post" id="post" type="text" />
 						<input name="findPost" id="findPost" type="button" value="우편번호"/>
 					</div>
 					<div>
-						<label for="addr">Address :</label> <input name="addr" id="addr" type="text" readonly />
+						<label for="addr">Address :</label> <input name="addr" id="addr" type="text"  />
 						<input name="detailAddr" id="detailAddr" type="text" />
 					</div>
 

@@ -17,6 +17,10 @@ public class OldBalanceService {
 	
 	OldBalanceRepository repo = new OldBalanceRepository();
 	
+	public int insertMember(ObMember member) {
+		return repo.insertMember(member);
+	}
+	
 //	public List<BoardRec> selectComment() {
 //		return repo.selectComment();
 //	}

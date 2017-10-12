@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mvc.oldBalance.command.CommandNull;
+import mvc.oldBalance.command.CommandRegister;
 import mvc.oldBalance.command.Command;
 import mvc.oldBalance.command.CommandException;
 
@@ -27,7 +28,7 @@ public class OldBalanceControl extends HttpServlet{
 	private void initCommand() {
 		commandMap = new HashMap();
 		
-		//commandMap.put("input-Form",new CommandNull("BoardInputForm.jsp") );
+		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

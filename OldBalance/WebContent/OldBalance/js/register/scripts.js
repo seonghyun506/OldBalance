@@ -37,5 +37,20 @@ $(document).ready(function() {
 	});
 	
 	
+	$('#join').click(function() {
+	      var check = document.getElementsByName('agree');
+	      var sub = true;
+	      
+	      for (var i = 0; i < check.length; i++) {
+	         if(check[i].checked == false) {
+	               sub = false;
+	         }         
+	      }
+	      
+	      if(sub) {
+	    	  alert('넘어가야 정상');
+	    	  $('form').submit();
+	      }
+	   });
 	
 });

@@ -14,6 +14,21 @@ public class CommandRegister implements Command {
 	}
 	
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		ObMember member = new ObMember();
+		
+		String	addr = request.getParameter("addr");
+		String	detailAddr = request.getParameter("detailAddr");
+		String	custAddr = addr + "/" + detailAddr;
+		
+		member.setCustId(request.getParameter("id"));
+		member.setCustPw(request.getParameter("password"));
+		member.setCustPost(Integer.parseInt(request.getParameter("post")));
+		member.setCustAddr(custAddr);
+		member.setCustTel(request.getParameter("telnum"));
+		member.setCustMig(0);
+		
+		OldBalanceService service = OldBalanceService.getInstance();
+		service.insertMember(member);
 		
 		return next;
 	}
