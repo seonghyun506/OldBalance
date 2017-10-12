@@ -56,5 +56,9 @@ $(document).ready(function() {
 	    	  $('form').submit();
 	      }
 	   });
+	$('#idCheck').click(function(){
+		windowObj=window.open("oldBalanceCheckId.jsp","중복 확인","width=500, height=500");
+	
+	});
 	
 });
