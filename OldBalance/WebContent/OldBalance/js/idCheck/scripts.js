@@ -15,7 +15,6 @@ $(document).ready(function(){
 				} else {
 					$('#message').html('이미 사용중인 아이디 입니다.');
 				}
-				alert(data);
 			},
 			error : function(err){
 				alert('에러발생' + err);
