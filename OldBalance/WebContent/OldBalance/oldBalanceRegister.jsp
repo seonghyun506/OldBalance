@@ -22,7 +22,7 @@
 				<h2>회원 가입</h2>
 				<form action="<%= pjName %>/ObControl?cmd=input-member" method='post'>
 					<div>
-						<label for="id">ID :</label> <input name="id" id="id" type="text" />
+						<label for="id">ID :</label> <input name="id" id="id" type="text" readonly/>
 						<input name="idCheck" id="idCheck" value="중복확인" type="button"/>
 					</div>
 					<div>
@@ -39,7 +39,7 @@
 						<input name="findPost" id="findPost" type="button" value="우편번호"/>
 					</div>
 					<div>
-						<label for="addr">Address :</label> <input name="addr" id="addr" type="text"  />
+						<label for="addr">Address :</label> <input name="addr" id="addr" type="text" readonly/>
 						<input name="detailAddr" id="detailAddr" type="text" />
 					</div>
 

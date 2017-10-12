@@ -48,7 +48,6 @@ $(document).ready(function() {
 	      }
 	      
 	      if(sub) {
-	    	  alert('넘어가야 정상');
 	    	  $('form').submit();
 	      }
 	   });
