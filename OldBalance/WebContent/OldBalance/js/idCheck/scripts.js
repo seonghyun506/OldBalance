@@ -12,8 +12,10 @@ $(document).ready(function(){
 			success : function(data){
 				if(data.trim() == "0") {
 					$('#message').html('사용 가능한 아이디 입니다.');
+					$('#useid').attr('disabled',false);
 				} else {
 					$('#message').html('이미 사용중인 아이디 입니다.');
+					$('#useid').attr('disabled',true);
 				}
 			},
 			error : function(err){
