@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>oldBalanceCheckId.jsp</title>
+<title>OldBalance</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/idCheck/scripts.js" type="text/javascript"></script>
+<script src="/OldBalance/OldBalance/js/idCheck/scripts.js" type="text/javascript"></script>
 </head>
 <body>
 <h1>아이디 중복확인</h1>

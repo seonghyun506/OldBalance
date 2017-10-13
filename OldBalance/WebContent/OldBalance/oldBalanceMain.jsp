@@ -7,8 +7,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>oldBalanceMain.jsp</title>
-<link rel="stylesheet" href="./css/main/common.css" type="text/css">
+<title>OldBalance</title>
+<link rel="stylesheet" href="/OldBalance/OldBalance/css/main/common.css" type="text/css">
 
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<!--[if lt IE 9]><script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script> <![endif]-->

@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>oldBalanceFindPost.jsp</title>
-<link rel="stylesheet" href="./css/findpost/findpost.css" type="text/css"/>
+<title>OldBalance</title>
+<link rel="stylesheet" href="/OldBalance/OldBalance/css/findpost/findpost.css" type="text/css"/>
 </head>
 <body>
 <h2>우편번호 검색</h2>

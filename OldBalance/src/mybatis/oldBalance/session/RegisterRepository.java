@@ -30,7 +30,6 @@ public class RegisterRepository {
 		SqlSession sess = getSqlSessionFactory().openSession();
 		
 		try {
-			System.out.println("1");
 			int result =  sess.insert(namespace + ".insertMember", member);
 			if(result > 0) {
 				sess.commit();

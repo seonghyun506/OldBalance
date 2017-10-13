@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>header</title>
-<link rel="stylesheet" href="./css/displaycss/common.css" type="text/css">
+<title>OldBalance</title>
+<link rel="stylesheet" href="/OldBalance/OldBalance/css/displaycss/common.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(function Men(){

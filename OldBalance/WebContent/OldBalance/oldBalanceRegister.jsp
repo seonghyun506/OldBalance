@@ -6,15 +6,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> Register </title>
+<title>OldBalance</title>
 
-<link rel="stylesheet" href="./css/register/base.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="./css/register/form.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="/OldBalance/OldBalance/css/register/base.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="/OldBalance/OldBalance/css/register/form.css" type="text/css" media="screen" charset="utf-8" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/register/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
-<script src="./js/register/scripts.js" type="text/javascript"></script>
+<script src="/OldBalance/OldBalance/js/register/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+<script src="/OldBalance/OldBalance/js/register/scripts.js" type="text/javascript"></script>
 
 </head>
+
+
 <body>
 
 	<div id="container">
@@ -36,11 +38,11 @@
 						<label for="telnum">TEL:</label> <input name="telnum" id="telnum" type="text" />
 					</div>
 					<div>
-						<label for="post">Post :</label> <input name="post" id="post" type="text" />
+						<label for="post">Post :</label> <input name="post" id="post" type="text" readonly/>
 						<input name="findPost" id="findPost" type="button" value="우편번호"/>
 					</div>
 					<div>
-						<label for="addr">Address :</label> <input name="addr" id="addr" type="text" readonly/>
+						<label for="addr">Address :</label> <input name="addr" id="addr" type="text" />
 						<input name="detailAddr" id="detailAddr" type="text" />
 					</div>
 

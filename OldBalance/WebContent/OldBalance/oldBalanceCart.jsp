@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>oldBalanceCart.jsp</title>
+<title>OldBalance</title>
 </head>
 <body>
 1234

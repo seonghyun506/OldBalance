@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>OldBalance</title>
 </head>
 <body>
 회원가입 완료되었습니다.
