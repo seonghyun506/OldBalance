@@ -166,21 +166,18 @@
 					<a href="#">
 						<img src="./images/main/banner1.jpg" alt=''>
 						<p>NB WOMEN ACTIVE CITY</p>
-						<span>SHOP NOW ▶</span>
 					</a>
 				</div>
 				<div>
 					<a href="#">
 						<img src="./images/main/banner2.jpg" alt="" >
 						<p>NEW SCHOOL RETRO SPORTS</p>
-						<span>SHOP NOW ▶</span>
 					</a>
 				</div>
 				<div>
 					<a href="#">
 						<img src="./images/main/banner3.jpg" alt="" >
 						<p>CLASSIC AUTHENTIC WEAR</p>
-						<span>SHOP NOW ▶</span>
 					</a>
 				</div>
 			</div>
