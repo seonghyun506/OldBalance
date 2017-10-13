@@ -67,7 +67,7 @@
 	<!-- Gmenu(s) -->
 	<header> 
 		<nav id='Gmenu'>
-			<h1><img src='./images/header/nb_logo.png' alt='뉴발란스 로고 이미지' /></h1>
+			<img class="logo" src='./images/header/nb_logo.png' alt='뉴발란스 로고 이미지' />
 			<ul>
 				<!-- 메인메뉴(s) -->
 				<li class='Men'>

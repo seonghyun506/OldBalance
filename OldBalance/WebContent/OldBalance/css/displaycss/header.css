@@ -11,7 +11,7 @@ header{width:100%; background:#000; opacity:0.8;}
 
 /******************************************************************Gmenu*/
 #Gmenu{width:1000px; height:50px; line-height:50px; margin:0 auto; overflow:hidden; padding-left:10px;}
-#Gmenu h1{float:left;}
+#Gmenu .logo{padding-top:8px; display:block; float:left;}
 #Gmenu ul li{float:left; margin-left:65px;}
 #Gmenu ul li a{font-family:'Nanum Squair'; font-size:14px; color:#fff;}
 #Gmenu ul li a:hover{color:#e92525; transition:0.3s; -webkit-transitionb:0.3s;}
