@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+h2{
+	color:red;
+}
+.myinfo{
+	border:3px solid #ccc;
+	width:700px;
+	}
+td{
+	text-align:center;
+}
+.myorder > table{
+	border:3px solid #ccc;
+}
+
