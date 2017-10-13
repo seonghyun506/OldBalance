@@ -190,6 +190,9 @@
 		</section>
 		
 	<!-- //content -->
+	<div id='footer'>
+		<img src='./images/main/footer.jpg'>
+	</div>
 	<!--slider-->
 	<script src="./js/main/jquery.min.js"></script>
 	<script src="./js/main/jquery.bxslider.js"></script>
