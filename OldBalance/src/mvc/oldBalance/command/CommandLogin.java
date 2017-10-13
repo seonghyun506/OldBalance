@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import mvc.oldBalance.model.*;
 import mybatis.oldBalance.service.*;
 
-public class CommandLogin implements Command {
+public class CommandLogin implements MainCommand {
 	private String next;
 	
 	public CommandLogin(String _next) {

@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import mvc.oldBalance.model.*;
 import mybatis.oldBalance.service.*;
 
-public class CommandOrder implements Command {
+public class CommandOrder implements OrderCommand {
 	private String next;
 	
 	public CommandOrder(String _next) {

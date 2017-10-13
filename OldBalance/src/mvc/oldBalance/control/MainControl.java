@@ -10,17 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mvc.oldBalance.command.CommandNull;
-import mvc.oldBalance.command.CommandRegister;
-import mvc.oldBalance.command.Command;
+import mvc.oldBalance.command.MainCommand;
+import mvc.oldBalance.command.CommandLogin;
+import mvc.oldBalance.command.CommandMain;
 import mvc.oldBalance.command.CommandException;
 
-public class OldBalanceControl extends HttpServlet{
+public class MainControl extends HttpServlet{
 	private HashMap commandMap;
 	private String	jspDir = "/OldBalance/";
 	private String  error = "error.jsp";
 	
 	
-	public OldBalanceControl() {
+	public MainControl() {
 		super();
 		initCommand();
 	}
@@ -28,7 +29,7 @@ public class OldBalanceControl extends HttpServlet{
 	private void initCommand() {
 		commandMap = new HashMap();
 		
-		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
+//		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -49,12 +50,12 @@ public class OldBalanceControl extends HttpServlet{
 			cmdKey = "input-Form";
 		}
 
-		Command cmd = null;
+		MainCommand cmd = null;
 
 		try{
 			
 			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (Command)commandMap.get( cmdKey);
+				cmd = (MainCommand)commandMap.get( cmdKey);
 			}else{
 				throw new CommandException("지정할 명령어가 존재하지 않음");
 			}

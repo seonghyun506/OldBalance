@@ -12,6 +12,51 @@
   
   
 <servlet>
+	<servlet-name>Register</servlet-name>
+	<servlet-class>mvc.oldBalance.control.RegisterControl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Register</servlet-name>
+	<url-pattern>/Register</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Product</servlet-name>
+	<servlet-class>mvc.oldBalance.control.ProductControl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Product</servlet-name>
+	<url-pattern>/Product</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Order</servlet-name>
+	<servlet-class>mvc.oldBalance.control.OrderControl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Order</servlet-name>
+	<url-pattern>/Order</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>My</servlet-name>
+	<servlet-class>mvc.oldBalance.control.MyControl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>My</servlet-name>
+	<url-pattern>/My</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Main</servlet-name>
+	<servlet-class>mvc.oldBalance.control.MainControl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Main</servlet-name>
+	<url-pattern>/Main</url-pattern>
+</servlet-mapping>
+
+<servlet>
 	<servlet-name>ObControl</servlet-name>
 	<servlet-class>mvc.oldBalance.control.OldBalanceControl</servlet-class>
 </servlet>
@@ -19,6 +64,5 @@
 	<servlet-name>ObControl</servlet-name>
 	<url-pattern>/ObControl</url-pattern>
 </servlet-mapping>
-
 
 </web-app>

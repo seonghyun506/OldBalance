@@ -5,15 +5,15 @@ import java.util.List;
 import mvc.oldBalance.model.*;
 import mybatis.oldBalance.session.*;
 
-public class OldBalanceService {
-	private static OldBalanceService service;
+public class OrderService {
+	private static OrderService service;
 	
-	public static OldBalanceService getInstance() {
-		if(service == null) service = new OldBalanceService();
+	public static OrderService getInstance() {
+		if(service == null) service = new OrderService();
 		return service;
 	}
 	
-	private OldBalanceService() {}
+	private OrderService() {}
 	
 	OldBalanceRepository repo = new OldBalanceRepository();
 	

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.OrderMapper">
+
+<!-- <select id="selectAll" parameterType="HashMap" resultType="comment"> -->
+<!-- select * from comment_tab -->
+
+<!-- <where> -->
+<!-- 	<if test="cId != null"> -->
+<!-- 		comment_no = #{cId} -->
+<!-- 	</if> -->
+<!-- </where> -->
+<!-- </select> -->
+
+
+<select id="insertMember" parameterType="member">
+insert into ob_member
+values ( #{custId}, #{custPw}, #{custPost}, #{custAddr}, #{custTel}, #{custMig})
+</select>
+
+</mapper>

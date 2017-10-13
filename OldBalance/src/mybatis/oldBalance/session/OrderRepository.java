@@ -10,8 +10,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import mvc.oldBalance.model.*;
 
-public class OldBalanceRepository {
-	private String namespace = "mapper.OldBalanceMapper";
+public class OrderRepository {
+	private String namespace = "mapper.OrderMapper";
 	
 	SqlSessionFactory getSqlSessionFactory() {
 		InputStream in = null;
@@ -25,7 +25,23 @@ public class OldBalanceRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
-
+	
+//	public int insertMember(ObMember member) {
+//		SqlSession sess = getSqlSessionFactory().openSession();
+//		
+//		try {
+//			int result =  sess.insert(namespace + ".insertMember", member);
+//			if(result > 0) {
+//				sess.commit();
+//			} else {
+//				sess.rollback();
+//			}
+//			
+//			return result;
+//		} finally {
+//			sess.close();
+//		}
+//	}
 	
 //	public List<ObMember> selectComment() {
 //		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체
@@ -36,6 +52,5 @@ public class OldBalanceRepository {
 //			sess.close();
 //		}
 //	}
-	
 	
 }

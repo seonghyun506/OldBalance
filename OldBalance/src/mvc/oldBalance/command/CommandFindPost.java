@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import mvc.oldBalance.model.*;
 import mybatis.oldBalance.service.*;
 
-public class CommandFindPost implements Command {
+public class CommandFindPost implements RegisterCommand {
 	private String next;
 	
 	public CommandFindPost(String _next) {

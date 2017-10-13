@@ -21,7 +21,7 @@
 		<div id="content">
 			<div id="signup">
 				<h2>회원 가입</h2>
-				<form action="<%= pjName %>/ObControl?cmd=input-member" method='post'>
+				<form action="<%= pjName %>/Register?cmd=input-member" method='post'>
 					<div>
 						<label for="id">ID :</label> <input name="id" id="id" type="text" readonly/>
 						<input name="idCheck" id="idCheck" value="중복확인" type="button"/>

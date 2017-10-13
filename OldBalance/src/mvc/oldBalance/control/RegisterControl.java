@@ -11,16 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import mvc.oldBalance.command.CommandNull;
 import mvc.oldBalance.command.CommandRegister;
-import mvc.oldBalance.command.Command;
+import mvc.oldBalance.command.RegisterCommand;
 import mvc.oldBalance.command.CommandException;
 
-public class OldBalanceControl extends HttpServlet{
+public class RegisterControl extends HttpServlet{
 	private HashMap commandMap;
 	private String	jspDir = "/OldBalance/";
 	private String  error = "error.jsp";
 	
 	
-	public OldBalanceControl() {
+	public RegisterControl() {
 		super();
 		initCommand();
 	}
@@ -49,12 +49,12 @@ public class OldBalanceControl extends HttpServlet{
 			cmdKey = "input-Form";
 		}
 
-		Command cmd = null;
+		RegisterCommand cmd = null;
 
 		try{
 			
 			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (Command)commandMap.get( cmdKey);
+				cmd = (RegisterCommand)commandMap.get( cmdKey);
 			}else{
 				throw new CommandException("지정할 명령어가 존재하지 않음");
 			}

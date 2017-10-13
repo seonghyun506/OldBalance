@@ -10,17 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mvc.oldBalance.command.CommandNull;
-import mvc.oldBalance.command.CommandRegister;
-import mvc.oldBalance.command.Command;
+import mvc.oldBalance.command.CommandProductDetail;
+import mvc.oldBalance.command.CommandProductList;
+import mvc.oldBalance.command.CommandProductMG;
+import mvc.oldBalance.command.ProductCommand;
 import mvc.oldBalance.command.CommandException;
 
-public class OldBalanceControl extends HttpServlet{
+public class ProductControl extends HttpServlet{
 	private HashMap commandMap;
 	private String	jspDir = "/OldBalance/";
 	private String  error = "error.jsp";
 	
 	
-	public OldBalanceControl() {
+	public ProductControl() {
 		super();
 		initCommand();
 	}
@@ -28,7 +30,7 @@ public class OldBalanceControl extends HttpServlet{
 	private void initCommand() {
 		commandMap = new HashMap();
 		
-		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
+//		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -49,12 +51,12 @@ public class OldBalanceControl extends HttpServlet{
 			cmdKey = "input-Form";
 		}
 
-		Command cmd = null;
+		ProductCommand cmd = null;
 
 		try{
 			
 			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (Command)commandMap.get( cmdKey);
+				cmd = (ProductCommand)commandMap.get( cmdKey);
 			}else{
 				throw new CommandException("지정할 명령어가 존재하지 않음");
 			}

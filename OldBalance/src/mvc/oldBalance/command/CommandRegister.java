@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import mvc.oldBalance.model.*;
 import mybatis.oldBalance.service.*;
 
-public class CommandRegister implements Command {
+public class CommandRegister implements RegisterCommand {
 	private String next;
 	
 	public CommandRegister(String _next) {
@@ -27,7 +27,7 @@ public class CommandRegister implements Command {
 		member.setCustTel(request.getParameter("telnum"));
 		member.setCustMig(0);
 		
-		OldBalanceService service = OldBalanceService.getInstance();
+		RegisterService service = RegisterService.getInstance();
 		service.insertMember(member);
 		
 		return next;
