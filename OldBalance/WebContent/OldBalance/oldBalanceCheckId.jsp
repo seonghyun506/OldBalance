@@ -21,7 +21,7 @@
 
 <form class="row">
 <div class="col-xs-7 idtxt">
-<input type="text" class="form-control" placeholder="Id input here..." placeholder=".col-xs-4">
+<input type="text" id="id" class="form-control" placeholder="Id input here..." placeholder=".col-xs-4">
 </div>
 <div class="col-xs-5">
 <input type="button" id="findId" class="btn" placeholder=".col-xs-3" value="중복확인"/><br/>
