@@ -1,8 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
-<%@ page import="" %>
+<%@ page import="mybatis.oldBalance.service.ProductService" %>
+<%@ page import="mvc.oldBalance.model.ObProduct" %>
 <%
 	String projectName = "/OldBalance";
+	String cate = request.getParameter("cate");
+	List<ObProduct> mList = ProductService.getInstance().selectByMainCate(cate);
 %>
 
 <jsp:include page="header.jsp"></jsp:include>

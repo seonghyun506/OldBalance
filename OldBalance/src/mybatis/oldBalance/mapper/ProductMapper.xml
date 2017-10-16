@@ -14,12 +14,12 @@
 <!-- </select> -->
 
 
-<select id="selectByMainCate" parameterType="product" resultType="List">
+<select id="selectByMainCate" parameterType="cate" resultType="List">
 select *
 from OB_PRODUCT
 <where>
 <if test="mainCate != null">
-  main_cate=#{mainCate}
+  main_cate=#{cate}
   </if>
   </where>
 </select>
