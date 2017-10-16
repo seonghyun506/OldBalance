@@ -8,8 +8,7 @@
 <title>oldBalanceModify.jsp</title>
 <link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
 <link rel="stylesheet" href="./css/mypage/mymodify.css" type="text/css" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./js/mymodify/mymodify.js" type="text/javascript"></script>
 
 </head>
