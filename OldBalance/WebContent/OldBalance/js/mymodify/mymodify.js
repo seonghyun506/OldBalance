@@ -11,7 +11,6 @@ $(document).ready(function(){
 			year=$(this).val();
 		if(0 ==year%4 && 0!=year%100 || 0==year%400){
 			day[1]="29";
-			alert(day[month-1]);
 		}else{
 			day[1]="28";
 			$('#day').empty();
@@ -20,7 +19,6 @@ $(document).ready(function(){
 				var option = $("<option>"+count+"</option>");
 				$("#day").append(option);
 			}
-			alert(day[month-1]);
 		}
 		}
 		
@@ -42,14 +40,9 @@ $(document).ready(function(){
 					var option = $("<option>"+count+"</option>");
 					$("#day").append(option);
 				}
-				alert(day[month-1]);
 			}
 			}
 		
 	});
-	
-	
-	
-	
 	
 });
