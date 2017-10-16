@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String pjName="/TeamProject"; %>
+<% String pjName="/OldBalance"; %>
 <jsp:include page="header.jsp"></jsp:include> 
 <!DOCTYPE html>
 <html>
@@ -8,13 +8,13 @@
 <meta charset="UTF-8">
 <title> OldBalance </title>
 
-<link rel="stylesheet" href="./css/register/base.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="./css/register/form.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/register/base.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/register/form.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/bootstrap/bootstrap.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/register/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
-<script src="./js/register/scripts.js" type="text/javascript"></script>
+<script src="<%=pjName%>/OldBalance/js/register/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="<%=pjName%>/OldBalance/js/bootstrap/bootstrap.js"></script>
+<script src="<%=pjName%>/OldBalance/js/register/scripts.js" type="text/javascript"></script>
 
 </head>
 <body>
