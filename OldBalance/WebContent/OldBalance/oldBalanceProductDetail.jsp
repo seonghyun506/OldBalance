@@ -8,14 +8,112 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>OldBalance</title>
-<link rel="stylesheet" href="./css/productlist/common.css"
+<link rel="stylesheet" href="./css/productIntroduce/common.css"
 	type="text/css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="./js/productDetail/jquery.loupe.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(function() {
+		$('#test').loupe({
+			width : 200,
+			height : 200,
+			loupe : 'loupe'
+		});
+	});
+</script>
 </head>
 <body>
 	<br />
 	<br />
 	<div class="whole">
-		<h1>Main Category</h1>
+		<h2>Product Name</h2>
+		<br />
+		<div class="productImage">
+			<img id='test' alt="" src="./images/product/154.jpg" width="500"
+				height="500" />
+		</div>
+		<div class='productInfo'>
+		<div class="top">
+			<h3>Product Name</h3>
+			<br/>
+			<table>
+				<tr>
+					<td>판매가</td>
+					<td>64000원</td>
+				</tr>
+				</table>
+				<hr/>
+				<table>
+				<tr>
+					<td>적립 마일리지</td>
+					<td>3840점(6%)</td>
+				</tr>
+			</table>
+			<hr/>
+
+			<table>
+				<tr>
+					<td>컬러(Color) : Gray</td>
+				</tr>
+			</table>
+
+			<table>
+				<tr>
+					<td>사이즈(Size)</td>
+				</tr>
+				<tr>
+					<td><a>S(90)</a><a>M(95)</a> <a>L(100)</a> <a>XL(105)</a> <a>XXL(110)</a></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>수량(Qty)</td>
+				</tr>
+				<tr>
+					<td><select>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+					</select></td>
+				</tr>
+			</table>
+			<br/>
+			<table>
+				<tr>
+					<td><a>장바구니 담기</a></td>
+					<td><a>바로 주문하기</a></td>
+				</tr>
+			</table>
+			</div>
+			<br/>
+			<div class='review'>
+			<table border="1">
+				<tr>
+					<td>동의?</td>
+					<td>2017/10/16</td>
+					<td>seonghy*****</td>
+				</tr>
+				<tr>
+					<td>어보감</td>
+					<td>2017/10/16</td>
+					<td>seonghy*****</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+		
+		
+	</div>
+
+
+	<div id='footer'>
+		<img src='./images/main/footer.jpg'>
 	</div>
 </body>
 </html>
