@@ -71,6 +71,5 @@ public class MainControl extends HttpServlet{
 
 		RequestDispatcher reqDp = getServletContext().getRequestDispatcher( jspDir + nextPage );
 		reqDp.forward( request, response );
-		
 	}
 }
