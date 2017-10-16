@@ -1,14 +1,15 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String pjName="/OldBalance"; %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>OldBalance</title>
-<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-<link rel="stylesheet" href="../OldBalance/css/loginform/oldBalanceLoginForm.css" type="text/css"/>
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/loginform/oldBalanceLoginForm.css" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="../OldBalance/js/loginform/jquery.js"></script>
+<script type="text/javascript" src="<%=pjName%>/OldBalance/js/loginform/jquery.js"></script>
 
 </head>
 <body>
