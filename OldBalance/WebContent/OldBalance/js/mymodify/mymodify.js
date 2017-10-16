@@ -14,7 +14,6 @@ $(document).ready(function(){
 		}else{
 			day[1]="28";
 			$('#day').empty();
-			
 			for(var count=1; count<=day[month-1]; count++){
 				var option = $("<option>"+count+"</option>");
 				$("#day").append(option);
