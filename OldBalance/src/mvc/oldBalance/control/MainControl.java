@@ -29,7 +29,8 @@ public class MainControl extends HttpServlet{
 	private void initCommand() {
 		commandMap = new HashMap();
 		
-//		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
+		commandMap.put("login", new CommandNull("oldBalanceLogin.jsp"));
+		commandMap.put("register", new CommandNull("oldBalanceRegister.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -55,7 +56,7 @@ public class MainControl extends HttpServlet{
 		try{
 			
 			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (MainCommand)commandMap.get( cmdKey);
+				cmd = (MainCommand)commandMap.get(cmdKey);
 			}else{
 				throw new CommandException("지정할 명령어가 존재하지 않음");
 			}
