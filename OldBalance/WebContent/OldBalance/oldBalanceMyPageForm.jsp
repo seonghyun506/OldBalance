@@ -25,7 +25,7 @@
 
 </div>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div id='footer'>
 	<img src='./images/main/footer.jpg'>
 </div>
