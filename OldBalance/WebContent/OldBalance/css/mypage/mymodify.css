@@ -1,10 +1,17 @@
 @charset "UTF-8";
 
-
+input{border-radius:5px 5px 5px 5px; box-shadow:none; }
 li{list-style:none;}
 
 .post_check li .tel{width:100px;}
 section{width:100%;}
-#modify{width:1000px; margin:0 auto;}
+#modify{width:500px; margin:0 auto;}
 .mymodify{width:500px; margin:0 auto;}
-.pa_check{width:500px; margin: 0 auto;}
+.pa_check{width:500px; margin: 0 auto; padding-left:40px;}`
+.post_check{width:500px; margin: 0 auto;}
+.post_check li{margin-bottom:20px;}
+.post_check li:last-child input{margin-bottom:5px;}
+.post_check li:last-child .detail{width:100%;}
+.btn_wrap{width:500px; margin:0 auto; overflow:hidden;}
+.btn_wrap div{float:right;}
+.btn_wrap input{margin-right:10px; margin-bottom:20px;}

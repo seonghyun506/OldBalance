@@ -75,7 +75,12 @@
 						type="text" name="addr2" />
 					</li>
 				</ul>
-
+				<div class='btn_wrap'>
+					<div>
+						<input type=button value="확인" name='complete' class="btn btn-danger">
+						<input type=button value="취소" name='cancle' class="btn btn-default">
+					</div>
+				</div>
 			</form>
 		</div>
 	</section>
