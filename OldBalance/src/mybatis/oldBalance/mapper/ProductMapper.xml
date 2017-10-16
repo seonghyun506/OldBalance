@@ -14,12 +14,12 @@
 <!-- </select> -->
 
 
-<select id="selectByMainCate" parameterType="HashMap" resultType="ObProduct">
+<select id="selectByMainCate" parameterType="product" resultType="List">
 select *
 from OB_PRODUCT
 <where>
 <if test="mainCate != null">
-  #{mainCate}
+  main_cate=#{mainCate}
   </if>
   </where>
 </select>

@@ -41,9 +41,9 @@
 		<section id='quick_bar'>
 			<div class='new_best'>
 				<ul>
-					<li><a href="#"><img src='<%=pjName %>/OldBalance/images/main/men.gif' alt=''></a></li>
-					<li><a href="#"><img src='<%=pjName %>/OldBalance/images/main/women.gif' alt=''></a></li>
-					<li><a href="#"><img src='<%=pjName %>/OldBalance/images/main/kids.gif' alt=''></a></li>
+					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=men"><img src='<%=pjName %>/OldBalance/images/main/men.gif' alt=''></a></li>
+					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=women"><img src='<%=pjName %>/OldBalance/images/main/women.gif' alt=''></a></li>
+					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=kids"><img src='<%=pjName %>/OldBalance/images/main/kids.gif' alt=''></a></li>
 				</ul>
 			</div>
 		</section>
