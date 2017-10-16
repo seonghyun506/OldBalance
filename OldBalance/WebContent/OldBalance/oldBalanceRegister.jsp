@@ -60,15 +60,17 @@
 						<h3>OldBalance 개인정보 수집 및 이용에 대한 안내 (필수)</h3>
 						<textarea name="content" cols="94" rows="8">제 1 조 (목적) 이 약관은 네이버 주식회사 (이하 “회사”)가 제공하는 위치정보사업 또는 위치기반서비스사업과 관련하여 회사와 개인위치정보주체와의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다. 제 2 조 (약관 외 준칙) 이 약관에 명시되지 않은 사항은 위치정보의 보호 및 이용 등에 관한 법률, 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 전기통신기본법, 전기통신사업법 등 관계법령과 회사의 이용약관 및 개인정보처리방침, 회사가 별도로 정한 지침 등에 의합니다. 제 3 조 (서비스 내용 및 요금) ①회사는 직접 위치정보를 수집하거나 위치정보사업자인 이동통신사로부터 위치정보를 전달받아 아래와 같은 위치기반서비스를 제공합니다. 1.Geo Tagging 서비스: 게시글 등록 시점의 개인위치정보주체의 위치정보를 게시글과 함께 저장합니다. 2.위치정보를 활용한 검색결과 제공 서비스: 정보 검색을 요청하거나 개인위치정보주체 또는 이동성 있는 기기의 위치정보를 제공 시 본 위치정보를 이용한 검색결과 및 주변결과(맛집, 주변업체, 교통수단 등)를 제시합니다. 3.위치정보를 활용한 친구찾기 및 친구맺기: 현재 위치를 활용하여 친구를 찾아주거나 친구를 추천하여 줍니다. 4.연락처 교환하기: 위치정보를 활용하여 친구와 연락처를 교환할 수 있습니다.</textarea><br/>
 						<input class='agree' name="agree" type="checkbox" value="na" />동의합니다.<br />
-						<h3><input class='agree' name="agree" type="checkbox" value="na" />이벤트 등 프로모션 알림 메일 수신</h3><br />
-						<hr />
-						<hr />
+						<h3><input class='agree' name="agree" type="checkbox" value="na" />이벤트 등 프로모션 알림 메일 수신</h3>
+						<h2 class="title"></h2>
 						<input class="check-all" name="agree" type="checkbox" /><span>위 조항 모두 동의합니다.</span> <br />
 					</div>
-
-					<div>
-						<br/><br/><input type="reset" value="가입취소" /> <input id='join' type="button" value="가입하기" />
-					</div>
+					
+					<div><br/><br/><br/></div>
+					
+					<br/><br/> <p class="text-center">
+						<input type="reset" value="가입취소" class="btn btn-danger"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input id='join' type="button" value="가입하기" class="form-control"/>
+					</p>
 
 				</form>
 			</div>
