@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.whole{
+	margin-right:15%;
+	margin-left:15%;
+}
+.sort{
+	height:40px;
+	background-color:black;
+	padding-top:18px;
+	color:white;
+}
+.sort a{
+	color:white;
+}
+
+.pageTable{
+padding-bottom: 5px;
+}
+
+.pageTable td{
+	padding-left:2.5px;
+	padding-right:2.5px;
+}
+#page{
+	float:right;
+}
+.productTable{
+	align:center;
+	border-color: black;
+	border: 1;
+}
