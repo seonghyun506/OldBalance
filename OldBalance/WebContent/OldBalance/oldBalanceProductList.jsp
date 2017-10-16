@@ -8,6 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>OldBalance</title>
+
+<link rel="stylesheet" href="./css/main/common.css" type="text/css">
 <link rel="stylesheet" href="./css/productlist/common.css"
 	type="text/css">
 </head>
@@ -42,6 +44,11 @@
 		</tr>
 		</table>
 		</div>
+	</div>
+	
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<div id='footer'>
+		<img src='./images/main/footer.jpg'>
 	</div>
 </body>
 </html>
