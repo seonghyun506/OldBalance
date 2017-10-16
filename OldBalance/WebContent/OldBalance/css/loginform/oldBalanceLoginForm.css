@@ -2,19 +2,17 @@
 
 h2{margin-top:20px;}
 #login_form{width:100%;}
-#form_wrap{width:510px; margin:0 auto;}
-.btn_wrap {}
+#form_wrap{width:350px; margin:0 auto;}
 .ID {margin-right:52px;}
 .SaveID{margin-left:70px;}
-.Cust > label{margin-left:30px;}
 .Cust .identer{}
 .Cust .pwenter{}
 .Guest > label{margin-left:50px;}
-.Guest input{float:right; margin-right:70px;}
+.Guest input{float:right; margin-bottom:10px;}
 .Guest input:last-child{margin-top:5px;}
 .Guest p{font-size:14px;}
 /* tab ************************/
-.tab_bar{width:510px;}
+.tab_bar{width:350px;}
 .tab_bar label{border:5px solid #e5e5e5; cursor:pointer; padding:5px; margin-bottom:2px; background:#ccc;}
 .tab_bar .select{background:#fff;}
 #Cust,
@@ -22,12 +20,13 @@ h2{margin-top:20px;}
 
 /* formcust */
 .identer,
-.pwenter{width:200px; margin-left:20px;}
+.pwenter{}
 
 /* 'btn_wrap' */
-.btn_wrap{margin:15px 0 0 35px;}
-.btn_wrap .SaveID{margin-bottom:20px; margin-left:145px;}
-.btn_wrap input{margin-right:5px;}
+.btn_wrap{}
+.btn_wrap .SaveID{margin-bottom:20px;}
+.btn_wrap .b{margin-right:9px; font-size:11px; width:30%;}
+.btn_wrap #login_btn{width:72%; margin-left:10px; margin-bottom:10px;}
 /**/
-form{border:10px solid #e5e5e5; width:500px; height:270px; padding:35px;}
+form{border:10px solid #e5e5e5; width:350px; height:275px; padding:20px;}
 h2{color:red;}

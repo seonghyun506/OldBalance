@@ -22,28 +22,28 @@
 			<input type="button" name="Guest" value="비회원 로그인 " id='Guest'/><br/>
 		</div>
 		<form class="Cust">
-			<label class="ID">ID</label>
-			<input type="text" name="ID" class='identer'/><br/>
-			<label class="PWD">Password</label>
-			<input type="text" name="PWD" class='pwenter'/><br/>
-			<!-- id / password -->
-			<div class='btn_wrap'>
-				<input type="checkbox" name="SaveID" class="SaveID"/>ID 저장 
-				<input type="button" name="Login" value="Login" class="btn btn-danger"/><br/>
-				<input type="button" name="register" value="회원가입" class="btn btn-primary"/>
-				<input type="button" name="SearchID" value="ID 찾기" class="btn btn-primary"/>
-				<input type="button" name="SearchPWD" value="PWD 찾기" class="btn btn-primary"/>
+			<div class='form-group'>
+				<input type="text" name="ID" class='identer form-control'  placeholder="Id" required autofocus/><br/>
+				<input type="text" name="PWD" class='pwenter form-control' placeholder="Password" required/><br/>
+				
+				<!-- id / password -->
 			</div>
+			<div class='btn_wrap'>
+					<input type="checkbox" name="SaveID" class="SaveID"/>ID 저장 
+					<input type="button" name="Login" value="Login" class="btn btn-danger" id='login_btn'/><br/>
+					<input type="button" name="register" value="회원가입" class="btn btn-default b col-xs-3"/>
+					<input type="button" name="SearchID" value="ID 찾기" class="btn btn-default b col-xs-3"/>
+					<input type="button" name="SearchPWD" value="PWD 찾기" class="btn btn-default b col-xs-3"/>
+				</div>
 		</form>
 		<form class="Guest">
 			<p>비회원구매 시 입력했던 구매자명/비밀번호/연락처로  로그인 해주세요.</p>
-			<label class="GusetName">구매자 명</label>
-			<input type="text" name="GuestName"/><br/>
-			<label class="GuestTell">연락처</label>
-			<input type="text" name="GuestTell"/><br/>
-			<label class="GuestPWD">비밀번호</label>
-			<input type="text" name="GuestPWD"/><br/>
-			<input type="button" name="GuestLogin" value="로그인" class="btn btn-danger"/>
+			<div class='form-group'>
+				<input type="text" name="GuestName" class='form-control' placeholder="구매자명" required autofocus/><br/>
+				<input type="text" name="GuestTell" class='form-control' placeholder="비밀번호" required /><br/>
+				<input type="text" name="GuestPWD" class='form-control'  placeholder="연락처" required /><br/>
+				<input type="button" name="GuestLogin" value="로그인" class="btn btn-danger"/>
+			</div>
 		</form>
 	</div>
 </section>
