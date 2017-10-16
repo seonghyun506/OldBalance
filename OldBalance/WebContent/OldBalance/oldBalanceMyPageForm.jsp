@@ -15,7 +15,7 @@
 
 <div id="myForm">
 <br/><br/>
-<h1 class='text-center'> 개인정보 수정이 완료되었습니다. </h1><br/><br/><br/>><br/><br/>
+<h1 class='text-center'> 개인정보 수정이 완료되었습니다. </h1><br/><br/><br/><br/><br/>
 
 <hr/>
 <p class="text-center">
