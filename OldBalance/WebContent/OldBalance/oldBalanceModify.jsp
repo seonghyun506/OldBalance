@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oldBalanceModify.jsp</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 <link rel="stylesheet" href="./css/mypage/mymodify.css" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./js/mymodify/mymodify.js" type="text/javascript"></script>
@@ -45,9 +46,9 @@ for(int i=2000;i<=2017; i++){
 </div>
 <hr/>
 <div>
-기존 비밀번호 <input type="text" name="password"/><br/>
-새 비밀변호 <input type="text"/><br/>
-새 비밀번호 확인 <input type="text"/><br/>
+<pre>기존 비밀번호       <input type="text" name="password"/><br/></pre> 
+<pre>새 비밀변호        <input type="text"/><br/></pre> 
+<pre>새 비밀번호 확인   <input type="text"/><br/></pre> 
 </div>
 <hr/>
 <ui>
@@ -55,7 +56,7 @@ for(int i=2000;i<=2017; i++){
 휴대 전화번호<input type="text" name="firstnum" class="tel"/>-<input type="text" name="secondnum" class="tel"/>-<input type="text" name="thirdnum" class="tel"/>
 </li>
 <li>
-주소 (우편번호) <input type="text" name="postnum"/> <input type="button" name="postsearch" value="우편번호 찾기"/>
+주소 (우편번호) <input type="text" name="postnum"/> <input class="btn btn-success" type="button" name="postsearch" value="우편번호 찾기"/>
 </li>
 <li>
 주소 (상세입력) <input type="text" name="addr1" disabled /> <input type="text" name="addr2"/>
