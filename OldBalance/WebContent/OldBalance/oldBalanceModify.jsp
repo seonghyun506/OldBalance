@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-  
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,12 +36,18 @@
 								<%
 									}
 								%>
-						</select> 년 <select id="month">
+						</select>년 
+						<select id="month">
 								<option>선택</option>
-		
-								<option></option>
-		
-						</select> 월 <select id="day">
+								<%
+									for (int i = 1; i <= 12; i++) {
+								%>
+								<option value="<%=i%>"><%=i%></option>
+								<%
+									}
+								%>
+						</select> 월
+						 <select id="day">
 								<option>선택</option>
 						</select> 일
 						</li>
@@ -70,7 +76,7 @@
 						type="text" name="addr2" />
 					</li>
 				</ul>
-		
+
 			</form>
 		</div>
 	</section>
