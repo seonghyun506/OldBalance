@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oldBalanceMyPage.jsp</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
 <link rel="stylesheet" href="./css/mypage/mypage.css" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./js/mymodify/mypage.js" type="text/javascript"></script>
@@ -16,6 +16,7 @@
 <h2>My Page</h2>
 
 <form class="myinfo">
+
 <table class="table table-striped table-inverse">
 <tr>
 <th rowspan="2">나의 회원정보</th>
