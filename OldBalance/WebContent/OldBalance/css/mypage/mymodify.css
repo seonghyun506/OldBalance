@@ -1,23 +1,10 @@
 @charset "UTF-8";
 
-input.tel{
-	width:50px;
-}
-h2{
-	color:red;
-}
-ul{
-	background:#333;
-}
-li{
-	color:white;
-}
-div{
-	background:gray;
-}
-pre{
-	color:white;
-}
-form{
-	background:#8d98a3;
-}
+
+li{list-style:none;}
+
+.post_check li .tel{width:100px;}
+section{width:100%;}
+#modify{width:1000px; margin:0 auto;}
+.mymodify{width:500px; margin:0 auto;}
+.pa_check{width:500px; margin: 0 auto;}
