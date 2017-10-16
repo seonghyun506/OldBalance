@@ -1,12 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String pjName="/OldBalance"; %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>OldBalance</title>
-<link rel="stylesheet" href="/OldBalance/OldBalance/css/displaycss/common.css" type="text/css">
+<title> OldBalance </title>
+<link rel="stylesheet" href="<%=pjName %>/OldBalance/css/displaycss/common.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="<%=pjName %>/OldBalance/js/main/mainControl.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function Men(){
 		$('.sho').hide();
@@ -57,8 +59,8 @@
 	<div id='top_nav'>
 		<nav>
 			<ul>
-				<li><a href='#'>로그인</a></li>
-				<li><a href='#'>회원가입</a></li>
+				<li><a href="<%= pjName %>/Main?cmd=login">로그인</a></li>
+				<li><a href="<%= pjName %>/Main?cmd=register">회원가입</a></li>
 				<li><a href='#'>장바구니</a></li>
 				<li><a href='#'>마이페이지</a></li>
 			</ul>
@@ -67,7 +69,7 @@
 	<!-- Gmenu(s) -->
 	<header> 
 		<nav id='Gmenu'>
-			<img class="logo" src='./images/header/nb_logo.png' alt='뉴발란스 로고 이미지' />
+			<img class="logo" src='<%=pjName %>/OldBalance/images/header/nb_logo.png' alt='뉴발란스 로고 이미지' />
 			<ul>
 				<!-- 메인메뉴(s) -->
 				<li class='Men'>
@@ -89,7 +91,7 @@
 				<li class='sale'>
 					<a href='#'>Sale</a>
 				</li>
-				<li class='search'><input type='text' name='search' id='search' placeholder='574s'><a href='#'><img src="./images/header/btn_search.png" /></a></li>
+				<li class='search'><input type='text' name='search' id='search' placeholder='574s'><a href='#'><img src="<%=pjName %>/OldBalance/images/header/btn_search.png" /></a></li>
 				<!-- 메인메뉴(e) -->
 			</ul>
 		</nav>
@@ -168,9 +170,9 @@
 		</nav>
 		<nav class='sub1_banner'>
 			<ul>
-				<li><a href='#'><img src='./images/header/m_banner.jpg' alt='신발'></a></li>
-				<li><a href='#'><img src='./images/header/m_banner2.jpg' alt='의류'></a></li>
-				<li><a href='#'><img src='./images/header/m_banner3.jpg' alt='키드'></a></li>
+				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner.jpg' alt='신발'></a></li>
+				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner2.jpg' alt='의류'></a></li>
+				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner3.jpg' alt='키드'></a></li>
 			</ul>
 		</nav>
 	</section>
@@ -251,8 +253,8 @@
 		</nav>
 		<nav class='sub1_banner'>
 			<ul>
-				<li><a href='#'><img src='./images/header/m_banner1_1.jpg' alt='여성의류프로모션'></a></li>
-				<li><a href='#'><img src='./images/header/m_banner_w.png' alt='여성의류프로모션'></a></li>
+				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner1_1.jpg' alt='여성의류프로모션'></a></li>
+				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner_w.png' alt='여성의류프로모션'></a></li>
 			</ul>
 		</nav>
 	</section>
@@ -269,7 +271,7 @@
 				<li><a href='#'>17F/W WIZARD</a></li>
 				<li><a href='#'>온라인 단독상품</a></li>
 				<li><a href='#'>베이비 라인</a></li>
-				<li><a href='#'><img src='./images/header/khd.jpg' alt='kid후드xl' /><br>[온라인한정]후드티 세트</a></li>
+				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/khd.jpg' alt='kid후드xl' /><br>[온라인한정]후드티 세트</a></li>
 			</ul>
 			<!-- 신발 -->
 			<ul>
@@ -316,8 +318,8 @@
 		</nav>
 		<nav class='sub1_banner'>
 			<ul>
-				<li><a href='#'><img src='./images/header/m_banner2_1.jpg' alt='베이비프로모션'></a></li>
-				<li><a href='#'><img src='./images/header/m_banner2_2.jpg' alt='베이비프로모션'></a></li>
+				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner2_1.jpg' alt='베이비프로모션'></a></li>
+				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner2_2.jpg' alt='베이비프로모션'></a></li>
 			</ul>
 		</nav>
 	</section>
