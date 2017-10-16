@@ -32,13 +32,14 @@ for(int i=2000;i<=2017; i++){
 년
 <select id="month">
 <option>선택</option>
-
-<option></option>
-
+<%
+for(int i=1;i<=12; i++){
+%>
+<option value="<%=i%>"><%=i%></option>
+<%} %>
 </select>
 월
 <select id="day">
-<option>선택</option>
 </select>
 일
 </li>
