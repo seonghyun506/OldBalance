@@ -41,7 +41,7 @@
 			<div class='form-group'>
 				<input type="text" name="GuestName" class='form-control' placeholder="구매자명" required autofocus/><br/>
 				<input type="text" name="GuestTell" class='form-control' placeholder="비밀번호" required /><br/>
-				<input type="text" name="GuestPWD" class='form-control'  placeholder="연락처" required /><br/>
+				<input type="text" name="GuestPWD" class='form-control'  placeholder="구매자명" required /><br/>
 				<input type="button" name="GuestLogin" value="로그인" class="btn btn-danger"/>
 			</div>
 		</form>
