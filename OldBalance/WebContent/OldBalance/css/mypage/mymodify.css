@@ -3,3 +3,21 @@
 input.tel{
 	width:50px;
 }
+h2{
+	color:red;
+}
+ul{
+	background:#333;
+}
+li{
+	color:white;
+}
+div{
+	background:gray;
+}
+pre{
+	color:white;
+}
+form{
+	background:#8d98a3;
+}
