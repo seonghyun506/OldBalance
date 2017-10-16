@@ -42,7 +42,7 @@
 		<section id='quick_bar'>
 			<div class='new_best'>
 				<ul>
-					<li><a href="<%=projectName %>/Product?cmd=product-list&cate=men"><img src='./images/main/men.gif' alt=''></a></li>
+					<li><a href="<%=projectName %>/Product?cmd=product-list&cate=men"><img src='./images/main/men.gif' alt='123'></a></li>
 					<li><a href="<%=projectName %>/Product?cmd=product-list&cate=women"><img src='./images/main/women.gif' alt=''></a></li>
 					<li><a href="<%=projectName %>/Product?cmd=product-list&cate=kids"><img src='./images/main/kids.gif' alt=''></a></li>
 				</ul>
