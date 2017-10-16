@@ -14,9 +14,14 @@
 <!-- </select> -->
 
 
-<select id="insertMember" parameterType="member">
-insert into ob_member
-values ( #{custId}, #{custPw}, #{custPost}, #{custAddr}, #{custTel}, #{custMig})
+<select id="selectByMainCate" parameterType="HashMap" resultType="ObProduct">
+select *
+from OB_PRODUCT
+<where>
+<if test="mainCate != null">
+  #{mainCate}
+  </if>
+  </where>
 </select>
 
 </mapper>
