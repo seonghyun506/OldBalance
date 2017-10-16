@@ -15,7 +15,11 @@ public class ProductService {
 	
 	private ProductService() {}
 	
-	OldBalanceRepository repo = new OldBalanceRepository();
+	ProductRepository repo = new ProductRepository();
+	
+	public List<ObProduct> selectByMainCate(ObProduct product) {
+		return repo.selectByMainCate(product);
+	}
 	
 //	public int insertMember(ObMember member) {
 //		return repo.insertMember(member);

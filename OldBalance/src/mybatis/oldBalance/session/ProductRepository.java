@@ -43,14 +43,14 @@ public class ProductRepository {
 //		}
 //	}
 	
-//	public List<ObMember> selectComment() {
-//		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체
-//		// JDBC의 연결객체 얻어오기 -> SqlSession
-//		try {
-//			return sess.selectList(namespace + ".selectAll");
-//		} finally {
-//			sess.close();
-//		}
-//	}
+	public List<ObProduct> selectByMainCate(ObProduct product) {
+		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectList(namespace + ".selectByMainCate", product);
+		} finally {
+			sess.close();
+		}
+	}
 	
 }

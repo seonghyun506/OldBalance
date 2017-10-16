@@ -30,7 +30,8 @@ public class ProductControl extends HttpServlet{
 	private void initCommand() {
 		commandMap = new HashMap();
 		
-//		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
+		commandMap.put("product-list", new CommandProductList("oldBalanceProductList.jsp"));
+		
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -48,7 +49,7 @@ public class ProductControl extends HttpServlet{
 		String nextPage = "";
 		String cmdKey	= request.getParameter("cmd");
 		if( cmdKey == null ){
-			cmdKey = "input-Form";
+			cmdKey = "product-list";
 		}
 
 		ProductCommand cmd = null;
