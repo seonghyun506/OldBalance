@@ -1,49 +1,55 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String pjName="/OldBalance"; %>
+<% String pjName="/TeamProject"; %>
 <jsp:include page="header.jsp"></jsp:include> 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>OldBalance</title>
+<title> OldBalance </title>
 
-<link rel="stylesheet" href="/OldBalance/OldBalance/css/register/base.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="/OldBalance/OldBalance/css/register/form.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="./css/register/base.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="./css/register/form.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/OldBalance/OldBalance/js/register/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
-<script src="/OldBalance/OldBalance/js/register/scripts.js" type="text/javascript"></script>
+<script src="./js/register/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+<script src="./js/register/scripts.js" type="text/javascript"></script>
 
 </head>
-
-
 <body>
 
 	<div id="container">
 		<div id="content">
-			<div id="signup">
+			<div id="signup" class="form-inline">
 				<h2>회원 가입</h2>
 				<form action="<%= pjName %>/Register?cmd=input-member" method='post'>
 					<div>
-						<label for="id">ID :</label> <input name="id" id="id" type="text" readonly/>
-						<input name="idCheck" id="idCheck" value="중복확인" type="button"/>
+						<label for="id">ID :</label> <input name="id" id="id"
+						placeholder="Click Button" type="text" class="form-control" readonly/>
+						<input name="idCheck" id="idCheck" value="중복확인" class="form-control" type="button"/>
 					</div>
 					<div>
-						<label for="password">Password :</label> <input name="password" id="password" type="password" />
+						<label for="password">Password :</label> <input class="form-control"
+						placeholder="Password" name="password" id="password" type="password" />
 					</div>
 					<div>
-						<label for="passconf">Check Password :</label> <input name="passconf" id="passconf" type="password" />
+						<label for="passconf">Check Password :</label> <input class="form-control"
+						placeholder="Check Password" name="passconf" id="passconf" type="password" />
 					</div>
 					<div>
-						<label for="telnum">TEL:</label> <input name="telnum" id="telnum" type="text" />
+						<label for="telnum">TEL:</label> <input class="form-control"
+						placeholder="Phone Number" name="telnum" id="telnum" type="text" />
 					</div>
 					<div>
-						<label for="post">Post :</label> <input name="post" id="post" type="text" readonly/>
-						<input name="findPost" id="findPost" type="button" value="우편번호"/>
+						<label for="post">Post :</label> <input class="form-control"  name="post"
+						placeholder="Click Button" id="post" type="text" readonly/>
+						<input name="findPost" id="findPost" class="form-control" type="button" value="우편번호"/>
 					</div>
 					<div>
-						<label for="addr">Address :</label> <input name="addr" id="addr" type="text" />
-						<input name="detailAddr" id="detailAddr" type="text" />
+						<label for="addr">Address :</label> <input class="form-control" name="addr" id="addr" type="text" readonly/>
+						<input name="detailAddr" class="form-control" id="detailAddr"
+						placeholder="detail Address" type="text" />
 					</div>
 
 					<div class="stats">

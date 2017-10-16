@@ -56,9 +56,13 @@ $(document).ready(function() {
 	    	  $('form').submit();
 	      }
 	   });
-	$('#idCheck').click(function(){
-		windowObj=window.open("oldBalanceCheckId.jsp","중복 확인","width=500, height=500");
 	
+	$('#findPost').click(function() {
+		windowObj=window.open("oldBalanceFindPost.jsp","중복 확인","width=650, height=550");
+	});
+	
+	$('#idCheck').click(function(){
+		windowObj=window.open("oldBalanceCheckId.jsp","중복 확인","width=460, height=350");
 	});
 	
 });
