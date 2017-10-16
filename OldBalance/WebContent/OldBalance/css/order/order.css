@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+#payment {
+	float: right;
+}
+
+.caption {
+	width: 500px;
+	height: 250px;
+}
+
+.guide {
+	width: 250px;
+	height: 150px;
+}
+h2{
+	color:red;
+}
+.payment{
+	
+}
+.btn-danger{
+	width:100%;
+}
+.btn-info{
+	width:100%;
+}
