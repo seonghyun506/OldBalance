@@ -24,7 +24,7 @@ public class MainControl extends HttpServlet{
 	public MainControl() {
 		super();
 		initCommand();
-	}
+	} 
 	
 	private void initCommand() {
 		commandMap = new HashMap();
