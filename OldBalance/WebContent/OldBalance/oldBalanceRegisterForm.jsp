@@ -1,15 +1,16 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String pjName="/OldBalance"; %>
 <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> OldBalance </title>
-<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-<link rel="stylesheet" href="./css/main/common.css" type="text/css">
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/main/common.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="<%=pjName%>/OldBalance/js/bootstrap/bootstrap.js"></script>
 </head>
 <body>
 
@@ -27,7 +28,7 @@
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div id='footer'>
-	<img src='./images/main/footer.jpg'>
+	<img src='<%=pjName%>/OldBalance/images/main/footer.jpg'>
 </div>
 </body>
 </html>
