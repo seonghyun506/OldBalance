@@ -5,20 +5,20 @@ import java.util.List;
 import mvc.oldBalance.model.*;
 import mybatis.oldBalance.session.*;
 
-public class MainService {
-	private static MainService service;
+public class MyPageService {
+	private static MyPageService service;
 	
-	public static MainService getInstance() {
-		if(service == null) service = new MainService();
+	public static MyPageService getInstance() {
+		if(service == null) service = new MyPageService();
 		return service;
 	}
 	
-	private MainService() {}
+	private MyPageService() {}
 	
-	MainRepository repo = new MainRepository();
+	MyPageRepository repo = new MyPageRepository();
 	
-	public int checkMember(String id, String pwd) {
-		return repo.checkMember(id, pwd);
+	public List<ObMember> selectMyPage(String id) {
+		return repo.selectMyPage(id);
 	}
 	
 //	public int insertMember(ObMember member) {

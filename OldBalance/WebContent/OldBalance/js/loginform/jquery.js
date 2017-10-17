@@ -20,7 +20,12 @@ $(document).ready(function(){
 		$(this).css('background','#fff');
 		$('.guest').css('background','#ccc');
 	});
+	
 	$('input[name="register"]').click(function(){
 		location.href = '/OldBalance/Main?cmd=register';
 	});
+	
+	$('input[name="Login"]').click(function() {
+		$('#cust').submit();
+	})
 });

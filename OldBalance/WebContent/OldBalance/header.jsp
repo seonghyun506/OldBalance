@@ -1,6 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% String pjName="/OldBalance"; %>
+<%
+String id="asdf";
+session.setAttribute("id", id);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +66,7 @@
 				<li><a href="<%= pjName %>/Main?cmd=login">로그인</a></li>
 				<li><a href="<%= pjName %>/Main?cmd=register">회원가입</a></li>
 				<li><a href='#'>장바구니</a></li>
-				<li><a href='#'>마이페이지</a></li>
+				<li><a href='<%= pjName %>/MyPage?cmd=mypage&id=asdf'>마이페이지</a></li>
 			</ul>
 		</nav>
 	</div>

@@ -10,8 +10,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import mvc.oldBalance.model.*;
 
-public class MainRepository {
-	private String namespace = "mapper.MainMapper";
+public class MyPageRepository {
+	private String namespace = "mapper.MyPageMapper";
 	
 	SqlSessionFactory getSqlSessionFactory() {
 		InputStream in = null;
@@ -24,18 +24,6 @@ public class MainRepository {
 		
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
-	}
-	
-	public Integer checkMember(String id, String pwd) {
-		SqlSession sess = getSqlSessionFactory().openSession();
-		try {
-			HashMap hash = new HashMap();
-			hash.put("id", id);
-			hash.put("password", pwd);
-			return sess.selectOne(namespace + ".checkMember", hash);
-		} finally {
-			sess.close();
-		}
 	}
 	
 //	public int insertMember(ObMember member) {
@@ -55,14 +43,14 @@ public class MainRepository {
 //		}
 //	}
 	
-//	public List<ObMember> selectComment() {
-//		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체
-//		// JDBC의 연결객체 얻어오기 -> SqlSession
-//		try {
-//			return sess.selectList(namespace + ".selectAll");
-//		} finally {
-//			sess.close();
-//		}
-//	}
+	public List<ObMember> selectMyPage(String id) {
+		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectList(namespace + ".selectMyPage", id);
+		} finally {
+			sess.close();
+		}
+	}
 	
 }

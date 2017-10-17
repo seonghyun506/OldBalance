@@ -162,19 +162,19 @@
 			<div class="ba_1">
 				<h3 class='title'>New Balance</h3>
 				<div>
-					<a href="#">
+					<a href="http://nbkorea.com/collection/activecity/">
 						<img src="<%=pjName %>/OldBalance/images/main/banner1.jpg" alt=''>
 						<p>NB WOMEN ACTIVE CITY</p>
 					</a>
 				</div>
 				<div>
-					<a href="#">
+					<a href="http://nbkorea.com/collection/wizard_down/">
 						<img src="<%=pjName %>/OldBalance/images/main/banner2.jpg" alt="" >
 						<p>NEW SCHOOL RETRO SPORTS</p>
 					</a>
 				</div>
 				<div>
-					<a href="#">
+					<a href="http://nbkorea.com/collection/classicwear/">
 						<img src="<%=pjName %>/OldBalance/images/main/banner3.jpg" alt="" >
 						<p>CLASSIC AUTHENTIC WEAR</p>
 					</a>

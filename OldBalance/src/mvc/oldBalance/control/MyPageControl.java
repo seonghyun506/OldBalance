@@ -10,19 +10,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mvc.oldBalance.command.CommandNull;
-import mvc.oldBalance.command.MainCommand;
-import mvc.oldBalance.command.CommandLogin;
-import mvc.oldBalance.command.CommandMain;
-import mvc.oldBalance.command.CommandMyPage;
+import mvc.oldBalance.command.CommandProductDetail;
+import mvc.oldBalance.command.CommandProductList;
+import mvc.oldBalance.command.CommandProductMG;
+import mvc.oldBalance.command.MyPageCommand;
+import mvc.oldBalance.command.ProductCommand;
 import mvc.oldBalance.command.CommandException;
+import mvc.oldBalance.command.CommandMyPage;
 
-public class MainControl extends HttpServlet{
+public class MyPageControl extends HttpServlet{
 	private HashMap commandMap;
 	private String	jspDir = "/OldBalance/";
 	private String  error = "error.jsp";
 	
 	
-	public MainControl() {
+	public MyPageControl() {
 		super();
 		initCommand();
 	}
@@ -30,9 +32,7 @@ public class MainControl extends HttpServlet{
 	private void initCommand() {
 		commandMap = new HashMap();
 		
-		commandMap.put("login", new CommandNull("oldBalanceLogin.jsp"));
-		commandMap.put("register", new CommandNull("oldBalanceRegister.jsp"));
-		commandMap.put("loginCheck", new CommandLogin("oldBalanceMain.jsp"));
+		commandMap.put("mypage", new CommandMyPage("oldBalanceMyPage.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -50,15 +50,15 @@ public class MainControl extends HttpServlet{
 		String nextPage = "";
 		String cmdKey	= request.getParameter("cmd");
 		if( cmdKey == null ){
-			cmdKey = "input-Form";
+			cmdKey = "mypage";
 		}
 
-		MainCommand cmd = null;
+		MyPageCommand cmd = null;
 
 		try{
 			
 			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (MainCommand)commandMap.get(cmdKey);
+				cmd = (MyPageCommand)commandMap.get( cmdKey);
 			}else{
 				throw new CommandException("지정할 명령어가 존재하지 않음");
 			}
