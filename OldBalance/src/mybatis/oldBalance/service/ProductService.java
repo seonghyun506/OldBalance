@@ -21,6 +21,9 @@ public class ProductService {
 		return repo.selectByMainCate(cate);
 	}
 	
+	public ObProduct selectById(String id) {
+		return repo.selectById(id);
+	}
 //	public int insertMember(ObMember member) {
 //		return repo.insertMember(member);
 //	}

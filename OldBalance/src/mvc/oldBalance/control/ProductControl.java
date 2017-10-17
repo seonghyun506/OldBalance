@@ -31,6 +31,7 @@ public class ProductControl extends HttpServlet{
 		commandMap = new HashMap();
 		
 		commandMap.put("product-list", new CommandProductList("oldBalanceProductList.jsp"));
+		commandMap.put("product-detail", new CommandProductDetail("oldBalanceProductDetail.jsp"));
 		
 	}
 	
