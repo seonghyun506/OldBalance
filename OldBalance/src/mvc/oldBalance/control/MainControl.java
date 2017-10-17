@@ -24,17 +24,14 @@ public class MainControl extends HttpServlet{
 	public MainControl() {
 		super();
 		initCommand();
-	} 
+	}
 	
 	private void initCommand() {
 		commandMap = new HashMap();
 		
 		commandMap.put("login", new CommandNull("oldBalanceLogin.jsp"));
 		commandMap.put("register", new CommandNull("oldBalanceRegister.jsp"));
-<<<<<<< HEAD
-//		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
-=======
->>>>>>> branch 'master' of https://github.com/seonghyun506/OldBalance.git
+		commandMap.put("loginSession", new CommandLogin(""));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -75,5 +72,6 @@ public class MainControl extends HttpServlet{
 
 		RequestDispatcher reqDp = getServletContext().getRequestDispatcher( jspDir + nextPage );
 		reqDp.forward( request, response );
+		
 	}
 }
