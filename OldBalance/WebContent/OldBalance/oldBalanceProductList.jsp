@@ -5,9 +5,9 @@
 <%
 	String projectName = "/OldBalance";
 	String cate = request.getParameter("cate");
-	List<ObProduct> mList = ProductService.getInstance().selectByMainCate(cate);
-	int totalCount = Integer.parseInt(ProductService.getInstance().selectTotalCount(cate));
-	int countList = 48;
+	List<ObProduct> mList = (List<ObProduct>)request.getAttribute("param");
+	int totalCount = (int)request.getAttribute("param2");
+	int countList = 36;
 	int cnt = 1;
 	int currPage = Integer.parseInt(request.getParameter("page"));
 	int totalPage = totalCount/countList+1;
@@ -16,7 +16,8 @@
 	if(totalPage<currPage){
 		currPage = totalPage;
 	}
-	int index = (currPage*countList)-1;
+	int index = (currPage-1)*countList;
+	
 	
 %>
 
@@ -57,7 +58,7 @@
 		<div>
 		
 		<table class="productTable" >
-		<% for(int i=index;i<index+24;i++){ 
+		<% for(int i=index;i<index+countList;i++){ 
 		ObProduct product = mList.get(i);
 		%>
 		<% if((cnt%4)==1){ %>

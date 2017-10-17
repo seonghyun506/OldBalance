@@ -5,7 +5,8 @@
 <%
 	String pjName = "/OldBalance";
 	String id = request.getParameter("id");
-	ObProduct product = ProductService.getInstance().selectById(id);
+	//ObProduct product = ProductService.getInstance().selectById(id);
+	ObProduct product = (ObProduct)request.getAttribute("param");
 %>
 <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>

@@ -23,7 +23,8 @@ public class CommandProductList implements ProductCommand {
 				
 		List <ObProduct> productList = service.selectByMainCate(cate);	
 	    request.setAttribute("param", productList );
-	    
+	    int totalCount = Integer.parseInt(service.getInstance().selectTotalCount(cate));
+	    request.setAttribute("param2", totalCount);
 
 		return next;
 	}
