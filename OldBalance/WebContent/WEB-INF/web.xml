@@ -65,5 +65,13 @@
 	<url-pattern>/ObControl</url-pattern>
 </servlet-mapping>
 
+<servlet>
+	<servlet-name>MyPage</servlet-name>
+	<servlet-class>mvc.oldBalance.control.MyPageControl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>MyPage</servlet-name>
+	<url-pattern>/MyPage</url-pattern>
+</servlet-mapping>
 
 </web-app>

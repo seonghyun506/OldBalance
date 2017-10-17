@@ -1,5 +1,5 @@
 $(document).ready(function(){
 	$("#mymodify").click(function(){
-	window.open("oldBalanceModify.jsp");	
+		location.href = '/OldBalance/Modify?cmd=modify';
 	});
 });
