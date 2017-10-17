@@ -1,5 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="java.util.*" %>
+    <%@ page import="mybatis.oldBalance.service.MyPageService" %>
+    <%@ page import="mvc.oldBalance.model.ObMember" %>
+    <%
+	String projectName = "/OldBalance";
+	String id = request.getParameter("id");
+	List<ObMember> mList = MyPageService.getInstance().selectMyPage(id);
+%>
+    
     <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
@@ -7,10 +16,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oldBalanceMyPage.jsp</title>
 
-<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-<link rel="stylesheet" href="./css/mypage/mypage.css" type="text/css"/>
+<link rel="stylesheet" href="<%=projectName %>/OldBalance/css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="<%=projectName %>/OldBalance/css/mypage/mypage.css" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/mymodify/mypage.js" type="text/javascript"></script>
+<script src="<%=projectName %>/OldBalance/js/mymodify/mypage.js" type="text/javascript"></script>
 </head>
 <body>
 	<section id='Mypage'>
@@ -22,19 +31,21 @@
 					<h3>회원정보</h3>
 				</div>
 				<table class="my_profile table-striped table-inverse">
+					<%for(ObMember member : mList){ %>
 					<!-- title -->
 					<tr>
 						<td>주소 :</td>
-						<td>경기도 김포시 통진읍 마송리</td>
+						<td><%=member.getCustAddr()%></td>
 					</tr>
 					<tr>
 						<td>H·P :</td>
-						<td>010-5555-6666</td>
+						<td><%=member.getCustTel()%></td>
 					</tr>
 					<tr>
 						<td>마일리지 :</td>
-						<td>1800원</td>
+						<td><%=member.getCustMig()%></td>
 					</tr>
+					<%} %>
 				</table>
 				<div class="serchorder">
 					<h3 class='or_b'>주문/배송 조회</h3>
