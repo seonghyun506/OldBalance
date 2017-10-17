@@ -85,7 +85,7 @@
 				</div>
 			</div>
 			
-			<!-- best -->
+			<!-- best! -->
 			<div class='prouct_best'>
 				<h3 class="best">BEST</h3>
 				<div class="box_wrap">

@@ -24,14 +24,17 @@ public class MainControl extends HttpServlet{
 	public MainControl() {
 		super();
 		initCommand();
-	}
+	} 
 	
 	private void initCommand() {
 		commandMap = new HashMap();
 		
 		commandMap.put("login", new CommandNull("oldBalanceLogin.jsp"));
 		commandMap.put("register", new CommandNull("oldBalanceRegister.jsp"));
+<<<<<<< HEAD
 //		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
+=======
+>>>>>>> branch 'master' of https://github.com/seonghyun506/OldBalance.git
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -57,7 +60,7 @@ public class MainControl extends HttpServlet{
 		try{
 			
 			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (MainCommand)commandMap.get( cmdKey);
+				cmd = (MainCommand)commandMap.get(cmdKey);
 			}else{
 				throw new CommandException("지정할 명령어가 존재하지 않음");
 			}
@@ -72,6 +75,5 @@ public class MainControl extends HttpServlet{
 
 		RequestDispatcher reqDp = getServletContext().getRequestDispatcher( jspDir + nextPage );
 		reqDp.forward( request, response );
-		
 	}
 }

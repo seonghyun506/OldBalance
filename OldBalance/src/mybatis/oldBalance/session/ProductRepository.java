@@ -43,11 +43,11 @@ public class ProductRepository {
 //		}
 //	}
 	
-	public List<ObProduct> selectByMainCate(ObProduct product) {
+	public List<ObProduct> selectByMainCate(String cate) {
 		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체
 		// JDBC의 연결객체 얻어오기 -> SqlSession
 		try {
-			return sess.selectList(namespace + ".selectByMainCate", product);
+			return sess.selectList(namespace + ".selectByMainCate", cate);
 		} finally {
 			sess.close();
 		}

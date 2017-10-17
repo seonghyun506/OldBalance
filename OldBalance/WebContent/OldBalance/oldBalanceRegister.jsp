@@ -1,6 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String pjName="/OldBalnce"; %>
+<<<<<<< HEAD
+<% String pjName="/OldBalance"; %>
+>>>>>>> branch 'master' of https://github.com/seonghyun506/OldBalance.git
 <jsp:include page="header.jsp"></jsp:include> 
 <!DOCTYPE html>
 <html>
@@ -24,6 +26,7 @@
 			<br/><br/>
 				<h2>회원 가입</h2>
 				<form action="<%= pjName %>/Register?cmd=input-member" method='post'>
+<<<<<<< HEAD
 					<section id='profile'>
 						<div>
 							<label for="id" class='input_1'>ID :</label> 
@@ -63,6 +66,35 @@
 							
 						</div>
 					</section>
+=======
+					<div>
+						<label for="id">ID :</label> <input name="id" id="id"
+						placeholder="Click Button" type="text" class="form-control" readonly/>
+						<input name="idCheck" id="idCheck" value="중복확인" class="form-control" type="button"/>
+					</div>
+					<div>
+						<label for="password">Password :</label> <input class="form-control"
+						placeholder="Password" name="password" id="password" type="password" />
+					</div>
+					<div>
+						<label for="passconf">Check Password :</label> <input class="form-control"
+						placeholder="Check Password" name="passconf" id="passconf" type="password" />
+					</div>
+					<div>
+						<label for="telnum">TEL:</label> <input class="form-control"
+						placeholder="Phone Number" name="telnum" id="telnum" type="text" />
+					</div>
+					<div>
+						<label for="post">Post :</label> <input class="form-control"  name="post"
+						placeholder="Click Button" id="post" type="text"/>
+						<input name="findPost" id="findPost" class="form-control" type="button" value="우편번호"/>
+					</div>
+					<div>
+						<label for="addr">Address :</label> <input class="form-control" name="addr" id="addr" type="text"/>
+						<input name="detailAddr" class="form-control" id="detailAddr"
+						placeholder="detail Address" type="text" />
+					</div>
+
 					<div class="stats">
 					<br/><br/>
 						<h2 class="title">모든 항목에 동의해야 합니다.</h2>

@@ -17,8 +17,8 @@ public class ProductService {
 	
 	ProductRepository repo = new ProductRepository();
 	
-	public List<ObProduct> selectByMainCate(ObProduct product) {
-		return repo.selectByMainCate(product);
+	public List<ObProduct> selectByMainCate(String cate) {
+		return repo.selectByMainCate(cate);
 	}
 	
 //	public int insertMember(ObMember member) {
