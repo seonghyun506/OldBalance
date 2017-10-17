@@ -16,16 +16,11 @@ public class CommandProductList implements ProductCommand {
 	}
 	
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		ObProduct product = new ObProduct();
-		
 		String cate = request.getParameter("cate");
 		
-		product.setMainCate(cate);
-		
 		ProductService service = ProductService.getInstance();
-		service.selectByMainCate(product);
-		
-		List <ObProduct> productList = service.selectByMainCate(product);	
+				
+		List <ObProduct> productList = service.selectByMainCate(cate);	
 	    request.setAttribute("param", productList );
 	    
 		return next;

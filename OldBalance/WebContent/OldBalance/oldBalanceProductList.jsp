@@ -6,6 +6,7 @@
 	String projectName = "/OldBalance";
 	String cate = request.getParameter("cate");
 	List<ObProduct> mList = ProductService.getInstance().selectByMainCate(cate);
+	
 %>
 
 <jsp:include page="header.jsp"></jsp:include>
@@ -40,13 +41,15 @@
 		</div>
 		<br/><br/>
 		<div>
+		
 		<table class="productTable" >
+		
+		<% for(ObProduct product : mList){ %>
 		<tr>
-		<td>1</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1</td>
+		<td><img alt="" src="<%= projectName%>/OldBalence/images/product/<%= product.getProdId() %>.png"></td>
 		</tr>
+		<%} %>
+		
 		</table>
 		</div>
 	</div>
