@@ -13,6 +13,10 @@
 <!-- </where> -->
 <!-- </select> -->
 
+<select id="checkMember" parameterType="HashMap" resultType='int'>
+select count(*) from ob_member
+where cust_id = #{id} AND cust_pw = #{password}
+</select>
 
 <select id="insertMember" parameterType="member">
 insert into ob_member

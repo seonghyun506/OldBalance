@@ -26,6 +26,18 @@ public class MainRepository {
 		return sessFac;
 	}
 	
+	public Integer checkMember(String id, String pwd) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		try {
+			HashMap hash = new HashMap();
+			hash.put("id", id);
+			hash.put("password", pwd);
+			return sess.selectOne(namespace + ".checkMember", hash);
+		} finally {
+			sess.close();
+		}
+	}
+	
 //	public int insertMember(ObMember member) {
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		

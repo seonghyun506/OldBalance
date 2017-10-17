@@ -31,7 +31,7 @@ public class MainControl extends HttpServlet{
 		
 		commandMap.put("login", new CommandNull("oldBalanceLogin.jsp"));
 		commandMap.put("register", new CommandNull("oldBalanceRegister.jsp"));
-		commandMap.put("loginSession", new CommandLogin(""));
+		commandMap.put("loginCheck", new CommandLogin("oldBalanceMain.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
