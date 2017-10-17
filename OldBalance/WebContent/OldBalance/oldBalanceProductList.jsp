@@ -6,7 +6,7 @@
 	String projectName = "/OldBalance";
 	String cate = request.getParameter("cate");
 	List<ObProduct> mList = ProductService.getInstance().selectByMainCate(cate);
-	
+	int cnt = 1;
 %>
 
 <jsp:include page="header.jsp"></jsp:include>
@@ -15,8 +15,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>OldBalance</title>
-<link rel="stylesheet" href="./css/main/common.css" type="text/css">
-<link rel="stylesheet" href="./css/productlist/common.css"
+<link rel="stylesheet" href="<%=projectName %>/OldBalance/css/main/common.css" type="text/css">
+<link rel="stylesheet" href="<%=projectName %>/OldBalance/css/productlist/common.css"
 	type="text/css">
 </head>
 <body>
@@ -39,15 +39,34 @@
 		<div class="sort">
 			&nbsp;&nbsp;<a>신상품순</a>  |  <a>인기순</a>  |  <a>낮은 가격순</a>  |  <a>높은 가격순</a>
 		</div>
-		<br/><br/>
 		<div>
 		
 		<table class="productTable" >
 		
 		<% for(ObProduct product : mList){ %>
+		<% if((cnt%4)==1){ %>
 		<tr>
-		<td><img alt="" src="<%= projectName%>/WebContent/OldBalence/images/product/<%= product.getProdId() %>.png" width=200 height=200/></td>
+		<td><img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
+		<p><%=product.getProdName() %></p>
+		<p><%=product.getProdPrice() %>원</p>
+		</td>
+		<%cnt++;}else if((cnt%4)==2) { %>
+		<td><img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
+		<p><%=product.getProdName() %></p>
+		<p><%=product.getProdPrice() %>원</p>
+		</td>
+		<%cnt++;}else if((cnt%4)==3) { %>
+		<td><img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
+		<p><%=product.getProdName() %></p>
+		<p><%=product.getProdPrice() %>원</p>
+		</td>
+		<%cnt++;} else if((cnt%4)==0){%>
+		<td><img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
+		<p><%=product.getProdName() %></p>
+		<p><%=product.getProdPrice() %>원</p>
+		</td>
 		</tr>
+		<%cnt++;} %>
 		<%} %>
 		
 		</table>
