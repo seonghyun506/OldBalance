@@ -2,22 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mapper.ProductMapper">
-
-<!-- <select id="selectAll" parameterType="HashMap" resultType="comment"> -->
-<!-- select * from comment_tab -->
-
-<!-- <where> -->
-<!-- 	<if test="cId != null"> -->
-<!-- 		comment_no = #{cId} -->
-<!-- 	</if> -->
-<!-- </where> -->
-<!-- </select> -->
-
-
-<select id="selectByMainCate" parameterType="String" resultType="List">
+<select id="selectByMainCate" parameterType="String" resultType="product">
 select *
 from OB_PRODUCT
-where MAIN_CATE=#{cate}
+<where>
+MAIN_CATE=#{value}
+</where>
 </select>
 
 </mapper>

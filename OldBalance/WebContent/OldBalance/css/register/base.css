@@ -77,9 +77,17 @@ td {
 	padding: 6px;
 }
 
-/* li¿ä¼Ò¸¦ ¿À¸¥ÂÊÀ¸·Î ¹èÄ¡ */
+/* liï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ */
 #navigation{
 	float: right;
 	width: 150px;
 }
-
+#profile div{width:100%;}
+#profile div label{float:left; margin-top:5px;}
+#profile div .input_1{margin-right:105px;}
+#profile div .input_2{margin-right:53px;}
+#profile div .input_3{margin-right:7px;}
+#profile div .input_4{margin-right:96px;}
+#profile div .input_5{margin-right:88px;}
+#profile div .input_6{margin-right:62px;}
+#profile div input{float:left; margin-right:10px;}

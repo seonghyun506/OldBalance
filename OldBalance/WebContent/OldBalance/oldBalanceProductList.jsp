@@ -23,7 +23,7 @@
 	<br />
 	<br />
 	<div class="whole">
-		<h1>Main Category</h1>
+		<h1><%=cate %></h1>
 		<div class="pageTable">
 		<table id="page">
 		<tr>
@@ -46,7 +46,7 @@
 		
 		<% for(ObProduct product : mList){ %>
 		<tr>
-		<td><img alt="" src="<%= projectName%>/OldBalence/images/product/<%= product.getProdId() %>.png"></td>
+		<td><img alt="" src="<%= projectName%>/WebContent/OldBalence/images/product/<%= product.getProdId() %>.png" width=200 height=200/></td>
 		</tr>
 		<%} %>
 		
