@@ -29,6 +29,8 @@ public class MainControl extends HttpServlet{
 	private void initCommand() {
 		commandMap = new HashMap();
 		
+		commandMap.put("login", new CommandNull("oldBalanceLogin.jsp"));
+		commandMap.put("register", new CommandNull("oldBalanceRegister.jsp"));
 //		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
 	}
 	

@@ -3,7 +3,7 @@ package mvc.oldBalance.command;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CommandNull implements Command{
+public class CommandNull implements MyCommand{
 	private String next;
 
 	public CommandNull( String _next ){

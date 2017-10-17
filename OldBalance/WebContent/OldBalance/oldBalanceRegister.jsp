@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String pjName="/TeamProject"; %>
+<% String pjName="/OldBalnce"; %>
 <jsp:include page="header.jsp"></jsp:include> 
 <!DOCTYPE html>
 <html>
@@ -18,41 +18,51 @@
 
 </head>
 <body>
-
 	<div id="container">
 		<div id="content">
 			<div id="signup" class="form-inline">
 			<br/><br/>
 				<h2>회원 가입</h2>
 				<form action="<%= pjName %>/Register?cmd=input-member" method='post'>
-					<div>
-						<label for="id">ID :</label> <input name="id" id="id"
-						placeholder="Click Button" type="text" class="form-control" readonly/>
-						<input name="idCheck" id="idCheck" value="중복확인" class="form-control" type="button"/>
-					</div>
-					<div>
-						<label for="password">Password :</label> <input class="form-control"
-						placeholder="Password" name="password" id="password" type="password" />
-					</div>
-					<div>
-						<label for="passconf">Check Password :</label> <input class="form-control"
-						placeholder="Check Password" name="passconf" id="passconf" type="password" />
-					</div>
-					<div>
-						<label for="telnum">TEL:</label> <input class="form-control"
-						placeholder="Phone Number" name="telnum" id="telnum" type="text" />
-					</div>
-					<div>
-						<label for="post">Post :</label> <input class="form-control"  name="post"
-						placeholder="Click Button" id="post" type="text" readonly/>
-						<input name="findPost" id="findPost" class="form-control" type="button" value="우편번호"/>
-					</div>
-					<div>
-						<label for="addr">Address :</label> <input class="form-control" name="addr" id="addr" type="text" readonly/>
-						<input name="detailAddr" class="form-control" id="detailAddr"
-						placeholder="detail Address" type="text" />
-					</div>
-
+					<section id='profile'>
+						<div>
+							<label for="id" class='input_1'>ID :</label> 
+								<input name="id" id="id" placeholder="Click Button" type="text" class="form-control" readonly/>
+								<input name="idCheck" id="idCheck" value="중복확인" class="form-control" type="button"/>
+						</div>
+						<div>
+							<label for="password" class='input_2'>Password :</label> 
+				
+								<input class="form-control" placeholder="Password" name="password" id="password" type="password" />
+							
+						</div>
+						<div>
+							<label for="passconf" class='input_3'>Check Password :</label> 
+							
+								<input class="form-control" placeholder="Check Password" name="passconf" id="passconf" type="password" />
+						
+						</div>
+						<div>
+							<label for="telnum" class='input_4'>TEL:</label> 
+							
+								<input class="form-control" placeholder="Phone Number" name="telnum" id="telnum" type="text" />
+							
+						</div>
+						<div>
+							<label for="post" class='input_5'>Post :</label> 
+							
+								<input class="form-control"  name="post" placeholder="Click Button" id="post" type="text" readonly/>
+								<input name="findPost" id="findPost" class="form-control" type="button" value="우편번호"/>
+							
+						</div>
+						<div>
+							<label for="addr" class='input_6'>Address :</label>
+							
+								<input class="form-control" name="addr" id="addr" type="text" readonly/>
+								<input name="detailAddr" class="form-control" id="detailAddr" placeholder="detail Address" type="text" /> 
+							
+						</div>
+					</section>
 					<div class="stats">
 					<br/><br/>
 						<h2 class="title">모든 항목에 동의해야 합니다.</h2>
@@ -69,15 +79,17 @@
 					
 					<div><br/><br/><br/></div>
 					
+					<div>
 					<br/><br/> <p class="text-center">
 						<input type="reset" value="가입취소" class="btn btn-danger"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<input id='join' type="button" value="가입하기" class="form-control"/>
 					</p>
-
+					</div>
 				</form>
 			</div>
 		</div>
 	</div>
+	
 	
 </body>
 </html>
