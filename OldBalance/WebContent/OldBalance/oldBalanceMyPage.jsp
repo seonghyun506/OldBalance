@@ -5,8 +5,16 @@
     <%@ page import="mvc.oldBalance.model.ObMember" %>
     <%
 	String projectName = "/OldBalance";
-	String id = request.getParameter("id");
+// 	String id = request.getParameter("id");
+	String id="";
+	id=(String)session.getAttribute("id");
+	if(id==null||id.equals("")){
+		
+		response.sendRedirect(projectName+"/Main?cmd=login");
+	}
 	List<ObMember> mList = MyPageService.getInstance().selectMyPage(id);
+	
+	
 %>
     
     <jsp:include page="header.jsp"></jsp:include>
@@ -47,6 +55,7 @@
 					</tr>
 					<%} %>
 				</table>
+				<input type="button" id="mymodify" value="회원정보 수정"/>
 				<div class="serchorder">
 					<h3 class='or_b'>주문/배송 조회</h3>
 					기간조회 <input type="date" name="bday" min="2014-12-31" />~ <input type="date" name="bday" max="2017-12-31" /> <input class="btn btn-info" type="button" name="bdaysearch" value="조회" />
