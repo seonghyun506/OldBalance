@@ -46,22 +46,26 @@
 		<% for(ObProduct product : mList){ %>
 		<% if((cnt%4)==1){ %>
 		<tr>
-		<td><img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
+		<td style='cursor:pointer;' onclick="location.href='<%=projectName %>/Product?cmd=product-detail&id=<%=product.getProdId()%>'">
+		<img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
 		<p><%=product.getProdName() %></p>
 		<p><%=product.getProdPrice() %>원</p>
 		</td>
 		<%cnt++;}else if((cnt%4)==2) { %>
-		<td><img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
+		<td style='cursor:pointer;' onclick="location.href='<%=projectName %>/Product?cmd=product-detail&id=<%=product.getProdId()%>'">
+		<img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
 		<p><%=product.getProdName() %></p>
 		<p><%=product.getProdPrice() %>원</p>
 		</td>
 		<%cnt++;}else if((cnt%4)==3) { %>
-		<td><img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
+		<td style='cursor:pointer;' onclick="location.href='<%=projectName %>/Product?cmd=product-detail&id=<%=product.getProdId()%>'">
+		<img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
 		<p><%=product.getProdName() %></p>
 		<p><%=product.getProdPrice() %>원</p>
 		</td>
 		<%cnt++;} else if((cnt%4)==0){%>
-		<td><img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
+		<td style='cursor:pointer;' onclick="location.href='<%=projectName %>/Product?cmd=product-detail&id=<%=product.getProdId()%>'">
+		<img alt="" src="<%= projectName%>/OldBalance/images/product/<%= product.getProdId() %>.png"/>
 		<p><%=product.getProdName() %></p>
 		<p><%=product.getProdPrice() %>원</p>
 		</td>

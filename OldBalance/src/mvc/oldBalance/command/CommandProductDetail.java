@@ -14,6 +14,12 @@ public class CommandProductDetail implements ProductCommand {
 	}
 	
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		String id = request.getParameter("id");
+		
+		ProductService service = ProductService.getInstance();
+		
+		ObProduct product = service.selectById(id);
+		request.setAttribute("param", product);
 		
 		return next;
 	}

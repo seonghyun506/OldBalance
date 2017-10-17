@@ -9,5 +9,11 @@ from OB_PRODUCT
 MAIN_CATE=#{value}
 </where>
 </select>
-
+<select id="selectById" parameterType="String" resultType="product">
+select *
+from OB_PRODUCT
+<where>
+PROD_ID=#{value}
+</where>
+</select>
 </mapper>
