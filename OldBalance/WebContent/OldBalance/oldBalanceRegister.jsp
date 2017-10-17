@@ -1,8 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<<<<<<< HEAD
+
 <% String pjName="/OldBalance"; %>
->>>>>>> branch 'master' of https://github.com/seonghyun506/OldBalance.git
+
 <jsp:include page="header.jsp"></jsp:include> 
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@
 			<br/><br/>
 				<h2>회원 가입</h2>
 				<form action="<%= pjName %>/Register?cmd=input-member" method='post'>
-<<<<<<< HEAD
+
 					<section id='profile'>
 						<div>
 							<label for="id" class='input_1'>ID :</label> 
@@ -66,7 +66,7 @@
 							
 						</div>
 					</section>
-=======
+
 					<div>
 						<label for="id">ID :</label> <input name="id" id="id"
 						placeholder="Click Button" type="text" class="form-control" readonly/>
