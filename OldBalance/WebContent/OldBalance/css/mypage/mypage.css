@@ -1,16 +1,34 @@
 @charset "UTF-8";
 
-h2{
-	color:red;
+h3{
+	font-size:16px;
 }
+#Mypage{width:100%;}
+#Myinpo_wrap{width:1000px; margin:0 auto;}
 .myinfo{
-	border:3px solid #ccc;
-	width:700px;
+	border:5px solid #ccc;
+	width:990px;
+	margin:0 auto;
+	padding:25px;
 	}
+	
+
 td{
 	text-align:center;
 }
 .myorder > table{
 	border:3px solid #ccc;
+	padding:15px;
 }
+.my_profile {width:90%;  margin:0 auto; border-top:2px solid #555;}
+.my_profile td{background:#f9f9f9; border-bottom:1px solid #fff; font-weight:bold; color:#838383; padding:5px; overflow:hidden;}
 
+/* product_info */
+
+.product_info{width:90%; border-top:3px solid #d9534f; margin:0 auto; overflow:hidden;}
+.product_info .title{border-bottom:1px solid #ccc;}
+.product_info td{text-align:center;}
+
+
+/* serchorder */
+.serchorder{width:90%; margin:20px auto;}
