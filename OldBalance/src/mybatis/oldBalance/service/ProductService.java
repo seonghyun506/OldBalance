@@ -24,12 +24,9 @@ public class ProductService {
 	public ObProduct selectById(String id) {
 		return repo.selectById(id);
 	}
-//	public int insertMember(ObMember member) {
-//		return repo.insertMember(member);
-//	}
 	
-//	public List<BoardRec> selectComment() {
-//		return repo.selectComment();
-//	}
+	public String selectTotalCount(String cate) {
+		return repo.selectTotalCount(cate);
+	}
 	
 }

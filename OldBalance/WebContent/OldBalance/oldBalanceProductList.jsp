@@ -6,7 +6,18 @@
 	String projectName = "/OldBalance";
 	String cate = request.getParameter("cate");
 	List<ObProduct> mList = ProductService.getInstance().selectByMainCate(cate);
+	int totalCount = Integer.parseInt(ProductService.getInstance().selectTotalCount(cate));
+	int countList = 48;
 	int cnt = 1;
+	int currPage = Integer.parseInt(request.getParameter("page"));
+	int totalPage = totalCount/countList+1;
+	 	
+
+	if(totalPage<currPage){
+		currPage = totalPage;
+	}
+	int index = (currPage*countList)-1;
+	
 %>
 
 <jsp:include page="header.jsp"></jsp:include>
@@ -27,11 +38,15 @@
 		<div class="pageTable">
 		<table id="page">
 		<tr>
-		<td>◀</td>
-		<td>1</td>
-		<td>2</td>
-		<td>3</td>
-		<td>▶</td>
+		<%if(currPage>1) {%>
+		<td><a href="<%=projectName %>/Product?cmd=product-list&cate=<%=cate %>&page=<%=currPage-1 %>">◀</a></td>
+		<%} %>
+		<%for(int i = 1;i<totalPage;i++){ %>
+		<td><a href="<%=projectName %>/Product?cmd=product-list&cate=<%=cate %>&page=<%= i %>"><%= i %></a></td>
+		<%} %>
+		<%if(currPage!=totalPage-1) {%>
+		<td><a href="<%=projectName %>/Product?cmd=product-list&cate=<%=cate %>&page=<%=currPage+1 %>">▶</a></td>
+		<%} %>
 		</tr>
 		</table>
 		</div>
@@ -42,8 +57,9 @@
 		<div>
 		
 		<table class="productTable" >
-		
-		<% for(ObProduct product : mList){ %>
+		<% for(int i=index;i<index+24;i++){ 
+		ObProduct product = mList.get(i);
+		%>
 		<% if((cnt%4)==1){ %>
 		<tr>
 		<td style='cursor:pointer;' onclick="location.href='<%=projectName %>/Product?cmd=product-detail&id=<%=product.getProdId()%>'">
@@ -71,7 +87,7 @@
 		</td>
 		</tr>
 		<%cnt++;} %>
-		<%} %>
+		<% } %>
 		
 		</table>
 		</div>

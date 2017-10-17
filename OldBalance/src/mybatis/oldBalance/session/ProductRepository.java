@@ -61,5 +61,14 @@ public class ProductRepository {
 			sess.close();
 		}
 	}
+	public String selectTotalCount(String cate) {
+		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectOne(namespace + ".selectTotalCount", cate);
+		} finally {
+			sess.close();
+		}
+	}
 	
 }
