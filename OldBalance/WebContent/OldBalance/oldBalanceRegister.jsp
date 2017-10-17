@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String pjName="/TeamProject"; %>
+<% String pjName="/OldBalance"; %>
 <jsp:include page="header.jsp"></jsp:include> 
 <!DOCTYPE html>
 <html>
@@ -44,11 +44,11 @@
 					</div>
 					<div>
 						<label for="post">Post :</label> <input class="form-control"  name="post"
-						placeholder="Click Button" id="post" type="text" readonly/>
+						placeholder="Click Button" id="post" type="text"/>
 						<input name="findPost" id="findPost" class="form-control" type="button" value="우편번호"/>
 					</div>
 					<div>
-						<label for="addr">Address :</label> <input class="form-control" name="addr" id="addr" type="text" readonly/>
+						<label for="addr">Address :</label> <input class="form-control" name="addr" id="addr" type="text"/>
 						<input name="detailAddr" class="form-control" id="detailAddr"
 						placeholder="detail Address" type="text" />
 					</div>
