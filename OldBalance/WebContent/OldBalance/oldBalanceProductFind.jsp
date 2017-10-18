@@ -4,21 +4,8 @@
 <%@ page import="mvc.oldBalance.model.ObProduct"%>
 <%
 	String pjName = "/OldBalance";
-	String cate = request.getParameter("cate");
 	List<ObProduct> mList = (List<ObProduct>) request.getAttribute("param");
-	String range = request.getParameter("range");
-	String subCate = request.getParameter("subCate");
-	String detailCate = request.getParameter("detailCate");
-	int totalCount = (int) request.getAttribute("param2");
-	int countList = 36;
 	int cnt = 1;
-	int currPage = Integer.parseInt(request.getParameter("page"));
-	int totalPage = totalCount / countList + 1;
-
-	if (totalPage < currPage) {
-		currPage = totalPage;
-	}
-	int index = (currPage - 1) * countList;
 %>
 
 <jsp:include page="header.jsp"></jsp:include>
@@ -37,55 +24,14 @@
 	<br />
 	<br />
 	<div class="whole">
-		<h1><%=cate%></h1>
-		<div class="pageTable">
-			<table id="page">
-				<tr>
-					<%
-						if (currPage > 1) {
-					%>
-					<td><a
-						href="<%=pjName%>/Product?cmd=product-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=currPage - 1%>">◀</a></td>
-					<%
-						}
-					%>
-					<%
-						for (int i = 1; i < totalPage; i++) {
-					%>
-					<td><a
-						href="<%=pjName%>/Product?cmd=product-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=i%>"><%=i%></a></td>
-					<%
-						}
-					%>
-					<%
-						if (currPage != totalPage - 1) {
-					%>
-					<td><a
-						href="<%=pjName%>/Product?cmd=product-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=currPage + 1%>">▶</a></td>
-					<%
-						}
-					%>
-				</tr>
-			</table>
-		</div>
+		<h1>Find Product</h1>
 		<br />
-		<div class="sort">
-			&nbsp;&nbsp;<a
-				href="<%=pjName%>/Product?cmd=product-list&range=new&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&page=1">신상품순</a>
-			| <a
-				href="<%=pjName%>/Product?cmd=product-list&range=popular&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&page=1">인기순</a>
-			| <a
-				href="<%=pjName%>/Product?cmd=product-list&range=low&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&page=1">낮은
-				가격순</a> | <a
-				href="<%=pjName%>/Product?cmd=product-list&range=high&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&page=1">높은
-				가격순</a>
-		</div>
 		<div>
 
 			<table class="productTable">
 				<%
-					for (int i = index; i < index + countList; i++) {
-						ObProduct product = mList.get(i);
+					for (ObProduct product : mList) {
+						
 				%>
 				<%
 					if ((cnt % 4) == 1) {

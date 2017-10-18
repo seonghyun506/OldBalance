@@ -32,10 +32,10 @@
 <mapper resource="mybatis/oldBalance/mapper/RegisterMapper.xml"/>
 <mapper resource="mybatis/oldBalance/mapper/ProductMapper.xml"/>
 <mapper resource="mybatis/oldBalance/mapper/OrderMapper.xml"/>
-<mapper resource="mybatis/oldBalance/mapper/MyMapper.xml"/>
 <mapper resource="mybatis/oldBalance/mapper/MainMapper.xml"/>
 <mapper resource="mybatis/oldBalance/mapper/MyPageMapper.xml"/>
 <mapper resource="mybatis/oldBalance/mapper/ModifyMapper.xml"/>
+
 
 </mappers>
 </configuration>

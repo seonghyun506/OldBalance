@@ -4,17 +4,14 @@
     <%@ page import="mybatis.oldBalance.service.MyPageService" %>
     <%@ page import="mvc.oldBalance.model.ObMember" %>
     <%
-	String projectName = "/OldBalance";
-// 	String id = request.getParameter("id");
+	String pjName = "/OldBalance";
 	String id="";
 	id=(String)session.getAttribute("id");
 	if(id==null||id.equals("")){
 		
-		response.sendRedirect(projectName+"/Main?cmd=login");
+		response.sendRedirect(pjName+"/Main?cmd=login");
 	}
 	List<ObMember> mList = MyPageService.getInstance().selectMyPage(id);
-	
-	
 %>
     
     <jsp:include page="header.jsp"></jsp:include>
@@ -24,23 +21,36 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oldBalanceMyPage.jsp</title>
 
-<link rel="stylesheet" href="<%=projectName %>/OldBalance/css/bootstrap/bootstrap.css" />
-<link rel="stylesheet" href="<%=projectName %>/OldBalance/css/mypage/mypage.css" type="text/css"/>
+<link rel="stylesheet" href="<%=pjName %>/OldBalance/css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="<%=pjName %>/OldBalance/css/mypage/mypage.css" type="text/css"/>
+<link rel="stylesheet" href="<%=pjName %>/OldBalance/css/main/common.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="<%=projectName %>/OldBalance/js/mymodify/mypage.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#mymodify").click(function(){
+		location.href = '<%=pjName%>/Modify?cmd=modify&id=123456';
+	});
+});
+</script>
 </head>
 <body>
 	<section id='Mypage'>
 		<div id='Myinpo_wrap'>
-			<h2>My Page</h2>
+			<br/><h2>My Page</h2><br/>
 
 			<form class="myinfo">
 				<div style='width:90%; margin:0 auto;'>
 					<h3>회원정보</h3>
 				</div>
+				
+				
 				<table class="my_profile table-striped table-inverse">
 					<%for(ObMember member : mList){ %>
 					<!-- title -->
+					<tr>
+						<td>ID :</td>
+						<td><%=member.getCustId()%></td>
+					</tr>
 					<tr>
 						<td>주소 :</td>
 						<td><%=member.getCustAddr()%></td>
@@ -54,11 +64,14 @@
 						<td><%=member.getCustMig()%></td>
 					</tr>
 					<%} %>
-				</table>
-				<input type="button" id="mymodify" value="회원정보 수정"/>
+				</table> <br/><br/>
+				<p class="text-right">
+					<input type="button" class="btn btn-danger" id="mymodify" value="회원정보 수정"/>
+				</p>
+				
 				<div class="serchorder">
-					<h3 class='or_b'>주문/배송 조회</h3>
-					기간조회 <input type="date" name="bday" min="2014-12-31" />~ <input type="date" name="bday" max="2017-12-31" /> <input class="btn btn-info" type="button" name="bdaysearch" value="조회" />
+					<h3 class='or_b'>주문/배송 조회</h3><br/>
+					기간조회 <input class="imsi" type="date" name="bday" min="2014-12-31" />~<input class="imsi" type="date" name="bday" max="2017-12-31" /> <input class="btn btn-default" type="button" name="bdaysearch" value="조회" />
 				</div>
 
 				<table class="product_info table-striped table-inverse">
@@ -74,7 +87,10 @@
 					</tr>
 				</table>
 			</form>
-		</div>
+		</div><br/><br/><br/><br/><br/><br/><br/><br/>
+	<div id='footer'>
+		<img src='<%=pjName %>/OldBalance/images/main/footer.jpg'>
+	</div>
 	</section>
 
 </body>

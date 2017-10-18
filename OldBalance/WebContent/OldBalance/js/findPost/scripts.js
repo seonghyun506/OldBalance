@@ -35,7 +35,6 @@ $(document).ready(function(){
 						alert('에러발생' + err);
 					}	
 			});
-			
 			$('#table').append('</tbody>');
 		}
 		

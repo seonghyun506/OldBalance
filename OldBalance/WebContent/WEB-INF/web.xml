@@ -39,12 +39,21 @@
 </servlet-mapping>
 
 <servlet>
-	<servlet-name>My</servlet-name>
-	<servlet-class>mvc.oldBalance.control.MyControl</servlet-class>
+	<servlet-name>MyPage</servlet-name>
+	<servlet-class>mvc.oldBalance.control.MyPageControl</servlet-class>
 </servlet>
 <servlet-mapping>
-	<servlet-name>My</servlet-name>
-	<url-pattern>/My</url-pattern>
+	<servlet-name>Modify</servlet-name>
+	<url-pattern>/Modify</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Modify</servlet-name>
+	<servlet-class>mvc.oldBalance.control.ModifyControl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>MyPage</servlet-name>
+	<url-pattern>/MyPage</url-pattern>
 </servlet-mapping>
 
 <servlet>
@@ -64,24 +73,5 @@
 	<servlet-name>ObControl</servlet-name>
 	<url-pattern>/ObControl</url-pattern>
 </servlet-mapping>
-
-<servlet>
-	<servlet-name>MyPage</servlet-name>
-	<servlet-class>mvc.oldBalance.control.MyPageControl</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>MyPage</servlet-name>
-	<url-pattern>/MyPage</url-pattern>
-</servlet-mapping>
-
-<servlet>
-	<servlet-name>Modify</servlet-name>
-	<servlet-class>mvc.oldBalance.control.ModifyControl</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>Modify</servlet-name>
-	<url-pattern>/Modify</url-pattern>
-</servlet-mapping>
-
 
 </web-app>

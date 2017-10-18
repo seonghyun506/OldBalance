@@ -12,23 +12,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="<%=pjName%>/OldBalance/js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-	$("#mymodify").click(function(){
-		location.href = '<%=pjName%>/Modify?cmd=modify';
+	$(function() {
+		$('#back').click(function() {
+			location.href = '<%=pjName%>/Main?cmd=login';
+		});
 	});
-});
+	
 </script>
 </head>
 <body>
 
 <div id="myForm">
 <br/><br/>
-<h1 class='text-center'> 개인정보 수정이 완료되었습니다. </h1><br/><br/><br/><br/><br/><br/><br/>
-
+<h1 class='text-center'> 아이디와 비밀번호를 다시 확인해주세요. </h1><br/><br/><br/><br/><br/><br/><br/>
 <hr/>
 <p class="text-center">
-<input type="button" name="back" id="back" class="btn btn-danger" value="MyPage"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="button" name="home" id="home" class="btn btn-default" value="Home"/>
+<input type="button" name="back" id="back" class="btn btn-danger" value=" 돌아가기  "/>
 </p>
 
 </div>

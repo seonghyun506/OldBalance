@@ -2,11 +2,12 @@
 
 input{border-radius:5px 5px 5px 5px; box-shadow:none; }
 li{list-style:none;}
-
+input[type=text]{width:100px;}
 .post_check li .tel{width:100px;}
 section{width:100%;}
 #modify{width:500px; margin:0 auto;}
-.mymodify{width:500px; margin:0 auto;}
+.mymodify{width:550px; margin:0 auto;}
+.put{width:10px;}
 .pa_check{width:500px; margin: 0 auto; padding-left:40px;}`
 .post_check{width:500px; margin: 0 auto;}
 .post_check li{margin-bottom:20px;}

@@ -13,7 +13,6 @@ import mvc.oldBalance.command.CommandNull;
 import mvc.oldBalance.command.MainCommand;
 import mvc.oldBalance.command.CommandLogin;
 import mvc.oldBalance.command.CommandMain;
-import mvc.oldBalance.command.CommandMyPage;
 import mvc.oldBalance.command.CommandException;
 
 public class MainControl extends HttpServlet{
@@ -32,7 +31,9 @@ public class MainControl extends HttpServlet{
 		
 		commandMap.put("login", new CommandNull("oldBalanceLogin.jsp"));
 		commandMap.put("register", new CommandNull("oldBalanceRegister.jsp"));
-		commandMap.put("loginCheck", new CommandLogin("oldBalanceMain.jsp"));
+		commandMap.put("loginCheck", new CommandLogin("oldBalanceLoginForm.jsp"));
+		commandMap.put("main", new CommandNull("oldBalanceMain.jsp"));
+		commandMap.put("logout", new CommandNull("oldBalanceLogout.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -16,9 +16,13 @@ public class ProductService {
 
 	private ProductService() {
 	}
-
+	
 	ProductRepository repo = new ProductRepository();
 
+	public List<ObProduct> selectByName(String prodName) {
+		return repo.selectByName(prodName);
+	}
+	
 	public List<ObProduct> selectByMainCate(String cate) {
 		return repo.selectByMainCate(cate);
 	}

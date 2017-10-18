@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% String pjName = "/OldBalance"; %>
 
 <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
@@ -6,10 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oldBalanceOrder.jsp</title>
-<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-<link rel="stylesheet" href="./css/order/order.css" type="text/css" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/order/order.css" type="text/css" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/main/common.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
+
 	$(function(){
 		$('.card_form').hide();
 		
@@ -22,6 +25,13 @@
 			$('.card_form').show();
 			$('.pay_form').hide();
 			$('.payment > p > a').text('카드결제');
+		});
+		
+		$('#payform').click(function() {
+			
+		});
+		$('#home').click(function() {
+			
 		});
 	});
 
@@ -131,14 +141,17 @@
 							<p>총결제금액 <span>838,000</span></p>
 							<p>배송비<span>0원(무료)</span></p>
 						</div>
-						<input type=button value='결제하기' class="btn btn-danger">
-						<input type=button value='취소하기' class="btn btn-danger">
+						<input type=button id="payform" value='결제하기' class="btn btn-danger">
+						<input type=button id="home" value='취소하기' class="btn btn-danger">
 					</div>
 				</div>
 			</form>	
 		</div>
 			
-		
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<div id='footer'>
+		<img src='<%=pjName%>/OldBalance/images/main/footer.jpg'>
+	</div>
 	</section>
 </body>
 </html>

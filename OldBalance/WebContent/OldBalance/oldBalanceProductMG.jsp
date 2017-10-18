@@ -1,27 +1,30 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String pjName="/OldBalance"; %>
 <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-<link rel="stylesheet" href="css/productmg/ManagementForm.css" type="text/css" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/productmg/ManagementForm.css" type="text/css" />
+<link rel="stylesheet" href="<%=pjName %>/OldBalance/css/main/common.css" type="text/css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript"
-	src="/OldBalance/OldBalance/js/productmg/jquery.js"></script>
+	src="<%=pjName%>/OldBalance/js/productmg/jquery.js"></script>
 <title>OldBalance</title>
 </head>
 <body>
 	<section id='productMG'>
 		<div id='productMG_wrap'>
+		<br/>
 		<h2>관리자 page</h2>
-		<p>재고 관리</p>
+		<br/>
 		<label for='InventCode'>제품 코드</label>
 			 <input type="text" name="InventCode" id='InventCode' class='code' style="width:100px;  margin-top:10px;"/> 
 			 <input type="button" name="InventCodeSearch" value="검색" class='btn_search'/>
-		<table>
+		<br/><table>
 			<tr>
 				<th>제품코드</th>
 				<th>제품단가</th>
@@ -69,6 +72,11 @@
 			<h1>삭제 되었습니다.</h1>
 		</form>
 		</div>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		
+	<div id='footer'>
+		<img src='<%=pjName %>/OldBalance/images/main/footer.jpg'>
+	</div>
 	</section>
 </body>
 </html>

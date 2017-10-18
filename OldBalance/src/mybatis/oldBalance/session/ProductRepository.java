@@ -26,6 +26,16 @@ public class ProductRepository {
 		return sessFac;
 	}
 
+	public List<ObProduct> selectByName(String prodName) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		prodName = "%" + prodName + "%";
+		try {
+			return sess.selectList(namespace + ".selectByName", prodName);
+		} finally {
+			sess.close();
+		}
+	}
+	
 	public List<ObProduct> selectByMainCate(String cate) {
 		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
 		// JDBC의 연결객체 얻어오기 -> SqlSession

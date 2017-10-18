@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String pjName="/OldBalance"; %>
+<% String pjName="/OldBalance";
+   String sess = (String)session.getAttribute("id"); %>
 <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
@@ -11,6 +12,17 @@
 <link rel="stylesheet" href="<%=pjName%>/OldBalance/css/main/common.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="<%=pjName%>/OldBalance/js/bootstrap/bootstrap.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#Product_List').click(function() {
+			location.href = '<%=pjName%>/Main?cmd=main';
+		});
+		
+		$('#home').click(function() {
+			location.href = '<%=pjName%>/MyPage?cmd=mypage&id=<%=sess%>';
+		});
+	});
+</script>
 </head>
 <body>
 
@@ -20,8 +32,8 @@
 <h4 class='text-center'> 'Old Balance'의 가족이 되신 고객님. 환영합니다. </h4><br/><br/><br/><br/>
 <hr/>
 <p class="text-center">
-<input type="button" name="Product_List" id="Product_List" class="btn btn-danger" value="쇼핑하러가기"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="button" name="home" id="home" class="btn btn-default" value="Home"/>
+<input type="button" name="Product_List" id="Product_List" class="btn btn-danger" value="Home"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" name="home" id="home" class="btn btn-default" value="MyPage"/>
 </p>
 
 </div>

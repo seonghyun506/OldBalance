@@ -3,10 +3,13 @@
 h2{margin-top:20px;}
 #login_form{width:100%;}
 #form_wrap{width:350px; margin:0 auto;}
-.ID {margin-right:52px;}
+#id {margin-left:8px; width:95%;}
+#pwd {margin-left:8px; width:95%;}
+#login {margin-left:32px;}
+.noM {margin-right:6px; width:95%;}
 .SaveID{margin-left:70px;}
-.Cust .identer{}
-.Cust .pwenter{}
+#guestName{margin-right:6px; width:95%;}
+#guestTell{margin-right:6px; width:95%;}
 .Guest > label{margin-left:50px;}
 .Guest input{float:right; margin-bottom:10px;}
 .Guest input:last-child{margin-top:5px;}
@@ -25,8 +28,8 @@ h2{margin-top:20px;}
 /* 'btn_wrap' */
 .btn_wrap{}
 .btn_wrap .SaveID{margin-bottom:20px;}
-.btn_wrap .b{margin-right:9px; font-size:11px; width:30%;}
-.btn_wrap #login_btn{width:72%; margin-left:10px; margin-bottom:10px;}
+.btn_wrap .b{margin-left:8px; font-size:11px; width:30%;}
+.btn_wrap #login_btn{width:85%; margin-left:22px; margin-bottom:10px;}
 /**/
-form{border:10px solid #e5e5e5; width:350px; height:275px; padding:20px;}
+form{border:8px solid #e5e5e5; width:350px; height:275px; padding:20px;}
 h2{color:red;}

@@ -14,24 +14,17 @@ public class CommandLogin implements MainCommand {
 	}
 	
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		String imsi[] = request.getParameter("path").split("/");
-		
 		String id = request.getParameter("ID");
 		String pwd = request.getParameter("PWD");
 		
 		MainService service = MainService.getInstance();
 		int result = service.checkMember(id, pwd);
 		
-		if(result != 0) {
-			if(imsi.length == 6) {next = imsi[5];}
-			else {
-				String im[] = imsi[4].split("=");
-				
-				if(im[1].equals("register")) {next = "oldBalanceRegister.jsp";}
-				else if(im[1].equals("login")) {next = "oldBalanceLogin.jsp";}
-				else if(im[1].equals("main")) {next = "oldBalanceMain.jsp";}
-			}
-		} else { next = "oldBalanceLoginForm.jsp"; }
+		if(result == 0) {
+				next = "oldBalanceLoginFail.jsp";
+		}else {
+			next = "oldBalanceLoginForm.jsp";
+		}
 		
 		return next;
 	}

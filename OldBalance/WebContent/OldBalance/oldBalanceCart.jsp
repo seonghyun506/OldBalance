@@ -1,19 +1,21 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String pjName = "/OldBalance"; %>
        <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oldBalanceCart.jsp</title>
-<link rel="stylesheet" href="/OldBalance/OldBalance/css/bootstrap/bootstrap.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="./css/cart/cart.css" type="text/css"
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/bootstrap/bootstrap.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="<%=pjName%>/OldBalance/css/cart/cart.css" type="text/css"
 	media="screen" charset="utf-8" />
+<link rel="stylesheet" href="<%=pjName %>/OldBalance/css/main/common.css" type="text/css">
 </head>
 <body>
 	<section id='cart'>
 		<div id='cart_wrap'>
-			<h2>Cart</h2>
+			<br/><h2>Cart</h2>
 			<div class='line'></div>
 				<p>
 				로그인 하시면 장바구니에 담은 상품이 30일간 보관됩니다. <a href='#'>로그인&nbsp;<span>▶</span></a>
@@ -86,7 +88,11 @@
 					<input class="btn btn-danger" type="button" value="주문하기" />
 				</div>
 			</form>
-		</div>
+		</div><br/><br/><br/><br/><br/><br/><br/><br/>
+		
+	<div id='footer'>
+		<img src='<%=pjName %>/OldBalance/images/main/footer.jpg'>
+	</div>
 	</section>
 
 </body>

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import mvc.oldBalance.command.CommandNull;
 import mvc.oldBalance.command.CommandProductDetail;
+import mvc.oldBalance.command.CommandProductFind;
 import mvc.oldBalance.command.CommandProductList;
 import mvc.oldBalance.command.CommandProductMG;
 import mvc.oldBalance.command.ProductCommand;
@@ -32,7 +33,7 @@ public class ProductControl extends HttpServlet{
 		
 		commandMap.put("product-list", new CommandProductList("oldBalanceProductList.jsp"));
 		commandMap.put("product-detail", new CommandProductDetail("oldBalanceProductDetail.jsp"));
-		
+		commandMap.put("product-find", new CommandProductFind("oldBalanceProductFind.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

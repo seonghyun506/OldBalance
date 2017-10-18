@@ -18,7 +18,10 @@ public class MainService {
 	MainRepository repo = new MainRepository();
 	
 	public int checkMember(String id, String pwd) {
-		return repo.checkMember(id, pwd);
+		int result = 0;
+		
+		if(id != null && pwd != null) {	return repo.checkMember(id, pwd); }
+		return result;
 	}
 	
 //	public int insertMember(ObMember member) {

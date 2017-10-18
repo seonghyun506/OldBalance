@@ -1,6 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% String pjName = "/OldBalance"; %>
+<% String id = request.getParameter("ID");
+   String pwd = request.getParameter("PWD");
+   
+   session.setAttribute("id", id); %>
 <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
@@ -13,22 +17,20 @@
 <script type="text/javascript" src="<%=pjName%>/OldBalance/js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript">
 	$(function() {
-		
-	$('#back').click(function() {
-			location.href = '/OldBalance/Main?cmd=login';
+		$('#home').click(function() {
+			location.href = '<%=pjName%>/Main?cmd=main';
 		});
 	});
 	
 </script>
 </head>
 <body>
-
 <div id="myForm">
 <br/><br/>
-<h1 class='text-center'> 아이디와 비밀번호를 다시 확인해주세요. </h1><br/><br/><br/><br/><br/>
+<h1 class='text-center'> 로그인 성공했습니다. </h1><br/><br/><br/><br/><br/><br/><br/>
 <hr/>
 <p class="text-center">
-<input type="button" name="back" id="back" class="btn btn-danger" value=" 돌아가기  "/>
+<input type="button" name="home" id="home" class="btn btn-danger" value=" Home "/>
 </p>
 
 </div>

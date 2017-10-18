@@ -67,6 +67,13 @@
 		<%   } %>
 	});
 	
+	$(function() {
+		$('#btSearch').click(function() {
+			var prodName = $('#tfSearch').val();
+			$(location).attr('href',"<%= pjName %>/Product?cmd=product-find&prodName="+prodName);
+		});
+	});
+	
 </script>
 </head>
 <body>
@@ -119,7 +126,7 @@
 				<li class='sale'>
 					<a href='#'>Sale</a>
 				</li>
-				<li class='search'><input type='text' name='search' id='search' placeholder='574s'><a href='#'><img src="<%=pjName %>/OldBalance/images/header/btn_search.png" /></a></li>
+				<li class='search'><input type='text' name='search' id='tfSearch' placeholder='제품명'> <input id="btSearch" type="image" src="<%=pjName %>/OldBalance/images/header/btn_search.png"></a></li>
 				<!-- 메인메뉴(e) -->
 			</ul>
 		</nav>

@@ -25,7 +25,6 @@ public class OldBalanceRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
-
 	
 //	public List<ObMember> selectComment() {
 //		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체

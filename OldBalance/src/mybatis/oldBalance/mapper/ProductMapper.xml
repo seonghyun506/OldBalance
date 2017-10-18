@@ -25,6 +25,15 @@
 			MAIN_CATE=#{value}
 		</where>
 	</select>
+	
+	<select id="selectByName" parameterType="String" resultType="product">
+		select *
+		from OB_PRODUCT
+		<where>
+			prod_name like #{value}
+		</where>
+		order by release_date
+	</select>
 
 	<select id="selByMainCateOrderByNew" parameterType="String"
 		resultType="product">
