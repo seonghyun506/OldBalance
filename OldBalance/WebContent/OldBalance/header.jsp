@@ -1,10 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String pjName="/OldBalance"; %>
-<%
-String id="asdf";
-session.setAttribute("id", id);
-%>
+<% String pjName="/OldBalance";
+   String sess = (String)session.getAttribute("id"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,24 +53,51 @@ session.setAttribute("id", id);
 			 $('#sub_wrap3').hide(); 
 		 });
 	});
+	
+	$(function() {
+		<% String id = (String)session.getAttribute("id");
+		   if(id != null) { %>
+			   $('#top_nav_before').remove;
+			   $('#top_nav_after').show();
+			   $('.log').css('display','none');
+		<% } else { %>
+			   $('#top_nav_after').hide();
+			   $('#top_nav_bafore').show();
+ 			   $('.out').css('display','none');
+		<%   } %>
+	});
+	
 </script>
 </head>
 <body>
+
 	<!-- top_nav(s) -->
-	<div id='top_nav'>
+	<div id='top_nav_before' class="shoo log">
 		<nav>
 			<ul>
 				<li><a href="<%= pjName %>/Main?cmd=login">로그인</a></li>
 				<li><a href="<%= pjName %>/Main?cmd=register">회원가입</a></li>
-				<li><a href='#'>장바구니</a></li>
-				<li><a href='<%= pjName %>/MyPage?cmd=mypage&id=asdf'>마이페이지</a></li>
+				<li><a href='<%= pjName %>/Main?cmd=login'>장바구니</a></li>
+				<li><a href='<%= pjName %>/Main?cmd=login'>마이페이지</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	<div id='top_nav_after' class="shoo out">
+		<nav>
+			<ul>
+				<li><%=id%> 님</li>
+				<li><a href="<%= pjName %>/Main?cmd=logout">로그아웃</a></li>
+				<li><a href='<%= pjName %>/MyPage?cmd=cart'>장바구니</a></li>
+				<li><a href='<%= pjName %>/MyPage?cmd=mypage&id=<%=sess%>'>마이페이지</a></li>
 			</ul>
 		</nav>
 	</div>
 	<!-- Gmenu(s) -->
 	<header> 
 		<nav id='Gmenu'>
-			<img class="logo" src='<%=pjName %>/OldBalance/images/header/nb_logo.png' alt='뉴발란스 로고 이미지' />
+			<a href="<%=pjName%>/Main?cmd=main" target=_blank>
+			<img class="logo" src='<%=pjName %>/OldBalance/images/header/nb_logo.png' alt='뉴발란스 로고 이미지' /></a>
 			<ul>
 				<!-- 메인메뉴(s) -->
 				<li class='Men'>
@@ -87,10 +111,10 @@ session.setAttribute("id", id);
 					<a href='#'>Kids</a>
 				</li>
 				<li>
-					<a href='#'>574S</a>
+					<p>&nbsp;</p>
 				</li>
 				<li>
-					<a href='#'>SchoolKIDS</a>
+					<p>&nbsp;</p>
 				</li>
 				<li class='sale'>
 					<a href='#'>Sale</a>
@@ -101,224 +125,110 @@ session.setAttribute("id", id);
 		</nav>
 	</header>
 	
-	<!-- sub_wrap1 -->
-	<section id='sub_wrap1' class='sho'>
-		<!-- MEN -->
-		<nav class="sub_menu1">
-			<!-- 신발 -->
-			<ul>
-				<li class="txt_f"><a href='#'>신발</a></li>
-				<li><a href='#'>프리미엄신발</a></li>
-				<li><a href='#'>라이프스타일</a></li>
-				<li><a href='#'>러닝</a></li>
-				<li><a href='#'>워킹</a></li>
-				<li><a href='#'>축구</a></li>
-				<li><a href='#'>스케이트보딩/야구/테니스</a></li>
-				<li><a href='#'>샌들/슬라이스(슬리퍼)</a></li>
-				<li class="allview"><a href='#'>- 신발 전체보기 <span>▶</span></a></li>
-			</ul>
-			<!-- 의류 -->
-			<ul>
-				<li class='txt_f'><a href="#">의류</a></li>
-				<li><a href='#'>상품별</a></li>
-				<li><a href='#'>- 티셔츠</a></li>
-				<li><a href='#'>- 맨투맨/후디</a></li>
-				<li><a href='#'>- 자켓</a></li>
-				<li><a href='#'>- 다운&베스트</a></li>
-				<li><a href='#'>- 롱팬츠</a></li>
-				<li><a href='#'>- 숏팬츠</a></li>
-				<li><a href='#'>- 레깅스</a></li>
-				<li class="allview"><a href='#'>- 상품별 전체보기<span>▶</span></a></li>
-			</ul>
-			<!-- 상품별  -->
-			<ul>
-				<li class="txt_f"><a href='#'>스포츠</a></li>
-				<li>
-					<a href='#'>- 러닝</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 상의</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 하의</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href='#'>- 축구/야구/테니스</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 상의</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 하의</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href='#'>- 트레이닝</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 상의</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 하의</a></li>
-					</ul>
-				</li>
-				<li class="allview"><a href='#'>- 스포츠별 전체보기 <span>▶</span></a></li>
-			</ul>
-			<!-- 용품  -->
-			<ul>
-				<li class="txt_f"><a href='#'>용품</a></li>
-				<li>
-					<a href='#'>가방</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 백팩</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 기타가방</a></li>
-					</ul>
-				</li>
-				<li><a href='#'>모자</a></li>
-				<li><a href='#'>양말</a></li>
-				<li><a href='#'>기타용품</a></li>
-				<li class="allview"><a href='#'>- 용품 전체보기 <span>▶</span></a></li>
-			</ul>
-		</nav>
-		<nav class='sub1_banner'>
-			<ul>
-				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner.jpg' alt='신발'></a></li>
-				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner2.jpg' alt='의류'></a></li>
-				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner3.jpg' alt='키드'></a></li>
-			</ul>
-		</nav>
-	</section>
-	<!-- //submenu1_wrap -->
-	
-	
-	<!-- sub_wrap2 -->
-	<section id='sub_wrap2' class='sho'>
-		<!-- ME -->
-		<nav class="sub_menu1">
-			<!-- 신발 -->
-			<ul>
-				<li class="txt_f"><a href='#'>신발</a></li>
-				<li><a href='#'>프리미엄신발</a></li>
-				<li><a href='#'>라이프스타일</a></li>
-				<li><a href='#'>러닝</a></li>
-				<li><a href='#'>워킹</a></li>
-				<li><a href='#'>축구</a></li>
-				<li><a href='#'>스케이트보딩/야구/테니스</a></li>
-				<li><a href='#'>샌들/슬라이스(슬리퍼)</a></li>
-				<li class="allview"><a href='#'>- 신발 전체보기 <span>▶</span></a></li>
-			</ul>
-			<!-- 의류 -->
-			<ul>
-				<li class='txt_f'><a href="#">의류</a></li>
-				<li><a href='#'>상품별</a></li>
-				<li><a href='#'>- 티셔츠</a></li>
-				<li><a href='#'>- 슬리브리스/브라탑</a></li>
-				<li><a href='#'>- 맨투맨/후디</a></li>
-				<li><a href='#'>- 자켓</a></li>
-				<li><a href='#'>- 다운&베스트</a></li>
-				<li><a href='#'>- 롱팬츠</a></li>
-				<li><a href='#'>- 숏팬츠/스커트</a></li>
-				<li><a href='#'>- 레깅스</a></li>
-				<li class="allview"><a href='#'>- 상품별 전체보기<span>▶</span></a></li>
-			</ul>
-			<!-- 상품별  -->
-			<ul>
-				<li class="txt_f"><a href='#'>스포츠</a></li>
-				<li>
-					<a href='#'>- 러닝</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 상의</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 하의</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href='#'>- 축구/야구/테니스</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 상의</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 하의</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href='#'>- 트레이닝</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 상의</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 하의</a></li>
-					</ul>
-				</li>
-				<li class="allview"><a href='#'>- 스포츠별 전체보기 <span>▶</span></a></li>
-			</ul>
-			<!-- 용품  -->
-			<ul>
-				<li class="txt_f"><a href='#'>용품</a></li>
-				<li>
-					<a href='#'>가방</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 백팩</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 기타가방</a></li>
-					</ul>
-				</li>
-				<li><a href='#'>모자</a></li>
-				<li><a href='#'>양말</a></li>
-				<li><a href='#'>기타용품</a></li>
-				<li class="allview"><a href='#'>- 용품 전체보기 <span>▶</span></a></li>
-			</ul>
-		</nav>
-		<nav class='sub1_banner'>
-			<ul>
-				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner1_1.jpg' alt='여성의류프로모션'></a></li>
-				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner_w.png' alt='여성의류프로모션'></a></li>
-			</ul>
-		</nav>
-	</section>
-	<!-- //submenu2_wrap -->
-	
-	
-	
-	<!-- sub_wrap3 -->
-	<section id='sub_wrap3' class='sho'>
-		<!-- ME -->
-		<nav class="sub_menu1">
-			<ul>
-				<li class="txt_f"><a href='#'>NB KID Special</a></li>
-				<li><a href='#'>17F/W WIZARD</a></li>
-				<li><a href='#'>온라인 단독상품</a></li>
-				<li><a href='#'>베이비 라인</a></li>
-				<li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/khd.jpg' alt='kid후드xl' /><br>[온라인한정]후드티 세트</a></li>
-			</ul>
-			<!-- 신발 -->
-			<ul>
-				<li class="txt_f"><a href='#'>신발</a></li>
-				<li><a href='#'>Infant</a></li>
-				<li><a href='#'>Pre-school</a></li>
-				<li><a href='#'>Grade-School</a></li>
-				<li><a href='#'>Kids 축구</a></li>
-				<li class="allview"><a href='#'>- 키즈신발 전체보기 <span>▶</span></a></li>
-			</ul>
-			<!-- 의류 -->
-			<ul>
-				<li class='txt_f'><a href="#">의류</a></li>
-				<li><a href='#'>상품별</a></li>
-				<li><a href='#'>베스트/바람막이/자켓</a></li>
-				<li><a href='#'>다운/패딩 자켓</a></li>
-				<li><a href='#'>트레이닝세트</a></li>
-				<li><a href='#'>맨투맨/후디</a></li>
-				<li><a href='#'>티셔츠</a></li>
-				<li><a href='#'>- 반팔/나시 티셔츠</a></li>
-				<li><a href='#'>- 긴팔 티셔츠</a></li>
-				<li><a href='#'>팬츠/레깅스</a></li>
-				<li><a href='#'>- 반바지</a></li>
-				<li><a href='#'>- 긴바지</a></li>
-				<li><a href='#'>원피스/스커트</a></li>
-				<li class="allview"><a href='#'>- 의류 전체보기<span>▶</span></a></li>
-			</ul>
-			
-			<!-- 용품  -->
-			<ul>
-				<li class="txt_f"><a href='#'>용품</a></li>
-				<li>
-					<a href='#'>가방</a>
-					<ul>
-						<li><a href="#">&nbsp;&nbsp;- 초등학생 책가방</a></li>
-						<li><a href="#">&nbsp;&nbsp;- 미니미 & 소풍가방</a></li>
-					</ul>
-				</li>
-				<li><a href='#'>모자</a></li>
-				<li><a href='#'>양말</a></li>
-				<li><a href='#'>기타용품</a></li>
-				<li class="allview"><a href='#'>- 용품 전체보기 <span>▶</span></a></li>
-			</ul>
+   <!-- sub_wrap1 -->
+   <section id='sub_wrap1' class='sho'>
+      <!-- MEN -->
+      <nav class="sub_menu1">
+      	  <ul>
+            <li class="txt_f">NB KID Special</li>
+            <li><a href='#'>17F/W WIZARD</a></li>
+            <li><a href='#'>온라인 단독상품</a></li>
+            <li><a href='#'>베이비 라인</a></li>
+            <li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/khd.jpg' alt='kid후드xl' /><br>[온라인한정]후드티 세트</a></li>
+         </ul>
+         <!-- 신발 -->
+         <ul>
+            <li class="txt_f">신발</li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=MEN&subCate=신발&detailCate=러닝화&page=1&range=all'>- 러닝</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=MEN&subCate=신발&detailCate=워킹화&page=1&range=all'>- 워킹</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=MEN&subCate=신발&detailCate=축구화&page=1&range=all'>- 축구</a></li><br/>
+            <li class="allview"><a href='#'>- 신발 전체보기 <span>▶</span></a></li>
+         </ul>
+         <!-- 의류 -->
+         <ul>
+            <li class='txt_f'>의류</li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=MEN&subCate=의류&detailCate=티셔츠&page=1&range=all'>- 티셔츠</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=MEN&subCate=의류&detailCate=맨투맨&page=1&range=all'>- 맨투맨/후디</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=MEN&subCate=의류&detailCate=자켓&page=1&range=all'>- 자켓</a></li><br/>
+            <li class="allview"><a href='#'>- 상품별 전체보기<span>▶</span></a></li>
+         </ul>
+         <!-- 상품별  -->
+      </nav>
+      <nav class='sub1_banner'>
+         <ul>
+            <li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner.jpg' alt='신발'></a></li>
+            <li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner2.jpg' alt='의류'></a></li>
+            <li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner3.jpg' alt='키드'></a></li>
+         </ul>
+      </nav>
+   </section>
+   <!-- //submenu1_wrap -->
+   
+   
+   <!-- sub_wrap2 -->
+   <section id='sub_wrap2' class='sho'>
+      <!-- ME -->
+      <nav class="sub_menu1">
+          <ul>
+            <li class="txt_f">NB KID Special</li>
+            <li><a href='#'>17F/W WIZARD</a></li>
+            <li><a href='#'>온라인 단독상품</a></li>
+            <li><a href='#'>베이비 라인</a></li>
+            <li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/khd.jpg' alt='kid후드xl' /><br>[온라인한정]후드티 세트</a></li>
+         </ul>
+         <!-- 신발 -->
+         <ul>
+            <li class="txt_f"><a href='#'>신발</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=WOMEN&subCate=신발&detailCate=러닝화&page=1&range=all'>- 러닝</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=WOMEN&subCate=신발&detailCate=러닝화&page=1&range=all'>- 워킹</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=WOMEN&subCate=신발&detailCate=러닝화&page=1&range=all'>- 축구</a></li><br/>
+            <li class="allview"><a href='#'>- 신발 전체보기 <span>▶</span></a></li>
+         </ul>
+         <!-- 의류 -->
+         <ul>
+            <li class='txt_f'>의류</li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=WOMEN&subCate=의류&detailCate=티셔츠&page=1&range=all'>- 티셔츠</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=WOMEN&subCate=의류&detailCate=맨투맨&page=1&range=all'>- 맨투맨/후디</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=WOMEN&subCate=의류&detailCate=자켓&page=1&range=all'>- 자켓</a></li><br/>
+            <li class="allview"><a href='#'>- 상품별 전체보기<span>▶</span></a></li>
+         </ul>
+      </nav>
+      <nav class='sub1_banner'>
+         <ul>
+            <li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner1_1.jpg' alt='여성의류프로모션'></a></li>
+            <li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/m_banner_w.png' alt='여성의류프로모션'></a></li>
+         </ul>
+      </nav>
+   </section>
+   <!-- //submenu2_wrap -->
+   
+   <!-- sub_wrap3 -->
+   <section id='sub_wrap3' class='sho'>
+      <!-- ME -->
+      <nav class="sub_menu1">
+         <ul>
+            <li class="txt_f">NB KID Special</li>
+            <li><a href='#'>17F/W WIZARD</a></li>
+            <li><a href='#'>온라인 단독상품</a></li>
+            <li><a href='#'>베이비 라인</a></li>
+            <li><a href='#'><img src='<%=pjName %>/OldBalance/images/header/khd.jpg' alt='kid후드xl' /><br>[온라인한정]후드티 세트</a></li>
+         </ul>
+         <!-- 신발 -->
+         <ul>
+            <li class="txt_f"><a href='#'>신발</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=KID&subCate=신발&detailCate=러닝화&page=1&range=all'>- 러닝</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=KID&subCate=신발&detailCate=워킹화&page=1&range=all'>- 워킹</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=KID&subCate=신발&detailCate=축구화&page=1&range=all'>- 축구</a></li><br/>
+            <li class="allview"><a href='#'>- 키즈신발 전체보기 <span>▶</span></a></li>
+         </ul>
+         <!-- 의류 -->
+         <ul>
+            <li class='txt_f'>의류</li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=KID&subCate=의류&detailCate=자켓&page=1&range=all'>- 베스트/바람막이/자켓</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=KID&subCate=의류&detailCate=맨투맨&page=1&range=all'>- 맨투맨/후디</a></li>
+            <li><a href='<%=pjName %>/Product?cmd=product-list&cate=KID&subCate=의류&detailCate=티셔츠&page=1&range=all'>- 티셔츠</a></li><br/>
+            <li class="allview"><a href='#'>- 의류 전체보기<span>▶</span></a></li>
+         </ul>
 		</nav>
 		<nav class='sub1_banner'>
 			<ul>
