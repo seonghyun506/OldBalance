@@ -95,4 +95,274 @@ public class ProductRepository {
 			sess.close();
 		}
 	}
+
+	public List<ObProduct> runningShoesOrderByNew(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".runningShoesOrderByNew", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> runningShoesOrderByPopular(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".runningShoesOrderByPopular", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> runningShoesOrderByLow(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".runningShoesOrderByLow", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> runningShoesOrderByHigh(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".runningShoesOrderByHigh", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> runningShoes(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".runningShoes", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> walkingShoesOrderByNew(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".walkingShoesOrderByNew", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> walkingShoesOrderByPopular(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".walkingShoesOrderByPopular", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> walkingShoesOrderByLow(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".walkingShoesOrderByLow", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> walkingShoesOrderByHigh(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".walkingShoesOrderByHigh", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> walkingShoes(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".walkingShoes", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> soccerShoesOrderByNew(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".soccerShoesOrderByNew", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> soccerShoesOrderByPopular(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".soccerShoesOrderByPopular", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> soccerShoesOrderByLow(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".soccerShoesOrderByLow", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> soccerShoesOrderByHigh(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".soccerShoesOrderByHigh", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> soccerShoes(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".soccerShoes", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> tShirtOrderByNew(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".tShirtOrderByNew", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> tShirtOrderByPopular(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".tShirtOrderByPopular", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> tShirtOrderByLow(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".tShirtOrderByLow", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> tShirtOrderByHigh(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".tShirtOrderByHigh", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> tShirt(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".tShirt", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> mtmOrderByNew(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".mtmOrderByNew", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> mtmOrderByPopular(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".mtmOrderByPopular", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> mtmOrderByLow(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".mtmOrderByLow", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> mtmOrderByHigh(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".mtmOrderByHigh", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> mtm(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".mtm", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> jacketOrderByNew(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".jacketOrderByNew", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> jacketOrderByPopular(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".jacketOrderByPopular", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> jacketOrderByLow(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".jacketOrderByLow", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> jacketOrderByHigh(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".jacketOrderByHigh", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public List<ObProduct> jacket(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".jacket", cate);
+		} finally {
+			sess.close();
+		}
+	}
 }
