@@ -365,4 +365,67 @@ public class ProductRepository {
 			sess.close();
 		}
 	}
+
+	public String jacketTotalCount(String cate) {
+		// TODO Auto-generated method stub
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectOne(namespace + ".jacketTotalCount", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public String mtmTotalCount(String cate) {
+		// TODO Auto-generated method stub
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectOne(namespace + ".mtmTotalCount", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public String tshirtTotalCount(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectOne(namespace + ".tshirtTotalCount", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public String soccerTotalCount(String cate) {
+		// TODO Auto-generated method stub
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectOne(namespace + ".soccerTotalCount", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public String walkingTotalCount(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectOne(namespace + ".walkingTotalCount", cate);
+		} finally {
+			sess.close();
+		}
+	}
+
+	public String runningTotalCount(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		try {
+			return sess.selectOne(namespace + ".runningTotalCount", cate);
+		} finally {
+			sess.close();
+		}
+	}
 }

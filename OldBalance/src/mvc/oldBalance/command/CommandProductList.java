@@ -46,6 +46,8 @@ public class CommandProductList implements ProductCommand {
 			}
 		} else if (subCate.equals("신발")) {// subCate가 '신발'일 때
 			if(detailCate.equals("러닝화")) {//subCate가 '신발' 이고 detailCate가 '러닝화'일 때
+				int totalCount = Integer.parseInt(service.getInstance().runningTotalCount(cate));
+				request.setAttribute("param2", totalCount);
 				if (range.equals("new")) {
 					List<ObProduct> productList = service.runningShoesOrderByNew(cate);
 					request.setAttribute("param", productList);
@@ -66,6 +68,8 @@ public class CommandProductList implements ProductCommand {
 					request.setAttribute("param", productList);
 				}
 			}else if(detailCate.equals("워킹화")) {//subCate가 '신발' 이고 detailCate가 '워킹화'일 때
+				int totalCount = Integer.parseInt(service.getInstance().walkingTotalCount(cate));
+				request.setAttribute("param2", totalCount);
 				if (range.equals("new")) {
 					List<ObProduct> productList = service.walkingShoesOrderByNew(cate);
 					request.setAttribute("param", productList);
@@ -86,6 +90,8 @@ public class CommandProductList implements ProductCommand {
 					request.setAttribute("param", productList);
 				}
 			}else if(detailCate.equals("축구화")) {//subCate가 '신발' 이고 detailCate가 '축구화'일 때
+				int totalCount = Integer.parseInt(service.getInstance().soccerTotalCount(cate));
+				request.setAttribute("param2", totalCount);
 				if (range.equals("new")) {
 					List<ObProduct> productList = service.soccerShoesOrderByNew(cate);
 					request.setAttribute("param", productList);
@@ -108,6 +114,8 @@ public class CommandProductList implements ProductCommand {
 			}
 		} else if (subCate.equals("의류")) {// subCate가 '의류'일 때
 			if(detailCate.equals("티셔츠")) {//subCate가 '의류' 이고 detailCate가 '티셔츠'일 때
+				int totalCount = Integer.parseInt(service.getInstance().tshirtTotalCount(cate));
+				request.setAttribute("param2", totalCount);
 				if (range.equals("new")) {
 					List<ObProduct> productList = service.tShirtOrderByNew(cate);
 					request.setAttribute("param", productList);
@@ -128,6 +136,8 @@ public class CommandProductList implements ProductCommand {
 					request.setAttribute("param", productList);
 				}
 			}else if(detailCate.equals("맨투맨")) {//subCate가 '의류' 이고 detailCate가 '맨투맨'일 때
+				int totalCount = Integer.parseInt(service.getInstance().mtmTotalCount(cate));
+				request.setAttribute("param2", totalCount);
 				if (range.equals("new")) {
 					List<ObProduct> productList = service.mtmOrderByNew(cate);
 					request.setAttribute("param", productList);
@@ -148,6 +158,8 @@ public class CommandProductList implements ProductCommand {
 					request.setAttribute("param", productList);
 				}
 			}else if(detailCate.equals("자켓")) {//subCate가 '의류' 이고 detailCate가 '자켓'일 때
+				int totalCount = Integer.parseInt(service.getInstance().jacketTotalCount(cate));
+				request.setAttribute("param2", totalCount);
 				if (range.equals("new")) {
 					List<ObProduct> productList = service.jacketOrderByNew(cate);
 					request.setAttribute("param", productList);
@@ -170,9 +182,6 @@ public class CommandProductList implements ProductCommand {
 			}
 			
 		}
-
-		int totalCount = Integer.parseInt(service.getInstance().selectTotalCount(cate));
-		request.setAttribute("param2", totalCount);
 
 		return next;
 	}

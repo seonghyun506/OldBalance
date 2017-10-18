@@ -346,5 +346,53 @@
 			MAIN_CATE=#{value} and SUB_CATE='의류' and detail_cate='자켓'
 		</where>
 	</select>
+	
+	<select id="runningTotalCount" parameterType="String" resultType="String">
+		select count(*) totalCount
+		from OB_PRODUCT
+		<where>
+			MAIN_CATE=#{value} and detail_cate='러닝화'
+		</where>
+	</select>
+
+	<select id="walkingTotalCount" parameterType="String" resultType="String">
+		select count(*) totalCount
+		from OB_PRODUCT
+		<where>
+			MAIN_CATE=#{value} and detail_cate='워킹화'
+		</where>
+	</select>
+	
+	<select id="soccerTotalCount" parameterType="String" resultType="String">
+		select count(*) totalCount
+		from OB_PRODUCT
+		<where>
+			MAIN_CATE=#{value} and detail_cate='축구화'
+		</where>
+	</select>
+	
+	<select id="tshirtTotalCount" parameterType="String" resultType="String">
+		select count(*) totalCount
+		from OB_PRODUCT
+		<where>
+			MAIN_CATE=#{value} and detail_cate='티셔츠'
+		</where>
+	</select>
+	
+	<select id="mtmTotalCount" parameterType="String" resultType="String">
+		select count(*) totalCount
+		from OB_PRODUCT
+		<where>
+			MAIN_CATE=#{value} and detail_cate='맨투맨'
+		</where>
+	</select>
+	
+	<select id="jacketTotalCount" parameterType="String" resultType="String">
+		select count(*) totalCount
+		from OB_PRODUCT
+		<where>
+			MAIN_CATE=#{value} and detail_cate='자켓'
+		</where>
+	</select>
 
 </mapper>

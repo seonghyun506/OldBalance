@@ -168,4 +168,28 @@ public class ProductService {
 		return repo.jacket(cate);
 	}
 
+	public String jacketTotalCount(String cate) {
+		return repo.jacketTotalCount(cate);
+	}
+
+	public String mtmTotalCount(String cate) {
+		return repo.mtmTotalCount(cate);
+	}
+
+	public String tshirtTotalCount(String cate) {
+		return repo.tshirtTotalCount(cate);
+	}
+
+	public String soccerTotalCount(String cate) {
+		return repo.soccerTotalCount(cate);
+	}
+
+	public String walkingTotalCount(String cate) {
+		return repo.walkingTotalCount(cate);
+	}
+
+	public String runningTotalCount(String cate) {
+		return repo.runningTotalCount(cate);
+	}
+
 }
