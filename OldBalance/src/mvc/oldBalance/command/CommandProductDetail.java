@@ -19,7 +19,8 @@ public class CommandProductDetail implements ProductCommand {
 		ProductService service = ProductService.getInstance();
 		
 		ObProduct product = service.selectById(id);
-		int result = service.updateReadNum(id);
+		
+		service.updateReadNum(id);
 		request.setAttribute("param", product);
 		
 		return next;

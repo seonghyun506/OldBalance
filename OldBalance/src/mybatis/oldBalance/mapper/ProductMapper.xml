@@ -397,12 +397,11 @@
 		</where>
 	</select>
 
-	<update id="updateReadNum" parameterType="String">
+	<update id="updateReadNum" parameterType="String" >
 		update OB_PRODUCT
-		SET READ_NUM = READ_NUM+1
-		<where>
-			PROD_ID=#{value}
-		</where>
+		SET
+		READ_NUM = READ_NUM+1
+		WHERE PROD_ID=#{value}
 	</update>
 
 </mapper>
