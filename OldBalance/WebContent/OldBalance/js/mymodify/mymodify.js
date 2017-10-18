@@ -13,4 +13,4 @@ $(document).ready(function() {
 //		window.location.href = '/OldBalance_cpy/FindPost?cmd=findpost';
 		window.open("/OldBalance_cpy/OldBalance/oldBalanceFindPost.jsp","","weigh=500,height=400");
 	});
-		});
+		}); 
