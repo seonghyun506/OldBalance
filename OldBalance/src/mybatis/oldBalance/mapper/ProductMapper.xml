@@ -25,4 +25,41 @@ from OB_PRODUCT
 MAIN_CATE=#{value}
 </where>
 </select>
+
+<select id="selByMainCateOrderByNew" parameterType="String" resultType="product">
+select *
+from OB_PRODUCT
+<where>
+MAIN_CATE=#{value}
+</where>
+order by release_date
+</select>
+
+<select id="selByMainCateOrderByPopular" parameterType="String" resultType="product">
+select *
+from OB_PRODUCT
+<where>
+MAIN_CATE=#{value}
+</where>
+order by read_num
+</select>
+
+<select id="selByMainCateOrderByLow" parameterType="String" resultType="product">
+select *
+from OB_PRODUCT
+<where>
+MAIN_CATE=#{value}
+</where>
+order by prod_price
+</select>
+
+<select id="selByMainCateOrderByHigh" parameterType="String" resultType="product">
+select *
+from OB_PRODUCT
+<where>
+MAIN_CATE=#{value}
+</where>
+order by prod_price desc
+</select>
+
 </mapper>
