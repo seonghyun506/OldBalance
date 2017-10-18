@@ -192,4 +192,8 @@ public class ProductService {
 		return repo.runningTotalCount(cate);
 	}
 
+	public int updateReadNum(String id) {
+		return repo.updateReadNum(id);
+	}
+
 }

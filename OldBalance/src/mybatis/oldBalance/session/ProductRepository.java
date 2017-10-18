@@ -428,4 +428,14 @@ public class ProductRepository {
 			sess.close();
 		}
 	}
+
+	public int updateReadNum(String id) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+				try {
+					return sess.update(namespace + ".updateReadNum", id);
+				} finally {
+					sess.close();
+				}
+	}
 }
