@@ -1,15 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<% String pjName="/OldBalance"; %>
+   <%@ page import="java.util.*" %>
+    <%@ page import="mybatis.oldBalance.service.ModifyService" %>
+    <%@ page import="mvc.oldBalance.model.ObMember" %>
+    <%
+    String id = request.getParameter("id");
+	List<ObMember> mList = ModifyService.getInstance().selectModify(id);
+	
+	
+    %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oldBalanceModify.jsp</title>
-<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-<link rel="stylesheet" href="./css/mypage/mymodify.css" type="text/css" />
+<link rel="stylesheet" href="<%=pjName %>/OldBalance/css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="<%=pjName %>/OldBalance/css/mypage/mymodify.css" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/mymodify/mymodify.js" type="text/javascript"></script>
+<script src="<%=pjName %>/OldBalance/js/mymodify/mymodify.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -17,46 +26,21 @@
 		<div id='modify'>
 			<h2>회원정보 수정</h2>
 			<hr>
-			<form>
+			<form action="<%=pjName%>/Modify?cmd=modify-member" method='post'>
 				<div class="mymodify">
 					<ul>
-						<li><pre>아이디                      아이디    </pre></li>
-						<li><pre>이름                       이름</pre></li>
-						<li><pre>성별                      <input type="radio"
-									name="gender" value="male">남성</input><input type="radio"
-									name="gender" value="female" />여성</input>
-							</pre></li>
-						<li>생년월일 <select id="year">
-								<option>선택</option>
-								<%
-									for (int i = 2000; i <= 2017; i++) {
-								%>
-								<option value="<%=i%>"><%=i%></option>
-								<%
-									}
-								%>
-						</select>년 
-						<select id="month">
-								<option>선택</option>
-								<%
-									for (int i = 1; i <= 12; i++) {
-								%>
-								<option value="<%=i%>"><%=i%></option>
-								<%
-									}
-								%>
-						</select> 월
-						 <select id="day">
-								<option>선택</option>
-						</select> 일
-						</li>
+					<%for(ObMember member : mList){ %>
+						<li><pre>아이디                     <%=member.getCustId()%>     </pre></li>
+						<li><pre>주소                        <%=member.getCustAddr()%> </pre></li>
+					
 					</ul>
 				</div>
 				<hr />
 				<div class='pa_check'>
-					<pre>기존 비밀번호       <input type="text" name="password" /><br />
-					</pre>
-					<pre>새 비밀변호        <input type="text" /><br />
+				<input type="hidden" name="id" value="<%=member.getCustId() %>"/>
+					<pre>기존 비밀번호       <input type="text" name="password" /><input type="hidden" name="hiddenpwd" value="<%=member.getCustPw() %>" /><br />
+					</pre><%} %>
+					<pre>새 비밀변호        <input type="text" name="newpwd" /><br />
 					</pre>
 					<pre>새 비밀번호 확인   <input type="text" /><br />
 					</pre>
@@ -67,11 +51,11 @@
 						type="text" name="secondnum" class="tel" />-<input type="text"
 						name="thirdnum" class="tel" />
 					</li>
-					<li>주소 (우편번호) <input type="text" name="postnum" /> <input
+					<li>주소 (우편번호) <input type="text" id="post" name="postnum" /> <input
 						class="btn btn-success" type="button" name="postsearch"
 						value="우편번호 찾기" />
 					</li>
-					<li>주소 (상세입력) <input type="text" name="addr1" disabled /> <input
+					<li>주소 (상세입력) <input type="text" id="addr" name="addr1" readonly /> <input
 						type="text" name="addr2" />
 					</li>
 				</ul>

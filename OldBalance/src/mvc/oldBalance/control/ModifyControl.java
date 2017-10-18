@@ -1,6 +1,8 @@
 package mvc.oldBalance.control;
 
 import java.io.IOException;
+
+
 import java.util.*;
 
 import javax.servlet.RequestDispatcher;
@@ -10,18 +12,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mvc.oldBalance.command.CommandNull;
-import mvc.oldBalance.command.MyCommand;
-import mvc.oldBalance.command.CommandMyPage;
-import mvc.oldBalance.command.CommandCart;
+import mvc.oldBalance.command.CommandProductDetail;
+import mvc.oldBalance.command.CommandProductList;
+import mvc.oldBalance.command.CommandProductMG;
+import mvc.oldBalance.command.ModifyCommand;
+import mvc.oldBalance.command.MyPageCommand;
+import mvc.oldBalance.command.ProductCommand;
 import mvc.oldBalance.command.CommandException;
+import mvc.oldBalance.command.CommandModify;
+import mvc.oldBalance.command.CommandModifyUpdate;
+import mvc.oldBalance.command.CommandMyPage;
 
-public class MyControl extends HttpServlet{
+public class ModifyControl extends HttpServlet{
 	private HashMap commandMap;
 	private String	jspDir = "/OldBalance/";
 	private String  error = "error.jsp";
 	
 	
-	public MyControl() {
+	public ModifyControl() {
 		super();
 		initCommand();
 	}
@@ -29,7 +37,12 @@ public class MyControl extends HttpServlet{
 	private void initCommand() {
 		commandMap = new HashMap();
 		
-//		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
+		commandMap.put("modify", new CommandModify("oldBalanceModify.jsp"));
+		commandMap.put("modify-member", new CommandModifyUpdate("oldBalanceMyPage.jsp"));
+		
+		
+//		commandMap.put("modify", new CommandmNull("oldBalanceModify.jsp")); //update
+		
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -47,15 +60,15 @@ public class MyControl extends HttpServlet{
 		String nextPage = "";
 		String cmdKey	= request.getParameter("cmd");
 		if( cmdKey == null ){
-			cmdKey = "input-Form";
+			cmdKey = "modify";
 		}
 
-		MyCommand cmd = null;
+		ModifyCommand cmd = null;
 
 		try{
 			
 			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (MyCommand)commandMap.get( cmdKey);
+				cmd = (ModifyCommand)commandMap.get( cmdKey);
 			}else{
 				throw new CommandException("지정할 명령어가 존재하지 않음");
 			}

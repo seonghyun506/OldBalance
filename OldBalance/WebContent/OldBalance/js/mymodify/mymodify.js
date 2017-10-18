@@ -1,58 +1,16 @@
-$(document).ready(
-		function() {
-			var year;
-			var month;
-			var day = [ "31", "28", "31", "30", "31", "30", "31", "31", "30",
-					"31", "30", "31" ];
-			var days;
-			$("#year").on("change", function() {
-				if (month == undefined) {
-					year = $(this).val();
-				} else {
-					year = $(this).val();
-					if (0 == year % 4 && 0 != year % 100 || 0 == year % 400) {
-						day[1] = "29";
-						$('#day').empty();
-						for (var count = 1; count <= day[month - 1]; count++) {
-							var option = $("<option>" + count + "</option>");
-							$("#day").append(option);
-						}
-					} else {
-						day[1] = "28";
-						$('#day').empty();
-						for (var count = 1; count <= day[month - 1]; count++) {
-							var option = $("<option>" + count + "</option>");
-							$("#day").append(option);
-						}
-					}
-				}
-
-			});
-
-			$("#month").on("change", function() {
-				if (year == undefined) {
-					month = $(this).val();
-				} else {
-					month = $(this).val();
-					if (0 == year % 4 && 0 != year % 100 || 0 == year % 400) {
-						day[1] = "29";
-						$('#day').empty();
-
-						for (var count = 1; count <= day[month - 1]; count++) {
-							var option = $("<option>" + count + "</option>");
-							$("#day").append(option);
-						}
-					} else {
-						day[1] = "28";
-						$('#day').empty();
-
-						for (var count = 1; count <= day[month - 1]; count++) {
-							var option = $("<option>" + count + "</option>");
-							$("#day").append(option);
-						}
-					}
-				}
-
-			});
-
+$(document).ready(function() {
+	$("input[name='complete']").click(function(){
+		alert("현재 비밀번호"+$("input[name='hiddenpwd']").val());
+		if($("input[name='hiddenpwd']").val()==$("input[name='password']").val()){
+			$('form').submit();
+			alert("회원 정보 수정 완료");	
+		}else{
+			alert("현재 비밀번호가 일치하지 않습니다..");
+			return;
+		}
+	});
+	$("input[name='postsearch']").click(function(){
+//		window.location.href = '/OldBalance_cpy/FindPost?cmd=findpost';
+		window.open("/OldBalance_cpy/OldBalance/oldBalanceFindPost.jsp","","weigh=500,height=400");
+	});
 		});
