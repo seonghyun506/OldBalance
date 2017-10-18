@@ -25,6 +25,8 @@ public class CommandProductList implements ProductCommand {
 
 		// subCate가 all(신발 and 의류)일 때
 		if (subCate.equals("all")) {
+			int totalCount = Integer.parseInt(service.getInstance().selectTotalCount(cate));
+			request.setAttribute("param2", totalCount);
 			if (range.equals("new")) {
 				List<ObProduct> productList = service.selByMainCateOrderByNew(cate);
 				request.setAttribute("param", productList);
