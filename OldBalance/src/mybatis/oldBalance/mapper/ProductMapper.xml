@@ -43,7 +43,7 @@
 		<where>
 			MAIN_CATE=#{value}
 		</where>
-		order by read_num
+		order by read_num desc
 	</select>
 
 	<select id="selByMainCateOrderByLow" parameterType="String"
@@ -83,7 +83,7 @@
 		<where>
 			MAIN_CATE=#{value} and SUB_CATE='신발' and detail_cate='러닝화'
 		</where>
-		order by read_num
+		order by read_num desc
 	</select>
 
 	<select id="runningShoesOrderByLow" parameterType="String"
@@ -131,7 +131,7 @@
 		<where>
 			MAIN_CATE=#{value} and SUB_CATE='신발' and detail_cate='워킹화'
 		</where>
-		order by read_num
+		order by read_num desc
 	</select>
 
 	<select id="walkingShoesOrderByLow" parameterType="String"
@@ -179,7 +179,7 @@
 		<where>
 			MAIN_CATE=#{value} and SUB_CATE='신발' and detail_cate='축구화'
 		</where>
-		order by read_num
+		order by read_num desc
 	</select>
 
 	<select id="soccerShoesOrderByLow" parameterType="String"
@@ -226,7 +226,7 @@
 		<where>
 			MAIN_CATE=#{value} and SUB_CATE='의류' and detail_cate='티셔츠'
 		</where>
-		order by read_num
+		order by read_num desc
 	</select>
 
 	<select id="tShirtOrderByLow" parameterType="String" resultType="product">
@@ -272,7 +272,7 @@
 		<where>
 			MAIN_CATE=#{value} and SUB_CATE='의류' and detail_cate='맨투맨'
 		</where>
-		order by read_num
+		order by read_num desc
 	</select>
 
 	<select id="mtmOrderByLow" parameterType="String" resultType="product">
@@ -317,7 +317,7 @@
 		<where>
 			MAIN_CATE=#{value} and SUB_CATE='의류' and detail_cate='자켓'
 		</where>
-		order by read_num
+		order by read_num desc
 	</select>
 
 	<select id="jacketOrderByLow" parameterType="String" resultType="product">
