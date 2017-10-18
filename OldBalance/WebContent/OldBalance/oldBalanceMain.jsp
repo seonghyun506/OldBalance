@@ -8,21 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oldBalanceMain.jsp</title>
 <link rel="stylesheet" href="<%=pjName %>/OldBalance/css/main/common.css" type="text/css">
-
-<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		<!--[if lt IE 9]><script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script> <![endif]-->
-		<!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
-		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<script>
-		document.createElement('header');
-		document.createElement('nav');
-		document.createElement('section');
-		document.createElement('article');
-		document.createElement('aside');
-		document.createElement('footer');
-		document.createElement('hgroup');
-		</script>
-		<![endif]-->
 </head>
 <body>
 	<!--visual-->
@@ -41,9 +26,9 @@
 		<section id='quick_bar'>
 			<div class='new_best'>
 				<ul>
-					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=MEN&page=1&range=all"><img src='<%=pjName %>/OldBalance/images/main/men.gif' alt=''></a></li>
-					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=WOMEN&page=1&range=all"><img src='<%=pjName %>/OldBalance/images/main/women.gif' alt=''></a></li>
-					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=KID&page=1&range=all"><img src='<%=pjName %>/OldBalance/images/main/kids.gif' alt=''></a></li>
+					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=MEN&subCate=all&detailCate=all&page=1&range=all"><img src='<%=pjName %>/OldBalance/images/main/men.gif' alt=''></a></li>
+					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=WOMEN&subCate=all&detailCate=all&page=1&range=all"><img src='<%=pjName %>/OldBalance/images/main/women.gif' alt=''></a></li>
+					<li><a href="<%=pjName %>/Product?cmd=product-list&cate=KID&subCate=all&detailCate=all&page=1&range=all"><img src='<%=pjName %>/OldBalance/images/main/kids.gif' alt=''></a></li>
 				</ul>
 			</div>
 		</section>

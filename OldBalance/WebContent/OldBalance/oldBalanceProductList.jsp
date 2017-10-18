@@ -7,6 +7,8 @@
 	String cate = request.getParameter("cate");
 	List<ObProduct> mList = (List<ObProduct>) request.getAttribute("param");
 	String range = request.getParameter("range");
+	String subCate = request.getParameter("subCate");
+	String detailCate = request.getParameter("detailCate");
 	int totalCount = (int) request.getAttribute("param2");
 	int countList = 36;
 	int cnt = 1;
@@ -43,7 +45,7 @@
 						if (currPage > 1) {
 					%>
 					<td><a
-						href="<%=projectName%>/Product?cmd=product-list&cate=<%=cate%>&range=<%=range %>&page=<%=currPage - 1%>">◀</a></td>
+						href="<%=projectName%>/Product?cmd=product-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=currPage - 1%>">◀</a></td>
 					<%
 						}
 					%>
@@ -51,7 +53,7 @@
 						for (int i = 1; i < totalPage; i++) {
 					%>
 					<td><a
-						href="<%=projectName%>/Product?cmd=product-list&cate=<%=cate%>&range=<%=range %>&page=<%=i%>"><%=i%></a></td>
+						href="<%=projectName%>/Product?cmd=product-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=i%>"><%=i%></a></td>
 					<%
 						}
 					%>
@@ -59,7 +61,7 @@
 						if (currPage != totalPage - 1) {
 					%>
 					<td><a
-						href="<%=projectName%>/Product?cmd=product-list&cate=<%=cate%>&range=<%=range %>&page=<%=currPage + 1%>">▶</a></td>
+						href="<%=projectName%>/Product?cmd=product-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=currPage + 1%>">▶</a></td>
 					<%
 						}
 					%>
@@ -69,10 +71,14 @@
 		<br />
 		<div class="sort">
 			&nbsp;&nbsp;<a
-				href="<%=projectName%>/Product?cmd=product-list&range=new&cate=<%=cate%>&page=1">신상품순</a>
-			| <a href="<%=projectName%>/Product?cmd=product-list&range=popular&cate=<%=cate%>&page=1">인기순</a>
-			| <a href="<%=projectName %>/Product?cmd=product-list&range=low&cate=<%=cate%>&page=1">낮은 가격순</a>
-		    | <a  href="<%=projectName %>/Product?cmd=product-list&range=high&cate=<%=cate%>&page=1">높은 가격순</a>
+				href="<%=projectName%>/Product?cmd=product-list&range=new&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&page=1">신상품순</a>
+			| <a
+				href="<%=projectName%>/Product?cmd=product-list&range=popular&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&page=1">인기순</a>
+			| <a
+				href="<%=projectName%>/Product?cmd=product-list&range=low&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&page=1">낮은
+				가격순</a> | <a
+				href="<%=projectName%>/Product?cmd=product-list&range=high&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&page=1">높은
+				가격순</a>
 		</div>
 		<div>
 
