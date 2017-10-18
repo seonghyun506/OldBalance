@@ -5,8 +5,15 @@ public class ObReview {
 	private	String	reviewDate;
 	private String	custId;
 	private int		prodId;
+	private String content;
 	
 	
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 	public int getReviewNum() {
 		return reviewNum;
 	}

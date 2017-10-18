@@ -13,6 +13,7 @@
 	<typeAlias type="mvc.oldBalance.model.ObOrder" alias="order"/>
 	<typeAlias type="mvc.oldBalance.model.ObProduct" alias="product"/>
 	<typeAlias type="mvc.oldBalance.model.ObReview" alias="review"/>
+	<typeAlias type="mvc.oldBalance.model.ObInventory" alias="inventory"/>
 </typeAliases>
 
 <environments default="development">

@@ -403,5 +403,14 @@
 		READ_NUM = READ_NUM+1
 		WHERE PROD_ID=#{value}
 	</update>
+	
+	<select id="selectByProductId" parameterType="String"
+		resultType="review">
+		select review_num, to_char(review_date,'YY-MM-DD') review_date,prod_id,cust_id,CONTENT
+		from OB_REVIEW
+		<where>
+			PROD_ID=#{value}
+		</where>
+	</select>
 
 </mapper>

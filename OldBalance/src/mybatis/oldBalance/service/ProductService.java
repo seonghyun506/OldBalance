@@ -196,4 +196,8 @@ public class ProductService {
 		return repo.updateReadNum(id);
 	}
 
+	public List<ObReview> selectByProductId(String id) {
+		return repo.selectByProductId(id);
+	}
+
 }

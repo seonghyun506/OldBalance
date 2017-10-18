@@ -444,4 +444,13 @@ public class ProductRepository {
 					sess.close();
 				}
 	}
+
+	public List<ObReview> selectByProductId(String id) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		try {
+			return sess.selectList(namespace + ".selectByProductId", id);
+		} finally {
+			sess.close();
+		}
+	}
 }

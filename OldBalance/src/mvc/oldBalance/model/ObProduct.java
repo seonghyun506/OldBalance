@@ -9,7 +9,7 @@ public class ObProduct {
 	private String	detailCate;
 	private String	prodName;
 	private int		discount;
-	private int		readName;
+	private int		readNum;
 	
 	
 	public String getProdName() {
@@ -18,11 +18,11 @@ public class ObProduct {
 	public void setProdName(String prodName) {
 		this.prodName = prodName;
 	}
-	public int getReadName() {
-		return readName;
+	public int getReadNum() {
+		return readNum;
 	}
-	public void setReadName(int readName) {
-		this.readName = readName;
+	public void setReadNum(int readNum) {
+		this.readNum = readNum;
 	}
 	public int getProdId() {
 		return prodId;
