@@ -2,15 +2,13 @@ package mvc.oldBalance.model;
 
 public class ObOrder {
 	private int		orderId;
-	private int		orderNum;
+	private String	orderNum;
 	private String	orderDate;
 	private String	delAddr;
 	private String	delTel;
 	private String	payState;
-	private	int		custId;
-	private String	guestTel;
+	private	String	custId;
 	private int		prodId;
-	
 	
 	public int getProdId() {
 		return prodId;
@@ -25,10 +23,10 @@ public class ObOrder {
 		this.orderId = orderId;
 	}
 
-	public int getOrderNum() {
+	public String getOrderNum() {
 		return orderNum;
 	}
-	public void setOrderNum(int orderNum) {
+	public void setOrderNum(String orderNum) {
 		this.orderNum = orderNum;
 	}
 	public String getOrderDate() {
@@ -55,17 +53,11 @@ public class ObOrder {
 	public void setPayState(String payState) {
 		this.payState = payState;
 	}
-	public int getCustId() {
+	public String getCustId() {
 		return custId;
 	}
-	public void setCustId(int custId) {
+	public void setCustId(String custId) {
 		this.custId = custId;
-	}
-	public String getGuestTel() {
-		return guestTel;
-	}
-	public void setGuestTel(String guestTel) {
-		this.guestTel = guestTel;
 	}
 	
 }
