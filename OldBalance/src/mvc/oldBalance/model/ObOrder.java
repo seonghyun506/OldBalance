@@ -2,7 +2,6 @@ package mvc.oldBalance.model;
 
 public class ObOrder {
 	private int		orderId;
-	private int		delId;
 	private int		orderNum;
 	private String	orderDate;
 	private String	delAddr;
@@ -10,20 +9,22 @@ public class ObOrder {
 	private String	payState;
 	private	int		custId;
 	private String	guestTel;
+	private int		prodId;
 	
 	
+	public int getProdId() {
+		return prodId;
+	}
+	public void setProdId(int prodId) {
+		this.prodId = prodId;
+	}
 	public int getOrderId() {
 		return orderId;
 	}
 	public void setOrderId(int orderId) {
 		this.orderId = orderId;
 	}
-	public int getDelId() {
-		return delId;
-	}
-	public void setDelId(int delId) {
-		this.delId = delId;
-	}
+
 	public int getOrderNum() {
 		return orderNum;
 	}

@@ -2,7 +2,6 @@ package mvc.oldBalance.model;
 
 public class ObProduct {
 	private int		prodId;
-	private int		orderId;
 	private int		prodPrice;
 	private String	mainCate;
 	private String	subCate;
@@ -10,8 +9,15 @@ public class ObProduct {
 	private String	prodName;
 	private int		discount;
 	private int		readNum;
+	private String	release_date;
 	
 	
+	public String getRelease_date() {
+		return release_date;
+	}
+	public void setRelease_date(String release_date) {
+		this.release_date = release_date;
+	}
 	public String getProdName() {
 		return prodName;
 	}
@@ -29,12 +35,6 @@ public class ObProduct {
 	}
 	public void setProdId(int prodId) {
 		this.prodId = prodId;
-	}
-	public int getOrderId() {
-		return orderId;
-	}
-	public void setOrderId(int orderId) {
-		this.orderId = orderId;
 	}
 	public int getProdPrice() {
 		return prodPrice;
