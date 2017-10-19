@@ -10,8 +10,15 @@ public class ObProduct {
 	private int		discount;
 	private int		readNum;
 	private String	release_date;
+	private String	prodPath;
 	
 	
+	public String getProdPath() {
+		return prodPath;
+	}
+	public void setProdPath(String prodPath) {
+		this.prodPath = prodPath;
+	}
 	public String getRelease_date() {
 		return release_date;
 	}
