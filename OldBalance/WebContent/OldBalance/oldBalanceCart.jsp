@@ -89,6 +89,9 @@ if(id==null||id.equals("")){
 		$('#order').click(function() {
 			location.href = '<%=pjName%>/MyPage?cmd=selectCart&id=<%=id%>';
 		});
+		$('#mypage').click(function() {
+			location.href = '<%=pjName%>/MyPage?cmd=mypage&id=<%=id%>';
+		});
 	});
 
    
@@ -169,7 +172,7 @@ if(id==null||id.equals("")){
                </table>
             </div>
             <div style="float:right;">
-               <input class="btn btn-danger" type="button" value="마이페이지로 이동" /> 
+               <input class="btn btn-danger" type="button" value="마이페이지로 이동" id="mypage" /> 
                <input class="btn btn-danger" type="button" id="order" value="주문하기" />
             </div>
          </form>
