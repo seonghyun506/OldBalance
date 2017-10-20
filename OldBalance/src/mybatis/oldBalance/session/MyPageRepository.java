@@ -26,6 +26,17 @@ public class MyPageRepository {
 		return sessFac;
 	}
 	
+	public List<ObCart> selectCart(String id) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		try {
+			System.out.println("repository" + id);
+			return sess.selectList(namespace + ".selectCart", id);
+		} finally {
+			sess.close();
+		}
+		
+	}
+	
 //	public int insertMember(ObMember member) {
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		

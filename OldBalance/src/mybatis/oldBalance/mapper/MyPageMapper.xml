@@ -2,12 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mapper.MyPageMapper">
+
 <select id="selectMyPage" parameterType="String" resultType="member">
 select *
 from ob_member
 <where>
 CUST_ID=#{value}
 </where>
+</select>
+
+<select id="selectCart" parameterType="String" resultType="cart">
+select cart_num, cust_id, c.prod_id, prod_name, amount, prod_size, prod_price
+from ob_cart c, ob_product p
+where c.PROD_ID = p.PROD_ID AND c.cust_id = #{value}
 </select>
 
 </mapper>
