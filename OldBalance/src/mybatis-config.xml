@@ -35,6 +35,7 @@
 <mapper resource="mybatis/oldBalance/mapper/MainMapper.xml"/>
 <mapper resource="mybatis/oldBalance/mapper/MyPageMapper.xml"/>
 <mapper resource="mybatis/oldBalance/mapper/ModifyMapper.xml"/>
+<mapper resource="mybatis/oldBalance/mapper/CartMapper.xml"/>
 
 
 </mappers>

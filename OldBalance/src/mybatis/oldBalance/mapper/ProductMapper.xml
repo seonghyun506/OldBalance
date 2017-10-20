@@ -443,7 +443,7 @@
 		select * 
 		from ob_product
 		<where>
-			MAIN_CATE=#{mainCate} and SUB_CATE=#{subCate} and detail_cate=#{detailCate} and prod_path is not null
+			MAIN_CATE=#{mainCate} and SUB_CATE=#{subCate} and detail_cate like '%${detailCate}%' and prod_path is not null
 		</where>
 		order by ${condition}
 	</select>

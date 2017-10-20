@@ -94,7 +94,7 @@
 			<ul>
 				<li><%=id%> 님</li>
 				<li><a href="<%= pjName %>/Main?cmd=logout">로그아웃</a></li>
-				<li><a href='<%= pjName %>/MyPage?cmd=cart'>장바구니</a></li>
+				 <li><a href='<%= pjName %>/Cart?cmd=cart&id=<%=id%>'>장바구니</a></li>
 				<% if(id != null) { 
 					if(id.equals("admin")) { %>
 						<li><a href='<%= pjName %>/Upload?cmd=product-mg'>관리자 페이지</a></li>
@@ -154,7 +154,7 @@
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=MEN&subCate=신발&detailCate=러닝화&page=1&range=release_date'>- 러닝</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=MEN&subCate=신발&detailCate=워킹화&page=1&range=release_date'>- 워킹</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=MEN&subCate=신발&detailCate=축구화&page=1&range=release_date'>- 축구</a></li><br/>
-            <li class="allview"><a href='#'>- 신발 전체보기 <span>▶</span></a></li>
+            <li class="allview"><a href='<%=pjName %>/Upload?cmd=pds-list&cate=MEN&subCate=신발&detailCate=&page=1&range=release_date'>- 신발 전체보기 <span>▶</span></a></li>
          </ul>
          <!-- 의류 -->
          <ul>
@@ -162,7 +162,7 @@
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=MEN&subCate=의류&detailCate=티셔츠&page=1&range=release_date'>- 티셔츠</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=MEN&subCate=의류&detailCate=맨투맨&page=1&range=release_date'>- 맨투맨/후디</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=MEN&subCate=의류&detailCate=자켓&page=1&range=release_date'>- 자켓</a></li><br/>
-            <li class="allview"><a href='#'>- 상품별 전체보기<span>▶</span></a></li>
+            <li class="allview"><a href='<%=pjName %>/Upload?cmd=pds-list&cate=MEN&subCate=의류&detailCate=&page=1&range=release_date''>- 상품별 전체보기<span>▶</span></a></li>
          </ul>
          <!-- 상품별  -->
       </nav>
@@ -194,7 +194,7 @@
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=WOMEN&subCate=신발&detailCate=러닝화&page=1&range=release_date'>- 러닝</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=WOMEN&subCate=신발&detailCate=워킹화&page=1&range=release_date'>- 워킹</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=WOMEN&subCate=신발&detailCate=자켓&page=1&range=release_date'>- 축구</a></li><br/>
-            <li class="allview"><a href='#'>- 신발 전체보기 <span>▶</span></a></li>
+            <li class="allview"><a href='<%=pjName %>/Upload?cmd=pds-list&cate=WOMEN&subCate=신발&detailCate=&page=1&range=release_date''>- 신발 전체보기 <span>▶</span></a></li>
          </ul>
          <!-- 의류 -->
          <ul>
@@ -202,7 +202,7 @@
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=WOMEN&subCate=의류&detailCate=티셔츠&page=1&range=release_date'>- 티셔츠</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=WOMEN&subCate=의류&detailCate=맨투맨&page=1&range=release_date'>- 맨투맨/후디</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=WOMEN&subCate=의류&detailCate=자켓&page=1&range=release_date'>- 자켓</a></li><br/>
-            <li class="allview"><a href='#'>- 상품별 전체보기<span>▶</span></a></li>
+            <li class="allview"><a href='<%=pjName %>/Upload?cmd=pds-list&cate=WOMEN&subCate=의류&detailCate=&page=1&range=release_date''>- 상품별 전체보기<span>▶</span></a></li>
          </ul>
       </nav>
       <nav class='sub1_banner'>
@@ -231,7 +231,7 @@
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=KID&subCate=신발&detailCate=러닝화&page=1&range=release_date'>- 러닝</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=KID&subCate=신발&detailCate=워킹화&page=1&range=release_date'>- 워킹</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=KID&subCate=신발&detailCate=축구화&page=1&range=release_date'>- 축구</a></li><br/>
-            <li class="allview"><a href='#'>- 키즈신발 전체보기 <span>▶</span></a></li>
+            <li class="allview"><a href='<%=pjName %>/Upload?cmd=pds-list&cate=KID&subCate=신발&detailCate=&page=1&range=release_date''>- 키즈신발 전체보기 <span>▶</span></a></li>
          </ul>
          <!-- 의류 -->
          <ul>
@@ -239,7 +239,7 @@
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=KID&subCate=의류&detailCate=자켓&page=1&range=release_date'>- 베스트/바람막이/자켓</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=KID&subCate=의류&detailCate=맨투맨&page=1&range=release_date'>- 맨투맨/후디</a></li>
             <li><a href='<%=pjName %>/Upload?cmd=pds-list&cate=KID&subCate=의류&detailCate=티셔츠&page=1&range=release_date'>- 티셔츠</a></li><br/>
-            <li class="allview"><a href='#'>- 의류 전체보기<span>▶</span></a></li>
+            <li class="allview"><a href='<%=pjName %>/Upload?cmd=pds-list&cate=KID&subCate=의류&detailCate=&page=1&range=release_date''>- 의류 전체보기<span>▶</span></a></li>
          </ul>
 		</nav>
 		<nav class='sub1_banner'>
