@@ -71,8 +71,8 @@
 			</div>
 			
 			<!-- best! -->
-			<div class='prouct_best'>
-				<h3 class="best">BEST</h3>
+			<div class='prouct_sale'>
+				<h3 class="sale">BEST</h3>
 				<div class="box_wrap">
 					<div class="box">
 						<a href=''>
@@ -107,7 +107,7 @@
 			
 			<!-- sale -->
 			<div class='prouct_sale'>
-				<h3 class="sale">SALE</h3>
+				<h3 class="best">SALE</h3>
 				<div class="box_wrap">
 				<div class="box">
 						<a href=''>

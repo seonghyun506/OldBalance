@@ -43,12 +43,12 @@ String detailCate = request.getParameter("detailCate");
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-// 	$(function(){
+ 	$(function(){
 		
-// 		$('.s_list').click(function(){
-// 			$('this').()	
-// 		});
-// 	});
+ 		$('.s_list').click(function(){
+ 			$('this').addClass('.active')	
+ 		});
+ 	});
 
 </script>
 </head>
