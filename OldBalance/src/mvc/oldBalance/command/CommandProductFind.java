@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import mvc.oldBalance.model.ObProduct;
 import mybatis.oldBalance.service.ProductService;
 
-public class CommandProductFind implements ProductCommand {
+public class CommandProductFind implements PdsCommand {
 	private String next;
 
 	public CommandProductFind(String _next) {

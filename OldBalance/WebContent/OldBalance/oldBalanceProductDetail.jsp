@@ -7,18 +7,18 @@
 	String pjName = "/OldBalance";
 	String id = request.getParameter("id");
 	ObProduct product = (ObProduct) request.getAttribute("param");
-		List<ObReview> reviewList = (List<ObReview>) request.getAttribute("param2");
-	
-	String mId=(String)session.getAttribute("id");
-	
+	List<ObReview> reviewList = (List<ObReview>) request.getAttribute("param2");
+
+	String mId = (String) session.getAttribute("id");
+
 	String flag;
 	String comment = "";
-	String content="";
-	
-	if(mId==null){
+	String content = "";
+
+	if (mId == null) {
 		flag = "true";
 		comment = "로그인 후에 이용하세요.";
-	}else{
+	} else {
 		flag = "false";
 		comment = "";
 	}
@@ -53,22 +53,24 @@
 		});
 		
 		$('#btncart').click(function(){
+			<%if (mId == null) {%>
+			alert("로그인 후에 사용 가능합니다.");
+		<%} else {%>
 			location.href='<%=pjName%>/Product?cmd=insert-cart&mId=<%=mId%>&id=<%=id%>&amount='
 					+$('#amount option:selected').text() + '&size=' + $(':radio[name="ckSize"]:checked').val();
 			alert("장바구니 저장 완료!!!");
+			<%}%>	
 		});
 		$('#btnorder').click(function(){
-			<%if(mId==null){%>
+			<%if (mId == null) {%>
 				alert("로그인 후에 사용 가능합니다.");
-			<%}else{%>
+			<%} else {%>
 				location.href='<%=pjName%>/MyPage?cmd=direct-order&prodId=<%=id%>&custId=<%=mId%>'+
-				'&prodName=<%=product.getProdName()%>'+'&amount='+$('#amount option:selected').text() + '&prodSize=' + $(':radio[name="ckSize"]:checked').val()+
-				'&prodPrice='+$('#prodPrice').text();
-			<%}%>
-			
-		});
+				'&prodName=<%=product.getProdName()%>'+ '&amount='+ $('#amount option:selected').text()
+									+ '&prodSize='+ $(':radio[name="ckSize"]:checked').val() + '&prodPrice=' + $('#prodPrice').text();
+<%}%>
 	});
-	
+	});
 </script>
 </head>
 <body>
@@ -78,8 +80,9 @@
 		<h2><%=product.getProdName()%></h2>
 		<br />
 		<div class="productImage">
-			<img id='test' alt="" src='<%=pjName%>/OldBalance/upload/<%=product.getProdPath()%>' width="500"
-				height="500" />
+			<img id='test' alt=""
+				src='<%=pjName%>/OldBalance/upload/<%=product.getProdPath()%>'
+				width="500" height="500" />
 		</div>
 		<div class='productInfo'>
 			<div class="top">
@@ -112,21 +115,32 @@
 						<td class='t_title'>사이즈(Size)</td>
 					</tr>
 					<tr class='s_list'>
-					<%if(product.getSubCate().equals("의류")){ %>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='S(90)'>S(90)</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='M(95)'>M(95)</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='L(100)'>L(100)</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='XL(105)'>XL(105)</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='XXL(110)'>XXL(110)</td>
-						<%}else{ %>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='220'>220</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='230'>230</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='240'>240</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='250'>250</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='260'>260</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='270'>270</td>
-						<td><input type='radio'  id='ckSize' name='ckSize' value='280'>280</td>
-						<%} %>
+						<%
+							if (product.getSubCate().equals("의류")) {
+						%>
+						<td><input type='radio' id='ckSize' name='ckSize'
+							value='S(90)'>S(90)</td>
+						<td><input type='radio' id='ckSize' name='ckSize'
+							value='M(95)'>M(95)</td>
+						<td><input type='radio' id='ckSize' name='ckSize'
+							value='L(100)'>L(100)</td>
+						<td><input type='radio' id='ckSize' name='ckSize'
+							value='XL(105)'>XL(105)</td>
+						<td><input type='radio' id='ckSize' name='ckSize'
+							value='XXL(110)'>XXL(110)</td>
+						<%
+							} else {
+						%>
+						<td><input type='radio' id='ckSize' name='ckSize' value='220'>220</td>
+						<td><input type='radio' id='ckSize' name='ckSize' value='230'>230</td>
+						<td><input type='radio' id='ckSize' name='ckSize' value='240'>240</td>
+						<td><input type='radio' id='ckSize' name='ckSize' value='250'>250</td>
+						<td><input type='radio' id='ckSize' name='ckSize' value='260'>260</td>
+						<td><input type='radio' id='ckSize' name='ckSize' value='270'>270</td>
+						<td><input type='radio' id='ckSize' name='ckSize' value='280'>280</td>
+						<%
+							}
+						%>
 					</tr>
 				</table>
 				<table>
@@ -176,8 +190,9 @@
 						}
 					%>
 				</table>
-				<input type="text"  id="tfReview" />&nbsp;<input type="button" id="inputReview"value="입력"/><br/>
-				<%=comment %>
+				<input type="text" id="tfReview" />&nbsp;<input type="button"
+					id="inputReview" value="입력" /><br />
+				<%=comment%>
 			</div>
 		</div>
 	</div>

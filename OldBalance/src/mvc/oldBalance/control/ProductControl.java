@@ -1,7 +1,7 @@
 package mvc.oldBalance.control;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,14 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import mvc.oldBalance.command.CommandNull;
+import mvc.oldBalance.command.CommandException;
+import mvc.oldBalance.command.CommandInputCartReview;
 import mvc.oldBalance.command.CommandProductDetail;
 import mvc.oldBalance.command.CommandProductFind;
 import mvc.oldBalance.command.CommandProductList;
-import mvc.oldBalance.command.CommandProductMG;
+import mvc.oldBalance.command.PdsCommand;
 import mvc.oldBalance.command.ProductCommand;
-import mvc.oldBalance.command.CommandDirectOrder;
-import mvc.oldBalance.command.CommandException;
 
 public class ProductControl extends HttpServlet{
 	private HashMap commandMap;
@@ -35,8 +34,8 @@ public class ProductControl extends HttpServlet{
 		commandMap.put("product-list", new CommandProductList("oldBalanceProductList.jsp"));
 		commandMap.put("product-detail", new CommandProductDetail("oldBalanceProductDetail.jsp"));
 		commandMap.put("product-find", new CommandProductFind("oldBalanceProductFind.jsp"));
-		commandMap.put("insert-review", new CommandProductDetail("oldBalanceProductDetail.jsp"));
-		commandMap.put("insert-cart", new CommandProductDetail("oldBalanceProductDetail.jsp"));
+		commandMap.put("insert-review", new CommandInputCartReview("insertCartReview.jsp"));
+		commandMap.put("insert-cart", new CommandInputCartReview("insertCartReview.jsp"));
 		
 	}
 	
@@ -58,12 +57,12 @@ public class ProductControl extends HttpServlet{
 			cmdKey = "product-list";
 		}
 
-		ProductCommand cmd = null;
+		PdsCommand cmd = null;
 
 		try{
 			
 			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (ProductCommand)commandMap.get( cmdKey);
+				cmd = (PdsCommand)commandMap.get( cmdKey);
 			}else{
 				throw new CommandException("지정할 명령어가 존재하지 않음");
 			}
