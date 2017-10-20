@@ -22,6 +22,7 @@ import mvc.oldBalance.command.CommandPdsDetail;
 import mvc.oldBalance.command.CommandPdsList;
 import mvc.oldBalance.command.CommandProductDetail;
 import mvc.oldBalance.command.CommandProductFind;
+import mvc.oldBalance.command.CommandUNull;
 import mvc.oldBalance.command.MyPageCommand;
 import mvc.oldBalance.command.PdsCommand;
 import mvc.oldBalance.model.ObMember;
@@ -40,12 +41,14 @@ public class FileUploadServlet extends HttpServlet {
 	private void initCommand() {
 		commandMap = new HashMap();
 
-		commandMap.put("upload", new CommandPds("oldBalanceProductMG.jsp"));
+		commandMap.put("upload", new CommandPds("oldBalanceProductMGForm.jsp"));
 		commandMap.put("pds-list", new CommandPdsList("oldBalanceProductList.jsp"));
 		commandMap.put("pds-detail", new CommandPdsDetail("oldBalanceProductDetail.jsp"));
 		commandMap.put("product-find", new CommandProductFind("oldBalanceProductFind.jsp"));
 		commandMap.put("insert-review", new CommandProductDetail("oldBalanceProductDetail.jsp"));
 		commandMap.put("insert-cart", new CommandProductDetail("oldBalanceProductDetail.jsp"));
+		commandMap.put("product-mg", new CommandUNull("oldBalanceProductMG.jsp"));
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -67,7 +70,7 @@ public class FileUploadServlet extends HttpServlet {
 		String contentType = request.getContentType(); ///
 		String cmdKey = request.getParameter("cmd");
 		if (cmdKey == null) {
-			cmdKey = "upload";
+			cmdKey = "product-mg";
 		}
 
 		PdsCommand cmd = null;

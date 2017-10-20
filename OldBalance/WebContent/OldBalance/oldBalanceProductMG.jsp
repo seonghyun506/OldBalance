@@ -61,7 +61,7 @@
 		<h2>관리자 page</h2>
 		<p>재고 관리</p>
 		<label for='InventCode'>제품 코드</label>
-		<form class="insert" action='/OldBalance_cp/Upload?cmd=upload' method='post' enctype="multipart/form-data">
+		<form class="insert" action='<%=projectName%>/Upload?cmd=upload' method='post' enctype="multipart/form-data">
 			 <input type="text" name="InventCode" id='InventCode' class='code' style="width:100px;  margin-top:10px;"/> 
 			 <input type="button" name="InventCodeSearch" value="검색" class='btn_search'/>
 		<table>
@@ -79,7 +79,7 @@
 				 <td><select id="s_main" name="main"><option value="메인">선택</option><option>MEN</option><option>WOMEN</option><option>KID</option></select></td>
 				<td><select id="s_sub" name="sub"><option>선택</option><option>신발</option><option>의류</option></select></td>
 				<td><select id="s_detail" name="detail"><option>선택</option></select></td>
-				<td><input type="file" name="file" class="btn btn-danger"/></td>
+				<td><input type="file" name="file" id="exampleInputFile"/></td>
 			</tr>
 		</table>
 			<div class='btn_wrap'>
@@ -87,24 +87,6 @@
 			</div>
 			</form>
 		<hr />
-
-		<form class="select">
-			<p>입고 관리</p>
-			<table>
-				<tr>
-					<th>제품코드</th>
-					<th>제품단가</th>
-					<th>메인</th>
-					<th>서브</th>
-					<th>디테일</th>
-					<th>사진 경로</th>
-				</tr>
-			</table>
-		</form>
-
-		<form class="delete">
-			<h1>삭제 되었습니다.</h1>
-		</form>
 		</div>
 	</section>
 </body>

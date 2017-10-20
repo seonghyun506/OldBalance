@@ -31,13 +31,19 @@ public class CommandPdsList implements PdsCommand {
 		
 
 		ListPdsItemService service = ListPdsItemService.getInstance();
+		
+		if(subCate.equals("all")) {
+			List<ObProduct> productList = service.selectByMainCate(cate);
+			request.setAttribute("listModel", productList);
+		}else {
 		List<ObProduct> itemListModel = service.getPdsItemList(product);
 		request.setAttribute("listModel", itemListModel);
+		}
 		response.setHeader("Pragma", "No-cache");
 		response.setHeader("Cache-Control", "no-cache");
 		response.addHeader("Cache-Control", "no-store");
 		response.setDateHeader("Expires", 1L);
-
+		
 		// subCate가 all(신발 and 의류)일 때
 
 		return next;

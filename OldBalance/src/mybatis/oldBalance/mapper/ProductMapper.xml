@@ -6,7 +6,7 @@
 		select *
 		from OB_PRODUCT
 		<where>
-			MAIN_CATE=#{value}
+			MAIN_CATE=#{value} and prod_path is not null
 		</where>
 	</select>
 
