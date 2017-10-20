@@ -2,17 +2,26 @@ package mvc.oldBalance.model;
 
 public class ObProduct {
 	private int		prodId;
+	private String	prodName;
 	private int		prodPrice;
 	private String	mainCate;
 	private String	subCate;
 	private String	detailCate;
-	private String	prodName;
+	private String	prodPath;
 	private int		discount;
 	private int		readNum;
 	private String	release_date;
-	private String	prodPath;
+	private String condition;
 	
 	
+	
+	
+	public String getCondition() {
+		return condition;
+	}
+	public void setCondition(String condition) {
+		this.condition = condition;
+	}
 	public String getProdPath() {
 		return prodPath;
 	}
