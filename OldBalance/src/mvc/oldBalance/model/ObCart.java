@@ -2,7 +2,7 @@ package mvc.oldBalance.model;
 
 public class ObCart {
 	private int cartNum;
-	private int custId;
+	private String custId;
 	private int prodId;
 	private int amount;
 	private int prodPrice;
@@ -28,10 +28,10 @@ public class ObCart {
 	public void setCartNum(int cartNum) {
 		this.cartNum = cartNum;
 	}
-	public int getCustId() {
+	public String getCustId() {
 		return custId;
 	}
-	public void setCustId(int custId) {
+	public void setCustId(String custId) {
 		this.custId = custId;
 	}
 	public int getProdId() {

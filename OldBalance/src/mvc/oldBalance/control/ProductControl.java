@@ -34,6 +34,8 @@ public class ProductControl extends HttpServlet{
 		commandMap.put("product-list", new CommandProductList("oldBalanceProductList.jsp"));
 		commandMap.put("product-detail", new CommandProductDetail("oldBalanceProductDetail.jsp"));
 		commandMap.put("product-find", new CommandProductFind("oldBalanceProductFind.jsp"));
+		commandMap.put("insert-review", new CommandProductDetail("oldBalanceProductDetail.jsp"));
+		commandMap.put("insert-cart", new CommandProductDetail("oldBalanceProductDetail.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

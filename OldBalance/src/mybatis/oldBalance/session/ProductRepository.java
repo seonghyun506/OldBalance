@@ -463,4 +463,38 @@ public class ProductRepository {
 			sess.close();
 		}
 	}
+
+	public int insertReview(ObReview review) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		
+				try {
+					int result = sess.insert(namespace + ".insertReview", review);
+					if(result>0) {
+						sess.commit();
+					}else {
+						sess.rollback();
+					}
+					return result;
+				}finally {
+					sess.close();
+				}
+	}
+
+	public int insertCart(ObCart cart) {
+		SqlSession sess = getSqlSessionFactory().openSession(); // CON 과같은 연결객체
+		// JDBC의 연결객체 얻어오기 -> SqlSession
+		
+				try {
+					int result = sess.insert(namespace + ".insertCart", cart);
+					if(result>0) {
+						sess.commit();
+					}else {
+						sess.rollback();
+					}
+					return result;
+				}finally {
+					sess.close();
+				}
+	}
 }

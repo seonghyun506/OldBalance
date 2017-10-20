@@ -25,7 +25,7 @@
 			MAIN_CATE=#{value}
 		</where>
 	</select>
-	
+
 	<select id="selectByName" parameterType="String" resultType="product">
 		select *
 		from OB_PRODUCT
@@ -406,20 +406,32 @@
 		</where>
 	</select>
 
-	<update id="updateReadNum" parameterType="String" >
-		update OB_PRODUCT
+	<update id="updateReadNum" parameterType="String">
+		update
+		OB_PRODUCT
 		SET
 		READ_NUM = READ_NUM+1
 		WHERE PROD_ID=#{value}
 	</update>
-	
+
 	<select id="selectByProductId" parameterType="String"
 		resultType="review">
-		select review_num, to_char(review_date,'YY-MM-DD') review_date,prod_id,cust_id,CONTENT
+		select review_num, to_char(review_date,'YY-MM-DD')
+		review_date,prod_id,cust_id,CONTENT
 		from OB_REVIEW
 		<where>
 			PROD_ID=#{value}
 		</where>
 	</select>
 
+	<insert id="insertReview" parameterType="review">
+	insert into ob_review
+	values(sq_review.nextval, sysdate, #{prodId}, #{custId}, #{content})
+	</insert>
+	
+	<insert id="insertCart" parameterType="cart">
+	insert into ob_cart
+	values(sq_cart.nextval, #{custId}, #{prodId}, #{amount}, #{prodSize})
+	</insert>
+	
 </mapper>

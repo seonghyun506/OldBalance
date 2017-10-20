@@ -1,4 +1,3 @@
-<%@page import="mvc.oldBalance.model.ObInventory"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"%>
 <%@ page import="mybatis.oldBalance.service.ProductService"%>
@@ -7,10 +6,22 @@
 <%
 	String pjName = "/OldBalance";
 	String id = request.getParameter("id");
-	//ObProduct product = ProductService.getInstance().selectById(id);
 	ObProduct product = (ObProduct) request.getAttribute("param");
-	//List<ObInventory> invenList = (List<ObInventory>)request.getAttribute("param2");
-	List<ObReview> reviewList = (List<ObReview>) request.getAttribute("param2");
+		List<ObReview> reviewList = (List<ObReview>) request.getAttribute("param2");
+	
+	String mId=(String)session.getAttribute("id");
+	
+	String flag;
+	String comment = "";
+	String content="";
+	
+	if(mId==null){
+		flag = "true";
+		comment = "로그인 후에 이용하세요.";
+	}else{
+		flag = "false";
+		comment = "";
+	}
 %>
 <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
@@ -26,7 +37,6 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript"
 	src="<%=pjName%>/OldBalance/js/productDetail/jquery.loupe.min.js">
-	
 </script>
 <script type="text/javascript">
 	$(function() {
@@ -35,7 +45,22 @@
 			height : 200,
 			loupe : 'loupe'
 		});
+		$('#tfReview').attr("disabled",<%=flag%>);
+		$('#inputReview').attr("disabled",<%=flag%>);
+		
+		$('#inputReview').click(function(){
+			location.href='<%=pjName%>/Product?cmd=insert-review&mId=<%=mId%>&id=<%=id%>&content=' + $("#tfReview").val();
+		});
+		
+		$('#btncart').click(function(){
+			location.href='<%=pjName%>/Product?cmd=insert-cart&mId=<%=mId%>&id=<%=id%>&amount='
+					+$('#amount option:selected').text() + '&size=' + $(':radio[name="ckSize"]:checked').val();
+			alert("장바구니 저장 완료!!!");
+
+		});
+		
 	});
+	
 </script>
 </head>
 <body>
@@ -80,11 +105,21 @@
 						<td class='t_title'>사이즈(Size)</td>
 					</tr>
 					<tr class='s_list'>
-						<td><a href='#'>S(90)</a></td>
-						<td><a href='#'>M(95)</a></td>
-						<td><a href='#'>L(100)</a></td>
-						<td><a href='#'>XL(105)</a></td>
-						<td><a href='#'>XXL(110)</a></td>
+					<%if(product.getSubCate().equals("의류")){ %>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='S(90)'>S(90)</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='M(95)'>M(95)</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='L(100)'>L(100)</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='XL(105)'>XL(105)</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='XXL(110)'>XXL(110)</td>
+						<%}else{ %>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='220'>220</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='230'>230</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='240'>240</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='250'>250</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='260'>260</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='270'>270</td>
+						<td><input type='radio'  id='ckSize' name='ckSize' value='280'>280</td>
+						<%} %>
 					</tr>
 				</table>
 				<table>
@@ -92,7 +127,7 @@
 						<td class='t_title'>수량(Qty)</td>
 					</tr>
 					<tr>
-						<td><select>
+						<td><select id="amount">
 								<option value="0"></option>
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -134,10 +169,10 @@
 						}
 					%>
 				</table>
+				<input type="text"  id="tfReview" />&nbsp;<input type="button" id="inputReview"value="입력"/><br/>
+				<%=comment %>
 			</div>
 		</div>
-
-
 	</div>
 
 

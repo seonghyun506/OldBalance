@@ -204,4 +204,14 @@ public class ProductService {
 		return repo.selectByProductId(id);
 	}
 
+	public int insertReview(ObReview review) {
+		return repo.insertReview(review);
+	}
+
+	public int insertCart(ObCart cart) {
+		return repo.insertCart(cart);
+		
+	}
+	
+	
 }
