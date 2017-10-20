@@ -13,6 +13,8 @@ import mvc.oldBalance.command.CommandNull;
 import mvc.oldBalance.command.CommandProductDetail;
 import mvc.oldBalance.command.CommandProductList;
 import mvc.oldBalance.command.CommandProductMG;
+import mvc.oldBalance.command.CommandSelectCart;
+import mvc.oldBalance.command.CommandmNull;
 import mvc.oldBalance.command.MyPageCommand;
 import mvc.oldBalance.command.ProductCommand;
 import mvc.oldBalance.command.CommandException;
@@ -33,6 +35,8 @@ public class MyPageControl extends HttpServlet{
 		commandMap = new HashMap();
 		
 		commandMap.put("mypage", new CommandMyPage("oldBalanceMyPage.jsp"));
+		commandMap.put("cart", new CommandmNull("oldBalanceCart.jsp"));
+		commandMap.put("selectCart", new CommandSelectCart("oldBalanceOrder.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

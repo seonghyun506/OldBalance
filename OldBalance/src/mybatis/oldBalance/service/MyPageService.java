@@ -21,6 +21,10 @@ public class MyPageService {
 		return repo.selectMyPage(id);
 	}
 	
+	public List<ObCart> selectCart(String id) {
+		return repo.selectCart(id);
+	}
+	
 //	public int insertMember(ObMember member) {
 //		return repo.insertMember(member);
 //	}
