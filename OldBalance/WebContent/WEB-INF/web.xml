@@ -43,8 +43,8 @@
 	<servlet-class>mvc.oldBalance.control.MyPageControl</servlet-class>
 </servlet>
 <servlet-mapping>
-	<servlet-name>Modify</servlet-name>
-	<url-pattern>/Modify</url-pattern>
+	<servlet-name>MyPage</servlet-name>
+	<url-pattern>/MyPage</url-pattern>
 </servlet-mapping>
 
 <servlet>
@@ -52,8 +52,8 @@
 	<servlet-class>mvc.oldBalance.control.ModifyControl</servlet-class>
 </servlet>
 <servlet-mapping>
-	<servlet-name>MyPage</servlet-name>
-	<url-pattern>/MyPage</url-pattern>
+	<servlet-name>Modify</servlet-name>
+	<url-pattern>/Modify</url-pattern>
 </servlet-mapping>
 
 <servlet>
@@ -72,6 +72,19 @@
 <servlet-mapping>
 	<servlet-name>ObControl</servlet-name>
 	<url-pattern>/ObControl</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>Upload</servlet-name>
+<servlet-class>mvc.oldBalance.control.FileUploadServlet</servlet-class>
+<multipart-config>
+<location>C:\\yoonks\\webwork\\OldBalance_cp\\WebContent\\OldBalance\\temp</location>
+<file-size-threshold>1024</file-size-threshold>
+</multipart-config>
+</servlet>
+<servlet-mapping>
+<servlet-name>Upload</servlet-name>
+<url-pattern>/Upload</url-pattern>
 </servlet-mapping>
 
 </web-app>

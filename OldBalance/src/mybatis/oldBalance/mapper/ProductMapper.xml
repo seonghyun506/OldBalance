@@ -434,4 +434,18 @@
 	values(sq_cart.nextval, #{custId}, #{prodId}, #{amount}, #{prodSize})
 	</insert>
 	
+	<select id="insertPds" parameterType="product">
+		insert into ob_product(prod_id,prod_price,main_cate,sub_cate,detail_cate,release_date,prod_name,prod_path)
+		values (sq_product.nextval,#{prodPrice},#{mainCate},#{subCate},#{detailCate},sysdate,#{prodName},#{prodPath})
+	</select>
+	
+	<select id="selectPds" parameterType="product" resultType="product">
+		select * 
+		from ob_product
+		<where>
+			MAIN_CATE=#{mainCate} and SUB_CATE=#{subCate} and detail_cate=#{detailCate} and prod_path is not null
+		</where>
+		order by ${condition}
+	</select>
+	
 </mapper>

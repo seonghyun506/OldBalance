@@ -58,9 +58,14 @@
 			alert("장바구니 저장 완료!!!");
 		});
 		$('#btnorder').click(function(){
-			location.href='<%=pjName%>/MyPage?cmd=direct-order&prodId=<%=id%>&custId=<%=mId%>'+
-					'&prodName=<%=product.getProdName()%>'+'&amount='+$('#amount option:selected').text() + '&prodSize=' + $(':radio[name="ckSize"]:checked').val()+
-					'&prodPrice='+$('#prodPrice').text();
+			<%if(mId==null){%>
+				alert("로그인 후에 사용 가능합니다.");
+			<%}else{%>
+				location.href='<%=pjName%>/MyPage?cmd=direct-order&prodId=<%=id%>&custId=<%=mId%>'+
+				'&prodName=<%=product.getProdName()%>'+'&amount='+$('#amount option:selected').text() + '&prodSize=' + $(':radio[name="ckSize"]:checked').val()+
+				'&prodPrice='+$('#prodPrice').text();
+			<%}%>
+			
 		});
 	});
 	
@@ -73,9 +78,8 @@
 		<h2><%=product.getProdName()%></h2>
 		<br />
 		<div class="productImage">
-			<img id='test' alt=""
-				src="<%=pjName%>/OldBalance/images/product/<%=product.getProdId()%>.jpg"
-				width="500" height="500" />
+			<img id='test' alt="" src='<%=pjName%>/OldBalance/upload/<%=product.getProdPath()%>' width="500"
+				height="500" />
 		</div>
 		<div class='productInfo'>
 			<div class="top">
