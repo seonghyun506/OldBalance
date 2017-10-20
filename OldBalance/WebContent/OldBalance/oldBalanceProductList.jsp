@@ -40,6 +40,17 @@ String detailCate = request.getParameter("detailCate");
 <link rel="stylesheet"
 	href="<%=projectName%>/OldBalance/css/productlist/common.css"
 	type="text/css">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+// 	$(function(){
+		
+// 		$('.s_list').click(function(){
+// 			$('this').()	
+// 		});
+// 	});
+
+</script>
 </head>
 <body>
 	<br />
