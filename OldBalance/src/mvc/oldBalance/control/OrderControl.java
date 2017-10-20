@@ -27,8 +27,9 @@ public class OrderControl extends HttpServlet{
 	
 	private void initCommand() {
 		commandMap = new HashMap();
+		commandMap.put("order", new CommandNull("oldBalanceOrder.jsp"));
+		commandMap.put("orderCommit", new CommandOrder("oldBalanceOrderForm.jsp"));
 		
-//		commandMap.put("input-member", new CommandRegister("oldBalanceRegisterForm.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

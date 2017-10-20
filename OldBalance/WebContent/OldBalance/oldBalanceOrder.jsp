@@ -55,7 +55,7 @@
 			
 			for (var i = 1; i < tr.length; i++) {
 				prodId += tr.eq(i).html() + "/";
-				alert(prodId);
+				
 			}
 			
 			$(location).attr('href',"<%= pjName %>/Order?cmd=orderCommit&id=<%=id%>&addr="+fullAddr+"&tel="+tel+"&pay="+pay+"&prodId="+prodId);
@@ -68,7 +68,7 @@
 		});
 		$('#ali').click(function() {
 			$.ajax({
-				url : '/TeamProject/OldBalance/getMemberData.jsp',
+				url : '<%=pjName%>/OldBalance/getMemberData.jsp',
 				type : 'post',
 				data : { id : '123456' },
 					dataType : 'text',
@@ -106,7 +106,7 @@
 					</tr>
 					<% for(ObCart cart : mList) {
 						int price = cart.getAmount() * cart.getProdPrice();
-					%> 
+					%>  
 					<tr class='body'>
 						<td ><%= cart.getProdId() %></td>
 						<td><%= cart.getProdName()%></td>

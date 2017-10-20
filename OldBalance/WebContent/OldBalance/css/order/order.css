@@ -1,11 +1,11 @@
 @charset "UTF-8";
 h3{font-size:16px; margin-left: 35px;}
 h3 label{font-size:12px; font-weight:normal;}
-input[type="text"]{width:80px;}
+#custName{width:80px;}
 #order{width:100%;}
 #order_wrap{width:1000px; margin:0 auto;}
 .order-list{border:5px solid #ccc; padding:10px; overflow:hidden; margin-top:20px; margin-bottom:30px;}
-
+.order-payment{border:5px solid #ccc; padding:10px; overflow:hidden; margin-top:20px; margin-bottom:30px;}
 
 .order_info{width:900px; margin:0 auto;  border-top:2px solid #555; }
 .order_info .title{background:#f9f9f9;}
@@ -20,14 +20,18 @@ input[type="text"]{width:80px;}
 .o2 td{width:0; border:1px solid #eee; padding:2px;}
 .o2 td:last-child{text-align:left; padding-left:5px;}
 .o2 td .num1{width:60px;}
+.o2 td .num3{width:80px;}
 .o2 td .num2{width:80%;}
+.o2 td .num4{width:133px;}
 .o2 td span{color:red;}
-.o2 td .bt{background:#d9534f; border:1px solid #d43f3a; color:#fff; border-radius:5px 5px 5px 5px; padding:2px 10px 2px 10px; margin-left:5px;}
+.o2 td .bt{background:#fff; border:1px solid #d43f3a; color:#000; border-radius:5px 5px 5px 5px; padding:2px 10px 2px 10px; margin-left:5px;}
 
 .btn_ali{margin-right:10px; font-size:15px;}
 
 #pay_type{margin:0 auto;}
-
+.card_num{width:60px;}
+#write{margin-right:80px; width:100px;}
+.order-payment{ display:none;}
 
 /* payment */
 .payment{width:200px; float:left; margin-left:50px;}
@@ -36,7 +40,7 @@ input[type="text"]{width:80px;}
 .payment div{margin-bottom:10px;}
 
 /* pay_form */
-.pay_form input[type="text"]{width:100px;}
+.pay_form input[type="text"]{width:60px;}
 .pay_form label{margin-right:10px;}
 .pay_form select{width:100px; margin-bottom:10px;}
 

@@ -2,6 +2,7 @@
 <%@ page language="java" import="java.sql.*"%>
 
 <%
+System.out.println("asdfasdfasdf");
 String driver="oracle.jdbc.driver.OracleDriver";
 String user="scott";
 String pass="tiger";
@@ -12,19 +13,18 @@ String rtn_xml = "";
 
 	Class.forName(driver);
 	Connection connection=DriverManager.getConnection(dbURL,user,pass);
-	String	type = request.getParameter("type");
-	String	date = request.getParameter("date") + "%";
-	String sql = "SELECT 우편번호, 시도, 시군구, 도로명, 지번본번 FROM post WHERE " + type + " LIKE ?";
+	String	id = request.getParameter("id");
+	System.out.println("id>" + id);
+	String sql = "select cust_tel, cust_post, cust_addr, cust_id from ob_member where cust_id = ?";
 	
 	PreparedStatement ps = connection.prepareStatement(sql);
-	ps.setString(1, date);
+	ps.setString(1, id);
 	ResultSet rs = ps.executeQuery();	
 	
-	while(rs.next()) {
-		rtn_xml += rs.getInt("우편번호") + "." + rs.getString("시도") + "." + rs.getString("시군구") + "." + rs.getString("도로명")
-		+ "." + rs.getInt("지번본번") + "/";
+	if(rs.next()) {
+		rtn_xml = rs.getString("cust_id") + "/" + rs.getInt("cust_post") + "/" + rs.getString("cust_addr") + "/"
+				+ rs.getString("cust_tel");
 	}
-	
 	rs.close();
 	connection.close();
 	

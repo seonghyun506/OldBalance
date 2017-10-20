@@ -21,8 +21,12 @@ public class CommandMyPage implements MyPageCommand {
 		
 		MyPageService service = MyPageService.getInstance();
 		
-		List <ObMember> mypagelist = service.selectMyPage(id);	
+		List <ObMember> mypagelist	= service.selectMyPage(id);	
+		List <ObOrder>	orderlist	= service.selectOrder(id);
+		List <String>	namePrice	= service.findNamePrice(id);
 	    request.setAttribute("param", mypagelist );
+	    request.setAttribute("order", orderlist);
+	    request.setAttribute("namePrice", namePrice);
 	    
 		return next;
 	}
