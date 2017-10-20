@@ -37,6 +37,23 @@ public class MyPageRepository {
 		
 	}
 	
+	public List<ObOrder> selectOrder(String id) {
+		SqlSession sess =  getSqlSessionFactory().openSession();
+		try {
+			return sess.selectList(namespace + ".selectOrder", id);
+		} finally {
+			sess.close();
+		}
+	}
+	
+	public List<String> findNamePrice(String id) {
+		SqlSession sess =  getSqlSessionFactory().openSession();
+		try {
+			return sess.selectList(namespace + ".findNamePrice", id);
+		} finally {
+			sess.close();
+		}
+	}
 //	public int insertMember(ObMember member) {
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		

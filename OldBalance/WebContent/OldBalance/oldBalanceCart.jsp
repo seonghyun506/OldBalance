@@ -1,6 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String pjName = "/OldBalance"; %>
+<% String pjName = "/OldBalance"; 
+String id="";
+id=(String)session.getAttribute("id");
+if(id==null||id.equals("")){
+	response.sendRedirect(pjName+"/Main?cmd=login");
+}
+%>
        <jsp:include page="header.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
@@ -11,6 +17,15 @@
 <link rel="stylesheet" href="<%=pjName%>/OldBalance/css/cart/cart.css" type="text/css"
 	media="screen" charset="utf-8" />
 <link rel="stylesheet" href="<%=pjName %>/OldBalance/css/main/common.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#order').click(function() {
+			location.href = '<%=pjName%>/MyPage?cmd=selectCart&id=<%=id%>';
+		});
+	});
+</script>
+
 </head>
 <body>
 	<section id='cart'>
@@ -85,7 +100,7 @@
 				</div>
 				<div style="float:right;">
 					<input class="btn btn-danger" type="button" value="쇼핑 계속하기" /> 
-					<input class="btn btn-danger" type="button" value="주문하기" />
+					<input class="btn btn-danger" id="order" type="button" value="주문하기" />
 				</div>
 			</form>
 		</div><br/><br/><br/><br/><br/><br/><br/><br/>

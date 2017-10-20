@@ -103,8 +103,7 @@ String detailCate = request.getParameter("detailCate");
 						onclick="location.href='<%=projectName%>/Upload?cmd=pds-detail&id=<%=product.getProdId()%>'">
 						<img src='<%=projectName%>/OldBalance/upload/<%=product.getProdPath()%>'>
 						<p><%=product.getProdName()%></p>
-						<p><%=product.getProdPrice()%>원
-						</p>
+						<p><%=product.getProdPrice()%>원</p>
 					</td>
 					<%
 						cnt++;

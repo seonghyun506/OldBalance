@@ -13,6 +13,11 @@
 <!-- </where> -->
 <!-- </select> -->
 
+<select id="insertOrder" parameterType="order">
+insert into ob_order
+values ( SQ_ORDER.NEXTVAL, #{custId}, sysdate, #{delAddr}, #{delTel}, #{payState}, #{custId}, #{prodId})
+</select>
+
 
 <select id="insertMember" parameterType="member">
 insert into ob_member

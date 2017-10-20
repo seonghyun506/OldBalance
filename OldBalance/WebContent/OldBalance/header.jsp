@@ -66,6 +66,12 @@
  			   $('.out').css('display','none');
 		<%   } %>
 	});
+	$(function() {
+		$('#btSearch').click(function() {
+			var prodName = $('#tfSearch').val();
+			$(location).attr('href',"<%= pjName %>/Product?cmd=product-find&prodName="+prodName);
+		});
+	});
 	
 </script>
 </head>
@@ -89,7 +95,13 @@
 				<li><%=id%> 님</li>
 				<li><a href="<%= pjName %>/Main?cmd=logout">로그아웃</a></li>
 				<li><a href='<%= pjName %>/MyPage?cmd=cart'>장바구니</a></li>
-				<li><a href='<%= pjName %>/MyPage?cmd=mypage&id=<%=sess%>'>마이페이지</a></li>
+				<% if(id != null) { 
+					if(id.equals("admin")) { %>
+						<li><a href='<%= pjName %>/Upload?cmd=product-mg'>관리자 페이지</a></li>
+				<% } else { %>
+						<li><a href='<%= pjName %>/MyPage?cmd=mypage&id=<%=sess%>'>마이페이지</a></li>
+					<% }
+				}%>
 			</ul>
 		</nav>
 	</div>
@@ -119,7 +131,7 @@
 				<li class='sale'>
 					<a href='#'>Sale</a>
 				</li>
-				<li class='search'><input type='text' name='search' id='search' placeholder='574s'><a href='#'><img src="<%=pjName %>/OldBalance/images/header/btn_search.png" /></a></li>
+				<li class='search'><input type='text' name='search' id='tfSearch' placeholder='제품명'> <input id="btSearch" type="image" src="<%=pjName %>/OldBalance/images/header/btn_search.png"></a></li>
 				<!-- 메인메뉴(e) -->
 			</ul>
 		</nav>

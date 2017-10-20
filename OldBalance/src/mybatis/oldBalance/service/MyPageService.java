@@ -24,6 +24,14 @@ public class MyPageService {
 	public List<ObCart> selectCart(String id) {
 		return repo.selectCart(id);
 	}
+
+	public List<String> findNamePrice(String id) {
+		return repo.findNamePrice(id);
+	}
+	
+	public List<ObOrder> selectOrder(String id) {
+		return repo.selectOrder(id);
+	}
 	
 //	public int insertMember(ObMember member) {
 //		return repo.insertMember(member);

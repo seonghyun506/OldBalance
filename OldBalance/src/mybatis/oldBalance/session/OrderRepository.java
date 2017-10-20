@@ -25,32 +25,19 @@ public class OrderRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
-	
-//	public int insertMember(ObMember member) {
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		
-//		try {
-//			int result =  sess.insert(namespace + ".insertMember", member);
-//			if(result > 0) {
-//				sess.commit();
-//			} else {
-//				sess.rollback();
-//			}
-//			
-//			return result;
-//		} finally {
-//			sess.close();
-//		}
-//	}
-	
-//	public List<ObMember> selectComment() {
-//		SqlSession sess =  getSqlSessionFactory().openSession(); // CON 과같은 연결객체
-//		// JDBC의 연결객체 얻어오기 -> SqlSession
-//		try {
-//			return sess.selectList(namespace + ".selectAll");
-//		} finally {
-//			sess.close();
-//		}
-//	}
-	
+	public int insertOrder(ObOrder order) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		try {
+			int result =  sess.insert(namespace + ".insertOrder", order);
+			if(result > 0) {
+				sess.commit();
+			} else {
+				sess.rollback();
+			}
+			return result;
+		} finally {
+			sess.close();
+		}
+	}
 }

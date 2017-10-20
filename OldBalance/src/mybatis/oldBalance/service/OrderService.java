@@ -15,8 +15,11 @@ public class OrderService {
 	
 	private OrderService() {}
 	
-	OldBalanceRepository repo = new OldBalanceRepository();
+	OrderRepository repo = new OrderRepository();
 	
+	public int insertOrder(ObOrder order) {
+		return repo.insertOrder(order);
+	}
 //	public int insertMember(ObMember member) {
 //		return repo.insertMember(member);
 //	}

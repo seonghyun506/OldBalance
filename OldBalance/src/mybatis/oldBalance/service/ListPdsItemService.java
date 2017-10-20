@@ -12,7 +12,7 @@ public class ListPdsItemService {
 
 	public static ListPdsItemService getInstance() {
 		if(instance == null) instance = new ListPdsItemService();
-		return instance;
+		return instance; 
 	}
 
 	private ListPdsItemService() {}
@@ -22,5 +22,9 @@ public class ListPdsItemService {
 	public List<ObProduct> getPdsItemList(ObProduct obproduct) {
 		return repo.selectPds(obproduct);
 	}
+	public List<ObProduct> selectByMainCate(String cate) {
+		return repo.selectByMainCate(cate);
+	}
+	
 	
 }
