@@ -3,7 +3,7 @@
 <%@ page import="mybatis.oldBalance.service.MyPageService" %>
 <%@ page import="mvc.oldBalance.model.ObCart" %>
 <%
-	String pjName = "/TeamProject";
+	String pjName = "/OldBalance";
 	String id="";
 	id=(String)session.getAttribute("id");
 	if(id==null||id.equals("")){

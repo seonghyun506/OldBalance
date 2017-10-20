@@ -17,6 +17,7 @@ import mvc.oldBalance.command.CommandSelectCart;
 import mvc.oldBalance.command.CommandmNull;
 import mvc.oldBalance.command.MyPageCommand;
 import mvc.oldBalance.command.ProductCommand;
+import mvc.oldBalance.command.CommandDirectOrder;
 import mvc.oldBalance.command.CommandException;
 import mvc.oldBalance.command.CommandMyPage;
 
@@ -37,6 +38,7 @@ public class MyPageControl extends HttpServlet{
 		commandMap.put("mypage", new CommandMyPage("oldBalanceMyPage.jsp"));
 		commandMap.put("cart", new CommandmNull("oldBalanceCart.jsp"));
 		commandMap.put("selectCart", new CommandSelectCart("oldBalanceOrder.jsp"));
+		commandMap.put("direct-order", new CommandDirectOrder("oldBalanceOrder.jsp"));
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

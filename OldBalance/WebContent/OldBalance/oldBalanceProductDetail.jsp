@@ -56,9 +56,12 @@
 			location.href='<%=pjName%>/Product?cmd=insert-cart&mId=<%=mId%>&id=<%=id%>&amount='
 					+$('#amount option:selected').text() + '&size=' + $(':radio[name="ckSize"]:checked').val();
 			alert("장바구니 저장 완료!!!");
-
 		});
-		
+		$('#btnorder').click(function(){
+			location.href='<%=pjName%>/MyPage?cmd=direct-order&prodId=<%=id%>&custId=<%=mId%>'+
+					'&prodName=<%=product.getProdName()%>'+'&amount='+$('#amount option:selected').text() + '&prodSize=' + $(':radio[name="ckSize"]:checked').val()+
+					'&prodPrice='+$('#prodPrice').text();
+		});
 	});
 	
 </script>
@@ -76,12 +79,12 @@
 		</div>
 		<div class='productInfo'>
 			<div class="top">
-				<h3><%=product.getProdName()%></h3>
+				<h3 id='prodId'><%=product.getProdName()%></h3>
 				<br />
 				<table>
 					<tr>
 						<td>판매가&nbsp;&nbsp;</td>
-						<td><span class='pay'><%=product.getProdPrice()%></span>원</td>
+						<td><span class='pay' id='prodPrice'><%=product.getProdPrice()%></span>원</td>
 					</tr>
 				</table>
 				<div class='line'></div>
