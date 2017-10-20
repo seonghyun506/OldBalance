@@ -95,7 +95,13 @@
 				<li><%=id%> 님</li>
 				<li><a href="<%= pjName %>/Main?cmd=logout">로그아웃</a></li>
 				<li><a href='<%= pjName %>/MyPage?cmd=cart'>장바구니</a></li>
-				<li><a href='<%= pjName %>/MyPage?cmd=mypage&id=<%=sess%>'>마이페이지</a></li>
+				<% if(id != null) { 
+					if(id.equals("admin")) { %>
+						<li><a href='<%= pjName %>/Upload?cmd=product-mg'>관리자 페이지</a></li>
+				<% } else { %>
+						<li><a href='<%= pjName %>/MyPage?cmd=mypage&id=<%=sess%>'>마이페이지</a></li>
+					<% }
+				}%>
 			</ul>
 		</nav>
 	</div>
