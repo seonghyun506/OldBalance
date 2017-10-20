@@ -119,15 +119,15 @@
 							if (product.getSubCate().equals("의류")) {
 						%>
 						<td><input type='radio' id='ckSize' name='ckSize'
-							value='S(90)'>S(90)</td>
-						<td><input type='radio' id='ckSize' name='ckSize'
-							value='M(95)'>M(95)</td>
-						<td><input type='radio' id='ckSize' name='ckSize'
-							value='L(100)'>L(100)</td>
-						<td><input type='radio' id='ckSize' name='ckSize'
-							value='XL(105)'>XL(105)</td>
-						<td><input type='radio' id='ckSize' name='ckSize'
-							value='XXL(110)'>XXL(110)</td>
+							value='S(90)'><label for='ckSize'>S(90)</label></td>
+						<td><input type='radio' id='coSize' name='ckSize'
+							value='M(95)'><label for='coSize'>M(95)</label></td>
+						<td><input type='radio' id='cuSize' name='ckSize'
+							value='L(100)'><label for='cuSize'>L(100)</label></td>
+						<td><input type='radio' id='ciSize' name='ckSize'
+							value='XL(105)'><label for='ciSize'>XL(105)</label></td>
+						<td><input type='radio' id='cpSize' name='ckSize'
+							value='XXL(110)'><label for='cpSize'>XXL(110)</label></td>
 						<%
 							} else {
 						%>

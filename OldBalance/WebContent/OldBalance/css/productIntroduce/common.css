@@ -58,10 +58,15 @@ label{cursor:pointer; margin-right: 5px;}
 .t_title{padding-bottom:8px;}
 .line{width:100%; border-bottom:1px dotted #999; margin-bottom:10px;}
 .s_list td{border:2px solid #4080ff; width:10px; padding:5px;}
-.s_list td a{font-size:12px; font-weight:bold; display:block; text-align:center; color:#0099cc;}
+.s_list td label{font-size:12px; font-weight:bold; display:block; text-align:center; color:#0099cc;}
 .s_list td:hover{background:#4080ff;}
-.s_list td:hover a{color:#fff; transition:0.8s;}
+.s_list td:hover label{color:#fff; transition:0.8s;}
+.s_list td:active{background:#4080ff;}
+
+.s_list td >input{display:none;}
 .pay{font-weight:bold; font-size:18px; color:#444;}
 #btncart,
 #btnorder{display:none;} */
+
+
 

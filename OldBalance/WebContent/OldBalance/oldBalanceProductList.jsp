@@ -35,7 +35,6 @@ String detailCate = request.getParameter("detailCate");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>OldBalance</title>
-<link rel="stylesheet" href="<%=projectName %>/OldBalance/css/bootstrap/bootstrap.css" />
 <link rel="stylesheet"
 	href="<%=projectName%>/OldBalance/css/main/common.css" type="text/css">
 <link rel="stylesheet"
@@ -53,7 +52,7 @@ String detailCate = request.getParameter("detailCate");
 					<%
 						if (currPage > 1) {
 					%>
-					<td><a
+					<td style="border:none; width:17px"><a
 						href="<%=projectName%>/Upload?cmd=pds-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=currPage - 1%>">◀</a></td>
 					<%
 						}
@@ -61,7 +60,7 @@ String detailCate = request.getParameter("detailCate");
 					<%
 						for (int i = 1; i <= totalPage; i++) {
 					%>
-					<td><a
+					<td style="border:none; width:17px"><a
 						href="<%=projectName%>/Upload?cmd=pds-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=i%>"><%=i%></a></td>
 					<%
 						}
@@ -69,7 +68,7 @@ String detailCate = request.getParameter("detailCate");
 					<%
 						if (currPage != totalPage - 1) {
 					%>
-					<td><a href="<%=projectName%>/Upload?cmd=pds-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=currPage + 1%>">▶</a></td>
+					<td style="border:none; width:17px"><a href="<%=projectName%>/Upload?cmd=pds-list&cate=<%=cate%>&subCate=<%=subCate %>&detailCate=<%=detailCate %>&range=<%=range%>&page=<%=currPage + 1%>">▶</a></td>
 					<%
 						}
 					%>
@@ -100,7 +99,7 @@ String detailCate = request.getParameter("detailCate");
 					if ((cnt % 4) == 1) {
 				%>
 				<tr>
-					<td style='cursor: pointer;'
+					<td style='cursor: pointer;' 
 						onclick="location.href='<%=projectName%>/Upload?cmd=pds-detail&id=<%=product.getProdId()%>'">
 						<img src='<%=projectName%>/OldBalance/upload/<%=product.getProdPath()%>'>
 						<p><%=product.getProdName()%></p>
@@ -122,7 +121,7 @@ String detailCate = request.getParameter("detailCate");
 						cnt++;
 							} else if ((cnt % 4) == 3) {
 					%>
-					<td style='cursor: pointer;'
+					<td style='cursor: pointer; '
 						onclick="location.href='<%=projectName%>/Upload?cmd=pds-detail&id=<%=product.getProdId()%>'">
 						<img src='<%=projectName%>/OldBalance/upload/<%=product.getProdPath()%>'>
 						<p><%=product.getProdName()%></p>
