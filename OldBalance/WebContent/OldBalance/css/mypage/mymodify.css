@@ -2,15 +2,25 @@
 
 input{border-radius:5px 5px 5px 5px; box-shadow:none; }
 li{list-style:none;}
-input[type=text]{width:100px;}
+pre{padding:5px;}
+
+
+.pass_form{overflow:hidden; margin-bottom:10px;}
+.pass_form input[type=text]{width:70%; float:right; margin-right:30px;}
 .post_check li .tel{width:100px;}
 section{width:100%;}
 #modify{width:500px; margin:0 auto;}
-.mymodify{width:550px; margin:0 auto;}
+.mymodify{width:550px; margin:0 auto; overflow:hidden;}
+.mymodify p{float:left;}
+
+
+
 .put{width:10px;}
 .pa_check{width:500px; margin: 0 auto; padding-left:40px;}`
 .post_check{width:500px; margin: 0 auto;}
 .post_check li{margin-bottom:20px;}
+.post_check li input{margin-bottom:12px; padding:10px;}
+.post_check li:first-child input{margin:0 5px;}
 .post_check li:last-child input{margin-bottom:5px;}
 .post_check li:last-child .detail{width:100%;}
 .btn_wrap{width:500px; margin:0 auto; overflow:hidden;}

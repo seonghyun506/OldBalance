@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.CartMapper">
+<!-- parameterType="String"  -->
+<select id="selectAll" parameterType="String" resultType="cart">
+select oc.amount,oc.PROD_SIZE,op.PROD_PRICE,op.PROD_NAME,op.main_Cate,op.sub_cate,op.detail_cate
+from ob_cart oc , ob_product op  
+where cust_id = #{value} AND oc.PROD_ID=op.PROD_ID
+order by oc.prod_id
+
+<!-- <where> -->
+<!-- cust_id=#{value} -->
+<!-- </where> -->
+</select>
+
+</mapper>

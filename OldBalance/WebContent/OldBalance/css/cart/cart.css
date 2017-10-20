@@ -1,7 +1,26 @@
 @charset "UTF-8";
 table{
-	width:100%;
+   width:100%;
 }
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #909;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #909;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #909;
+}
+
 p{font-family:'Nanum squir'; font-size:13px;}
 tr{height:30px;}
 label{cursor:pointer;}
@@ -20,5 +39,5 @@ label{cursor:pointer;}
 th,td{text-align:center;}
 
 #conunt{width:20px;}
-.btn_change{height:50px; border-top:2px solid #f1f1f1;}
-.btn_change .le{text-align:left;}
+.btn_change{height:50px; border-bottom:2px solid #f1f1f1;}
+.btn_change .le{text-align:left; padding-left:20px;}
